@@ -5,6 +5,7 @@ namespace Contoso
         public dynamic iso { get; set; }
         public dynamic family_name { get; set; }
         public dynamic given_names { get; set; }
+        public dynamic date_of_birth { get; set; }
         public dynamic address_unit { get; set; }
         public dynamic address_number { get; set; }
         public dynamic address_street { get; set; }

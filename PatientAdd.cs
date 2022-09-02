@@ -25,6 +25,7 @@ namespace Contoso
             var iso = getValue(fields, "iso");
             var family_name = getValue(fields, "family_name");
             var given_names = getValue(fields, "given_names");
+            var date_of_birth = getValue(fields, "date_of_birth");
             
             var address_unit = getValue(fields, "address_unit");
             var address_number = getValue(fields, "address_number");
@@ -53,6 +54,7 @@ namespace Contoso
                 iso = iso,
                 family_name = family_name,
                 given_names = given_names,
+                date_of_birth = date_of_birth,
                 address_unit = address_unit,
                 address_number = address_number,
                 address_street = address_street,
@@ -81,7 +83,7 @@ namespace Contoso
         }
 
         private static string getValue(dynamic fields, string key){
-            return fields[key]["content"].ToString();
+            return fields[key]["valueString"].ToString();
         }
 
     }

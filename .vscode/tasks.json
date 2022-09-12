@@ -75,7 +75,8 @@
       },
       "command": "host start",
       "isBackground": true,
-      "problemMatcher": "$func-dotnet-watch"
+      "problemMatcher": "$func-dotnet-watch",
+      "label": "func: host start"
     }
   ]
 }

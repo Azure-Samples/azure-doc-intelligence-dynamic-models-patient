@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: new-patient-e2e
+services:
+  web:
+    language: ts
+    project: "./src/frontend"
+    host: staticwebapp
+  api:
+    language: csharp
+    project: "./src/api"
+    host: function

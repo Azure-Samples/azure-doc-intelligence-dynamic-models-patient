@@ -1,52 +1,34 @@
-@minLength(1)
-@description('Primary location for all resources')
-param location string
+targetScope = 'subscription'
 
 @minLength(1)
 @maxLength(50)
 @description('Name of the the environment which is used to generate a short unique hash used in all resources.')
 param name string
 
-param databaseName string = ''
-param containerName string = ''
+@minLength(1)
+@description('Primary location for all resources')
+param location string
 
-param swaSku string = 'Standard'
+resource resourceGroup 'Microsoft.Resources/resourceGroups@2020-06-01' = {
+    name: 'rg-${name}'
+    location: location
+    tags: tags
+}
 
+var resourceToken = toLower(uniqueString(subscription().id, name))
 var tags = {
-  'azd-env-name': name
+    'azd-env-name': name
 }
 
-// Cosmosdb
-module cosmosdb 'cosmosdb.bicep' = {
-  name: '${deployment().name}--cosmosdb'
-  params: {
-    location: location
-    primaryRegion: location
-    databaseName: databaseName
-    containerName: containerName
-  }
+module resources './resources.bicep' = {
+    name: 'resources-${resourceToken}'
+    scope: resourceGroup
+    params: {
+        location: location
+        name: resourceToken
+        tags: tags
+    }
 }
 
-// Functions
-module functions 'functions.bicep' = {
-  name: '${deployment().name}--functions'
-  params: {
-    location: location
-    appInsightsLocation: location
-    tags: union(tags, {
-        'azd-env-name': 'api'
-      })
-  }
-}
-
-// Static Web Apps
-module staticWebApp 'swa.bicep' = {
-  name: '${deployment().name}--swa'
-  params: {
-    location: 'westus2'
-    sku: swaSku
-    tags: union(tags, {
-        'azd-service-name': 'web'
-      })
-  }
-}
+output APP_WEB_BASE_URL string = resources.outputs.WEB_URI
+output AZURE_LOCATION string = location

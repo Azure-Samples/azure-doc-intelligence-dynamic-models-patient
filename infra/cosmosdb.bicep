@@ -1,5 +1,5 @@
 @description('Cosmos DB account name, max length 44 characters, lowercase')
-param accountName string = 'cosmos-${uniqueString(resourceGroup().id)}'
+param accountName string
 
 @description('Location for the Cosmos DB account.')
 param location string
@@ -28,17 +28,11 @@ param maxStalenessPrefix int = 100000
 param maxIntervalInSeconds int = 300
 
 @description('The name for the database')
-param databaseName string = 'ordersDb'
+param databaseName string = 'patientDb'
 
 @description('The name for the container')
-param containerName string = 'orders'
+param containerName string = 'patients'
 
-@description('Maximum throughput for the container')
-@minValue(4000)
-@maxValue(1000000)
-param autoscaleMaxThroughput int = 4000
-
-var accountName_var = toLower(accountName)
 var consistencyPolicy = {
   Eventual: {
     defaultConsistencyLevel: 'Eventual'
@@ -66,8 +60,8 @@ var locations = [
   }
 ]
 
-resource accountName_resource 'Microsoft.DocumentDB/databaseAccounts@2021-01-15' = {
-  name: accountName_var
+resource cosmos 'Microsoft.DocumentDB/databaseAccounts@2021-01-15' = {
+  name: toLower(accountName)
   kind: 'GlobalDocumentDB'
   location: location
   properties: {
@@ -75,38 +69,31 @@ resource accountName_resource 'Microsoft.DocumentDB/databaseAccounts@2021-01-15'
     locations: locations
     databaseAccountOfferType: 'Standard'
   }
-}
 
-resource accountName_databaseName 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2021-01-15' = {
-  parent: accountName_resource
-  name: databaseName
-  properties: {
-    resource: {
-      id: databaseName
-    }
-  }
-}
-
-resource accountName_databaseName_containerName 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2021-01-15' = {
-  parent: accountName_databaseName
-  name: containerName
-  properties: {
-    resource: {
-      id: containerName
-      partitionKey: {
-        paths: [
-          '/id'
-        ]
-        kind: 'Hash'
+  resource database 'sqlDatabases' = {
+    name: databaseName
+    properties: {
+      resource: {
+        id: databaseName
       }
     }
-    options: {
-      autoscaleSettings: {
-        maxThroughput: autoscaleMaxThroughput
+
+    resource list 'containers' = {
+      name: containerName
+      properties: {
+        resource: {
+          id: containerName
+          partitionKey: {
+            paths: [
+              '/id'
+            ]
+          }
+        }
+        options: {}
       }
     }
   }
 }
 
-output documentEndpoint string = accountName_resource.properties.documentEndpoint
-output primaryMasterKey string = listKeys(accountName_resource.id, accountName_resource.apiVersion).primaryMasterKey
+output documentEndpoint string = cosmos.properties.documentEndpoint
+output primaryMasterKey string = listKeys(cosmos.id, cosmos.apiVersion).primaryMasterKey

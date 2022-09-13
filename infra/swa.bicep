@@ -1,5 +1,5 @@
 @description('Cosmos DB account name, max length 44 characters, lowercase')
-param name string = 'swa-${uniqueString(resourceGroup().id)}'
+param name string
 param location string
 param sku string = 'Standard'
 param tags object
@@ -16,3 +16,5 @@ resource swa_resource 'Microsoft.Web/staticSites@2021-01-15' = {
     size: sku
   }
 }
+
+output SWA_URI string = 'https://${swa_resource.properties.defaultHostname}'

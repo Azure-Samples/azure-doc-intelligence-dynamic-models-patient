@@ -16,7 +16,10 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "ms-azuretools.vscode-bicep",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "ms-azuretools.azure-dev",
+        "ms-azuretools.vscode-cosmosdb",
+        "ms-azuretools.vscode-azurestaticwebapps"
       ]
     }
   },

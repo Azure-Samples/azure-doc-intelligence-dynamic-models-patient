@@ -6,6 +6,7 @@ services:
     language: ts
     project: "./src/frontend"
     host: staticwebapp
+    dist: "dist"
   api:
     language: csharp
     project: "./src/api"

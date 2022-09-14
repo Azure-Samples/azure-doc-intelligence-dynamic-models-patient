@@ -6,13 +6,11 @@ export const dragZone = style({
   width: "480px",
   margin: "50px auto",
   padding: "20px",
-
-  selectors: {
-    "&.highlight": {
-      borderColor: "purple",
-    },
-  },
 });
+
+export const dragZoneHighlight = style([dragZone, {
+  borderColor: "purple",
+}]);
 
 export const fileUpload = style({
   display: "none",

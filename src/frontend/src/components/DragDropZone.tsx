@@ -1,5 +1,5 @@
 import { Button } from "./Button";
-import { dragZone, fileUpload } from "./DragDropZone.css";
+import { dragZone, dragZoneHighlight, fileUpload } from "./DragDropZone.css";
 import Icon from "@mdi/react";
 import { mdiCamera, mdiCameraOff } from "@mdi/js";
 import { useEffect, useRef } from "react";
@@ -15,6 +15,20 @@ export function DragDropZone({
 }) {
   const dropZoneRef = useRef<HTMLDivElement>(null);
 
+  const onDrop = (e: DragEvent) => {
+    e.preventDefault();
+
+    const file = e.dataTransfer?.files[0];
+    if (file) {
+      fileSelected(file);
+    }
+  };
+
+  function preventDefaults(e: Event) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
   useEffect(() => {
     if (dropZoneRef.current) {
       const dropArea = dropZoneRef.current;
@@ -23,7 +37,6 @@ export function DragDropZone({
         document.body.addEventListener(eventName, preventDefaults, false);
       });
 
-      // Highlight drop area when item is dragged over it
       ["dragenter", "dragover"].forEach((eventName) => {
         dropArea.addEventListener(eventName, highlight, false);
       });
@@ -31,31 +44,14 @@ export function DragDropZone({
         dropArea.addEventListener(eventName, unhighlight, false);
       });
 
-      // Handle dropped files
-      dropArea.addEventListener(
-        "drop",
-        (e) => {
-          e.preventDefault();
-
-          const file = e.dataTransfer?.files[0];
-          if (file) {
-            fileSelected(file);
-          }
-        },
-        false
-      );
-
-      function preventDefaults(e: Event) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
+      dropArea.addEventListener("drop", onDrop, false);
 
       function highlight(e: Event) {
-        dropArea.classList.add("highlight");
+        dropArea.className = dragZoneHighlight;
       }
 
       function unhighlight(e: Event) {
-        dropArea.classList.remove("highlight");
+        dropArea.className = dragZone;
       }
     }
   });

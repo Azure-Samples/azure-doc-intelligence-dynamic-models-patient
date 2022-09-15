@@ -1,11 +1,27 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Attach to .NET Functions",
-            "type": "coreclr",
-            "request": "attach",
-            "processId": "${command:azureFunctions.pickProcess}"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "launch: frontend",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "dev"],
+      "runtimeExecutable": "npm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node",
+      "cwd": "${workspaceFolder}/src/frontend"
+    },
+    {
+      "name": "launch: backend",
+      "type": "coreclr",
+      "request": "attach",
+      "processId": "${command:azureFunctions.pickProcess}",
+      "preLaunchTask": "func: host start"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "launch: all",
+      "configurations": ["launch: backend", "launch: frontend"]
+    }
+  ]
 }

@@ -7,9 +7,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Contoso;
 
-public static class UploadImage
+public static class UploadFile
 {
-    [FunctionName("UploadImage")]
+    [FunctionName(nameof(UploadFile))]
     public static async Task<IActionResult> Run(
         [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req, ILogger log)
     {

@@ -32,12 +32,22 @@ export default function CameraFeed({
         <div>
           <Button
             onClick={() => {
-              if (canvasRef.current && videoRef.current) {
-                const context = canvasRef.current.getContext("2d");
+              const video = videoRef.current;
+              const canvas = canvasRef.current;
+              if (canvas && video) {
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                const context = canvas.getContext("2d");
                 if (context) {
-                  context.drawImage(videoRef.current, 0, 0, 640, 480);
+                  context.drawImage(
+                    video,
+                    0,
+                    0,
+                    video.videoWidth,
+                    video.videoHeight
+                  );
 
-                  canvasRef.current.toBlob((blob) => {
+                  canvas.toBlob((blob) => {
                     if (blob) {
                       const file = new File([blob], "image.png", {
                         type: "image/png",

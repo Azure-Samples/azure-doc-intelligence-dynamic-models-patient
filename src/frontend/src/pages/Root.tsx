@@ -5,10 +5,11 @@ import { mdiCamera, mdiCameraOff, mdiUpload } from "@mdi/js";
 import { Button } from "../components/Button";
 import CameraFeed from "../components/CameraFeed";
 import { DragDropZone } from "../components/DragDropZone";
+import FileToUpload from "../components/FileToUpload";
 
 function Root() {
   const [cameraActive, setCameraActive] = useState(false);
-  const mediaStream = useUserMedia(cameraActive);
+  const [mediaStream, videoDimensions] = useUserMedia(cameraActive);
   const [fileToUpload, setFileToUpload] = useState<File | null>(null);
 
   useEffect(() => {
@@ -26,11 +27,14 @@ function Root() {
       />
       <CameraFeed mediaStream={mediaStream} captureImage={setFileToUpload} />
       {fileToUpload && (
-        <Button onClick={() => {}}>
-          <>
-            <Icon path={mdiUpload} size={1} />
-          </>
-        </Button>
+        <>
+          <FileToUpload file={fileToUpload} width={videoDimensions?.width} height={videoDimensions?.height} />
+          <Button onClick={() => {}}>
+            <>
+              <Icon path={mdiUpload} size={1} />
+            </>
+          </Button>
+        </>
       )}
     </>
   );

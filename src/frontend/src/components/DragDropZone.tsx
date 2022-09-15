@@ -2,7 +2,7 @@ import { Button } from "./Button";
 import { dragZone, dragZoneHighlight, fileUpload } from "./DragDropZone.css";
 import Icon from "@mdi/react";
 import { mdiCamera, mdiCameraOff } from "@mdi/js";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 export function DragDropZone({
   setCameraActiveState,
@@ -15,19 +15,34 @@ export function DragDropZone({
 }) {
   const dropZoneRef = useRef<HTMLDivElement>(null);
 
-  const onDrop = (e: DragEvent) => {
-    e.preventDefault();
+  const onDrop = useCallback(
+    (e: DragEvent) => {
+      e.preventDefault();
 
-    const file = e.dataTransfer?.files[0];
-    if (file) {
-      fileSelected(file);
-    }
-  };
+      const file = e.dataTransfer?.files[0];
+      if (file) {
+        fileSelected(file);
+      }
+    },
+    [fileSelected]
+  );
 
-  function preventDefaults(e: Event) {
+  const preventDefaults = useCallback((e: Event) => {
     e.preventDefault();
     e.stopPropagation();
-  }
+  }, []);
+
+  const highlight = useCallback((e: Event) => {
+    if (dropZoneRef.current) {
+      dropZoneRef.current.className = dragZoneHighlight;
+    }
+  }, []);
+
+  const unhighlight = useCallback((e: Event) => {
+    if (dropZoneRef.current) {
+      dropZoneRef.current.className = dragZone;
+    }
+  }, []);
 
   useEffect(() => {
     if (dropZoneRef.current) {
@@ -45,14 +60,6 @@ export function DragDropZone({
       });
 
       dropArea.addEventListener("drop", onDrop, false);
-
-      function highlight(e: Event) {
-        dropArea.className = dragZoneHighlight;
-      }
-
-      function unhighlight(e: Event) {
-        dropArea.className = dragZone;
-      }
     }
   });
 

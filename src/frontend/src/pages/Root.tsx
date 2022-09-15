@@ -1,7 +1,7 @@
 import useUserMedia from "../hooks/useUserMedia";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Icon from "@mdi/react";
-import { mdiCamera, mdiCameraOff, mdiUpload } from "@mdi/js";
+import { mdiUpload } from "@mdi/js";
 import { Button } from "../components/Button";
 import CameraFeed from "../components/CameraFeed";
 import { DragDropZone } from "../components/DragDropZone";
@@ -18,6 +18,10 @@ function Root() {
     }
   }, [fileToUpload]);
 
+  const uploadFile = useCallback(() => {
+    console.log(`Uploading file: ${fileToUpload?.name}`);
+  }, [fileToUpload]);
+
   return (
     <>
       <DragDropZone
@@ -28,8 +32,12 @@ function Root() {
       <CameraFeed mediaStream={mediaStream} captureImage={setFileToUpload} />
       {fileToUpload && (
         <>
-          <FileToUpload file={fileToUpload} width={videoDimensions?.width} height={videoDimensions?.height} />
-          <Button onClick={() => {}}>
+          <FileToUpload
+            file={fileToUpload}
+            width={videoDimensions?.width}
+            height={videoDimensions?.height}
+          />
+          <Button onClick={uploadFile}>
             <>
               <Icon path={mdiUpload} size={1} />
             </>

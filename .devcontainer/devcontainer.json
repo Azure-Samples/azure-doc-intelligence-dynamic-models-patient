@@ -19,7 +19,9 @@
         "redhat.vscode-yaml",
         "ms-azuretools.azure-dev",
         "ms-azuretools.vscode-cosmosdb",
-        "ms-azuretools.vscode-azurestaticwebapps"
+        "ms-azuretools.vscode-azurestaticwebapps",
+        "Azurite.azurite",
+        "ms-azuretools.vscode-azurestorage"
       ]
     }
   },

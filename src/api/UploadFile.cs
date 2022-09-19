@@ -13,6 +13,9 @@ public static class UploadFile
     public static async Task<IActionResult> Run(
         [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req, ILogger log)
     {
-        return new OkResult();
+        var formData = await req.ReadFormAsync();
+        var file = formData.Files["file"];
+
+        return new OkObjectResult(new { file.FileName, file.Length });
     }
 }

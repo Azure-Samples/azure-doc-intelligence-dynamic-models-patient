@@ -69,8 +69,11 @@ export function DragDropZone({
         <input
           type="file"
           id="fileElem"
-          accept="image/*"
+          accept="image/*,.pdf"
           className={fileUpload}
+          onChange={(e) => {
+            e.target.files && fileSelected(e.target.files[0]);
+          }}
         />
         <label htmlFor="fileElem">Drop file here</label>
         <br />

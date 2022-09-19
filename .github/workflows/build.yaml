@@ -1,0 +1,39 @@
+name: "Build app"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-frontend:
+    name: "⚙️ Build frontend app"
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/frontend
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: 'src/frontend/.nvmrc'
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+  build-backend:
+    name: "⚙️ Build backend app"
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/api
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v2
+        with:
+          node-version: '6.0.x'
+      - run: dotnet restore
+      - run: dotnet build
+      - run: dotnet publish

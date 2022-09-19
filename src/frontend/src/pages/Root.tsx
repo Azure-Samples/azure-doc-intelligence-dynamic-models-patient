@@ -26,7 +26,7 @@ function Root() {
       const formData = new FormData();
       formData.append("file", fileToUpload);
 
-      const res = await fetch("/api/UploadFile", {
+      const res = await fetch("/api/new-patient/upload-file", {
         method: "POST",
         body: formData,
       });

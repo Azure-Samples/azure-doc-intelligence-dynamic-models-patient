@@ -25,6 +25,6 @@ ENV NVM_SYMLINK_CURRENT=true \
 
 RUN apt-get update && curl -ssL https://raw.githubusercontent.com/microsoft/vscode-dev-containers/main/script-library/node-debian.sh -o /tmp/node-debian.sh \
     && apt-get update \
-    && bash /tmp/node-debian.sh "${NVM_DIR}"
-
-RUN curl -fsSL https://aka.ms/install-azd.sh | bash
+    && bash /tmp/node-debian.sh "${NVM_DIR}" \
+    && curl -fsSL https://aka.ms/install-azd.sh | bash \
+    && su vscode -c "umask 0002 && npm install --cache /tmp/empty-cache -g @azure/static-web-apps-cli"

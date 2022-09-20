@@ -31,7 +31,7 @@ function Root() {
         body: formData,
       });
 
-      if (res.status === 200) {
+      if (res.ok) {
         console.log(`Upload successful`);
         console.log(await res.json());
       } else {

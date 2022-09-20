@@ -2,6 +2,7 @@ using Azure;
 using Azure.AI.FormRecognizer.DocumentAnalysis;
 using Azure.Storage.Blobs;
 using Azure.Storage.Sas;
+using Contoso.Healthcare.Api.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -19,15 +20,21 @@ public static class UploadFile
     public static async Task<IActionResult> Run(
         [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "new-patient/upload-file")] HttpRequest req,
         [Blob("unprocessed-patient-forms", Connection = "NEW_PATIENT_STORAGE")] BlobContainerClient containerClient,
+        [CosmosDB(
+                databaseName: "patientDb",
+                collectionName: "patientContainer",
+                ConnectionStringSetting = "COSMOS_DB")]IAsyncCollector<FormRecognizerResponse> formResponse,
         ILogger log)
     {
         var formData = await req.ReadFormAsync();
         var file = formData.Files["file"];
 
-        var filename = await StoreFile(file, containerClient);
+        var (patiendId, filename) = await StoreFile(file, containerClient);
         var outputs = await ExtractFormInfo(containerClient, log, filename);
 
-        return new OkObjectResult(outputs);
+        await formResponse.AddAsync(new FormRecognizerResponse(FormRecognizerResponse.GetId(patiendId), outputs));
+
+        return new OkObjectResult(new { PatiendId = patiendId });
     }
 
     private static async Task<Dictionary<string, (string, float?)>> ExtractFormInfo(BlobContainerClient containerClient, ILogger log, string filename)
@@ -49,18 +56,8 @@ public static class UploadFile
 
         foreach (AnalyzedDocument document in result.Documents)
         {
-            log.LogInformation($"Document of type: {document.DocumentType}");
-
-            foreach (KeyValuePair<string, DocumentField> fieldKvp in document.Fields)
+            foreach ((string fieldName, DocumentField field) in document.Fields)
             {
-                string fieldName = fieldKvp.Key;
-                DocumentField field = fieldKvp.Value;
-
-                log.LogInformation($"Field '{fieldName}': ");
-
-                log.LogInformation($"  Content: '{field.Content}'");
-                log.LogInformation($"  Confidence: '{field.Confidence}'");
-
                 outputs.Add(fieldName, (field.Content, field.Confidence));
             }
         }
@@ -68,15 +65,15 @@ public static class UploadFile
         return outputs;
     }
 
-    private static async Task<string> StoreFile(IFormFile file, BlobContainerClient containerClient)
+    private static async Task<(string, string)> StoreFile(IFormFile file, BlobContainerClient containerClient)
     {
         _ = await containerClient.CreateIfNotExistsAsync();
 
-        var instanceId = Guid.NewGuid().ToString();
+        var patientId = Guid.NewGuid().ToString();
 
-        var name = $"{instanceId}_{file.FileName}";
+        var name = $"{patientId}_{file.FileName}";
         _ = await containerClient.UploadBlobAsync(name, file.OpenReadStream());
 
-        return name;
+        return (patientId, name);
     }
 }

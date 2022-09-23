@@ -29,19 +29,24 @@ public static class UploadFile
         var formData = await req.ReadFormAsync();
         var file = formData.Files["file"];
 
-        var (patiendId, filename) = await StoreFile(file, containerClient);
-        var outputs = await ExtractFormInfo(containerClient, log, filename);
+        var (patientId, filename) = await StoreFile(file, containerClient);
+        var outputs = await ExtractFormInfo(containerClient, filename);
 
-        await formResponse.AddAsync(new FormRecognizerResponse(FormRecognizerResponse.GetId(patiendId), outputs));
+        await formResponse.AddAsync(new FormRecognizerResponse(FormRecognizerResponse.GetId(patientId), outputs));
 
-        return new OkObjectResult(new { PatiendId = patiendId });
+        return new OkObjectResult(new { PatientId = patientId });
     }
 
-    private static async Task<Dictionary<string, (string, float?)>> ExtractFormInfo(BlobContainerClient containerClient, ILogger log, string filename)
+    private static async Task<Dictionary<string, (string, float?)>> ExtractFormInfo(BlobContainerClient containerClient, string filename)
     {
-        string endpoint = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_ENDPOINT");
-        string apiKey = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_API_KEY");
-        string modelId = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_MODEL_ID");
+        string? endpoint = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_ENDPOINT");
+        string? apiKey = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_API_KEY");
+        string? modelId = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_MODEL_ID");
+
+        if (string.IsNullOrEmpty(endpoint) || string.IsNullOrEmpty(apiKey) || string.IsNullOrEmpty(modelId))
+        {
+            throw new InvalidOperationException("Missing environment variables");
+        }
 
         var credential = new AzureKeyCredential(apiKey);
         var client = new DocumentAnalysisClient(new Uri(endpoint), credential);

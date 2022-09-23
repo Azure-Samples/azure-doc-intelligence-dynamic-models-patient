@@ -6,12 +6,14 @@ import { Button } from "../components/Button";
 import CameraFeed from "../components/CameraFeed";
 import { DragDropZone } from "../components/DragDropZone";
 import FileToUpload from "../components/FileToUpload";
+import { useNavigate } from "react-router-dom";
 
-function Root() {
+function Upload() {
   const [cameraActive, setCameraActive] = useState(false);
   const [mediaStream, videoDimensions] = useUserMedia(cameraActive);
   const [fileToUpload, setFileToUpload] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (fileToUpload) {
@@ -32,8 +34,8 @@ function Root() {
       });
 
       if (res.ok) {
-        console.log(`Upload successful`);
-        console.log(await res.json());
+        const { patientId } = await res.json();
+        navigate(`/verify/${patientId}`);
       } else {
         console.error("Upload failed");
         const resText = await res.text();
@@ -68,4 +70,4 @@ function Root() {
   );
 }
 
-export default Root;
+export default Upload;

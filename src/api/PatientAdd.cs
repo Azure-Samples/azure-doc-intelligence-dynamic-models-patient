@@ -49,31 +49,31 @@ namespace Contoso
 
             var date = getValue(fields, "date");
 
-            var patient = new Patient
-            {
-                Iso = iso,
-                FamilyName = family_name,
-                GivenNames = given_names,
-                DateOfBirth = date_of_birth,
-                AddressUnit = address_unit,
-                AddressNumber = address_number,
-                AddressStreet = address_street,
-                AddressCity = address_city,
-                AddressState = address_state,
-                Email = email,
-                Phone = phone,
-                EmergencyName = emergency_name,
-                EmergencyRelationship = emergency_relationship,
-                EmergencyPhone = emergency_phone,
-                EmergencyEmail = emergency_email,
-                Allergy1 = allergy_1,
-                Allergy2 = allergy_2,
-                Allergy3 = allergy_3,
-                Reaction1 = reaction_1,
-                Reaction2 = reaction_2,
-                Reaction3 = reaction_3,
-                Date = date
-            };
+            // var patient = new Patient
+            // {
+            //     Iso = iso,
+            //     FamilyName = family_name,
+            //     GivenNames = given_names,
+            //     DateOfBirth = date_of_birth,
+            //     AddressUnit = address_unit,
+            //     AddressNumber = address_number,
+            //     AddressStreet = address_street,
+            //     AddressCity = address_city,
+            //     AddressState = address_state,
+            //     Email = email,
+            //     Phone = phone,
+            //     EmergencyName = emergency_name,
+            //     EmergencyRelationship = emergency_relationship,
+            //     EmergencyPhone = emergency_phone,
+            //     EmergencyEmail = emergency_email,
+            //     Allergy1 = allergy_1,
+            //     Allergy2 = allergy_2,
+            //     Allergy3 = allergy_3,
+            //     Reaction1 = reaction_1,
+            //     Reaction2 = reaction_2,
+            //     Reaction3 = reaction_3,
+            //     Date = date
+            // };
 
             string responseMessage = string.IsNullOrEmpty(given_names)
                 ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."

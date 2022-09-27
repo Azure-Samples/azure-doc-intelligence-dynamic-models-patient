@@ -7,6 +7,8 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Azure.Cosmos;
 
 namespace Contoso
 {
@@ -14,22 +16,25 @@ namespace Contoso
     {
         [FunctionName("PatientGetByID")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
-            ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "PatientGetByID/{id}")] HttpRequest req, ILogger log, ExecutionContext context, string id)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            string name = req.Query["name"];
+            var config = new ConfigurationBuilder()
+                .SetBasePath(context.FunctionAppDirectory).AddJsonFile("local.settings.json", optional: true, reloadOnChange: true).AddEnvironmentVariables().Build();
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
+            var endPointUrl = config["CosmosDBEndPoint"];
+            var connectionString = config["ConnectionStrings:COSMOS_DB"];
 
-            string responseMessage = string.IsNullOrEmpty(name)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {name}. This HTTP triggered function executed successfully.";
+            using (var client = new CosmosClient(connectionString))
+            {
+                var database = client.GetDatabase("patientDb");
+                var container = database.GetContainer("patientContainer");
 
-            return new OkObjectResult(responseMessage);
+                var item=await container.ReadItemAsync<Patient>(id, new PartitionKey(id));
+                return new OkObjectResult(item.Resource);
+            }
         }
     }
 }
+ 

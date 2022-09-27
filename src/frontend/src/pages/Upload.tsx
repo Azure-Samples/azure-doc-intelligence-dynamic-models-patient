@@ -6,11 +6,14 @@ import { Button } from "../components/Button";
 import CameraFeed from "../components/CameraFeed";
 import { DragDropZone } from "../components/DragDropZone";
 import FileToUpload from "../components/FileToUpload";
+import { useNavigate } from "react-router-dom";
 
-function Root() {
+function Upload() {
   const [cameraActive, setCameraActive] = useState(false);
   const [mediaStream, videoDimensions] = useUserMedia(cameraActive);
   const [fileToUpload, setFileToUpload] = useState<File | null>(null);
+  const [uploading, setUploading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (fileToUpload) {
@@ -18,8 +21,27 @@ function Root() {
     }
   }, [fileToUpload]);
 
-  const uploadFile = useCallback(() => {
-    console.log(`Uploading file: ${fileToUpload?.name}`);
+  const uploadFile = useCallback(async () => {
+    if (fileToUpload) {
+      setUploading(true);
+
+      const formData = new FormData();
+      formData.append("file", fileToUpload);
+
+      const res = await fetch("/api/new-patient/upload-file", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.ok) {
+        const { patientId } = await res.json();
+        navigate(`/verify/${patientId}`);
+      } else {
+        console.error("Upload failed");
+        const resText = await res.text();
+        console.error(resText);
+      }
+    }
   }, [fileToUpload]);
 
   return (
@@ -48,4 +70,4 @@ function Root() {
   );
 }
 
-export default Root;
+export default Upload;

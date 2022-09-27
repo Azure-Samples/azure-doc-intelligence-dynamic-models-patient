@@ -1,13 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Root from "./pages/Root";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./main.css";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import Upload from "./pages/Upload";
+import Verify from "./pages/Verify";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Upload />,
+  },
+  {
+    path: "/verify/:id",
+    element: <Verify />,
+    loader: async ({ params }) => {
+      return fetch(`/api/new-patient/${params.id}`)
+    }
   },
 ]);
 

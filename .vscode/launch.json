@@ -16,12 +16,26 @@
       "request": "attach",
       "processId": "${command:azureFunctions.pickProcess}",
       "preLaunchTask": "func: host start"
+    },
+    {
+      "name": "launch: swa",
+      "request": "launch",
+      "runtimeExecutable": "swa",
+      "runtimeArgs": [
+        "start",
+        "http://localhost:3000",
+        "--api-location",
+        "http://localhost:7071",
+        "--api-devserver-url",
+        "http://localhost:7071"
+      ],
+      "type": "node"
     }
   ],
   "compounds": [
     {
       "name": "launch: all",
-      "configurations": ["launch: backend", "launch: frontend"]
+      "configurations": ["launch: backend", "launch: frontend", "launch: swa"]
     }
   ]
 }

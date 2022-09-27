@@ -1,28 +1,50 @@
+using System.Collections.Generic;
+using Newtonsoft.Json;
+
 namespace Contoso
 {
-    internal class Patient
+    public class Allergy
     {
-        public dynamic iso { get; set; }
-        public dynamic family_name { get; set; }
-        public dynamic given_names { get; set; }
-        public dynamic date_of_birth { get; set; }
-        public dynamic address_unit { get; set; }
-        public dynamic address_number { get; set; }
-        public dynamic address_street { get; set; }
-        public dynamic address_city { get; set; }
-        public dynamic address_state { get; set; }
-        public dynamic email { get; set; }
-        public dynamic phone { get; set; }
-        public dynamic emergency_name { get; set; }
-        public dynamic emergency_relationship { get; set; }
-        public dynamic emergency_phone { get; set; }
-        public dynamic emergency_email { get; set; }
-        public dynamic allergy_1 { get; set; }
-        public dynamic allergy_2 { get; set; }
-        public dynamic allergy_3 { get; set; }
-        public dynamic reaction_1 { get; set; }
-        public dynamic reaction_2 { get; set; }
-        public dynamic reaction_3 { get; set; }
-        public dynamic date { get; set; }
+        public string? Medication { get; set; }
+        public string? Reaction { get; set; }
+    }
+
+    public enum Gender
+    {
+        Male, Female, Queer, Decline, MTF, FTM
+    }
+
+    public enum Pronouns
+    {
+        He, She, They, Other
+    }
+
+    public class Patient
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; } = "";
+        public string? Iso { get; set; }
+        public string? FamilyName { get; set; }
+        public string? GivenNames { get; set; }
+        public string? DateOfBirth { get; set; }
+        public string? AddressUnit { get; set; }
+        public string? AddressNumber { get; set; }
+        public string? AddressStreet { get; set; }
+        public string? AddressCity { get; set; }
+        public string? AddressState { get; set; }
+        public string? Email { get; set; }
+        public string? Phone { get; set; }
+        public string? EmergencyName { get; set; }
+        public string? EmergencyRelationship { get; set; }
+        public string? EmergencyPhone { get; set; }
+        public string? EmergencyEmail { get; set; }
+        public List<Allergy> Allergies { get; set; } = new();
+        public string? Date { get; set; }
+        public string? AddressPostcode { get; internal set; }
+        public List<Gender> Gender { get; set; } = new();
+        public List<Pronouns> Pronouns { get; set; } = new();
+        public string? PronounsOther { get; set; }
+
+        public static string GetId(string patiendId) => $"{patiendId}:complete";
     }
 }

@@ -4,11 +4,22 @@ export const hidden = style({
   display: "none",
 });
 
-globalStyle("#root", {
+export const main = style({
   maxWidth: "1280px",
   margin: "0 auto",
   padding: "2rem",
   textAlign: "center",
+});
+
+globalStyle("#root", {
+  margin: 0,
+  display: "grid",
+  minWidth: "320px",
+  minHeight: "100vh",
+  gridTemplateRows: "auto 1fr auto",
+  gridTemplateAreas: `"header"
+   "main"
+   "footer"`,
 });
 
 globalStyle(":root", {
@@ -51,10 +62,10 @@ globalStyle("a:hover", {
   },
 });
 
-globalStyle("body", {
-  margin: 0,
-  display: "flex",
-  placeItems: "center",
-  minWidth: "320px",
-  minHeight: "100vh",
+globalStyle("table", {
+  width: "100%",
+});
+
+globalStyle("table tr:nth-child(odd)", {
+  backgroundColor: "#f5f5f5",
 });

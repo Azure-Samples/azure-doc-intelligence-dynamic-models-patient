@@ -1,0 +1,24 @@
+export type Patient = {
+  addressStreet: string;
+  addressPostcode: string;
+  addressState: string;
+  addressCity: string;
+  familyName: string;
+  givenNames: string;
+  dateOfBirth: string;
+  phone: string;
+  email: string;
+  iso: string;
+  gender: string;
+  pronouns: string;
+  emergencyName: string;
+  emergencyPhone: string;
+  emergencyRelationship: string;
+  emergencyEmail: string;
+  allergies: { medication: string; reaction: string }[];
+  date: string;
+  id?: string;
+  preferEmail: boolean;
+  preferPhone: boolean;
+  preferText: boolean;
+};

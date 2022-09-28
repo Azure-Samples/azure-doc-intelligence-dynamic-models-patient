@@ -1,25 +1,9 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Contoso
+namespace Contoso.Healthcare.Api.Models
 {
-    public class Allergy
-    {
-        public string? Medication { get; set; }
-        public string? Reaction { get; set; }
-    }
-
-    public enum Gender
-    {
-        Male, Female, Queer, Decline, MTF, FTM
-    }
-
-    public enum Pronouns
-    {
-        He, She, They, Other
-    }
-
-    public class Patient
+    public record Patient
     {
         [JsonProperty("id")]
         public string Id { get; set; } = "";
@@ -27,8 +11,6 @@ namespace Contoso
         public string? FamilyName { get; set; }
         public string? GivenNames { get; set; }
         public string? DateOfBirth { get; set; }
-        public string? AddressUnit { get; set; }
-        public string? AddressNumber { get; set; }
         public string? AddressStreet { get; set; }
         public string? AddressCity { get; set; }
         public string? AddressState { get; set; }
@@ -41,10 +23,12 @@ namespace Contoso
         public List<Allergy> Allergies { get; set; } = new();
         public string? Date { get; set; }
         public string? AddressPostcode { get; internal set; }
-        public List<Gender> Gender { get; set; } = new();
-        public List<Pronouns> Pronouns { get; set; } = new();
-        public string? PronounsOther { get; set; }
+        public string? Gender { get; set; }
+        public string? Pronouns { get; set; }
         public bool IsApproved { get; set; }
+        public bool PreferEmail { get; set; }
+        public bool PreferText { get; set; }
+        public bool PreferPhone { get; set; }
 
         public static string GetId(string patiendId) => $"{patiendId}:complete";
     }

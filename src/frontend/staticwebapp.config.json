@@ -1,0 +1,36 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+
+  "routes": [
+    {
+      "route": "/surgery/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/surgery/admin",
+      "allowedRoles": ["admin"]
+    },
+    {
+      "route": "/surgery/doctor",
+      "allowedRoles": ["doctor"]
+    },
+    {
+      "route": "/surgery/nurse",
+      "allowedRoles": ["nurse"]
+    },
+    {
+      "route": "/api/new-patient/*",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/api/patient/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/api/surgery/*",
+      "allowedRoles": ["authenticated"]
+    }
+  ]
+}

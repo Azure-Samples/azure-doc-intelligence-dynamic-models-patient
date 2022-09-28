@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Nav from "./components/Nav";
 import "./main.css";
 import { main } from "./main.css";
+import Doctor from "./pages/Doctor";
 import Nurse from "./pages/Nurse";
 import PostLogin from "./pages/PostLogin";
 import SurgeryAdmin from "./pages/SurgeryAdmin";
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/surgery/nurse",
     element: <Nurse />,
+  },
+  {
+    path: "/surgery/doctor",
+    element: <Doctor />,
   },
 ]);
 

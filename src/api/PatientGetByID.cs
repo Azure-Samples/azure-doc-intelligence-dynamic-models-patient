@@ -4,7 +4,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Contoso.Healthcare.Api.Models;
 
-namespace Contoso
+namespace Contoso.Healthcare.Api
 {
     public static class PatientGetByID
     {

@@ -10,7 +10,6 @@ param name string
 param databaseName string = 'patientDb'
 param containerName string = 'patientContainer'
 
-param swaSku string = 'Standard'
 param tags object
 
 // Cosmosdb
@@ -25,30 +24,19 @@ module cosmosdb 'cosmosdb.bicep' = {
   }
 }
 
-// Functions
-module functions 'functions.bicep' = {
-  name: '${name}--functions'
-  params: {
-    location: location
-    appInsightsLocation: location
-    tags: union(tags, {
-        'azd-env-name': 'api'
-      })
-    appName: 'api-${name}'
-  }
-}
-
 // Static Web Apps
 module staticWebApp 'swa.bicep' = {
   name: '${name}--swa'
   params: {
     location: 'westus2'
-    sku: swaSku
     tags: union(tags, {
         'azd-service-name': 'web'
       })
-    name: 'swa-${name}'
+    buildProperties: {
+      skipGithubActionWorkflowGeneration: true
+    }
+    staticSiteName: 'swa-${name}'
   }
 }
 
-output WEB_URI string = staticWebApp.outputs.SWA_URI
+output WEB_URI string = staticWebApp.outputs.uri

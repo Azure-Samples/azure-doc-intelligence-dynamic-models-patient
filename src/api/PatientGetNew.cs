@@ -7,6 +7,8 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Azure.Cosmos;
 
 namespace Contoso
 {
@@ -14,22 +16,35 @@ namespace Contoso
     {
         [FunctionName("PatientGetNew")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
-            ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req, ILogger log, ExecutionContext context)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            string name = req.Query["name"];
+            var config = new ConfigurationBuilder().SetBasePath(context.FunctionAppDirectory).AddJsonFile("local.settings.json", optional: true, reloadOnChange: true).AddEnvironmentVariables().Build();
 
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
+            var endPointUrl = config["CosmosDBEndPoint"];
+            var connectionString = config["ConnectionStrings:COSMOS_DB"];
 
-            string responseMessage = string.IsNullOrEmpty(name)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello, {name}. This HTTP triggered function executed successfully.";
+            using (var client = new CosmosClient(connectionString))
+            {
+                var database = client.GetDatabase("patientDb");
+                var container = database.GetContainer("patientContainer");
 
-            return new OkObjectResult(responseMessage);
+                // get patients that are not approved
+                var sqlQueryText = "SELECT * FROM c WHERE c.IsApproved = false";
+                var queryDefinition = new QueryDefinition(sqlQueryText);
+                var iterator = container.GetItemQueryIterator<Patient>(queryDefinition);
+                var results = new System.Collections.Generic.List<Patient>();
+                while (iterator.HasMoreResults)
+                {
+                    var response = await iterator.ReadNextAsync();
+                    results.AddRange(response.Resource);
+                }
+
+                return new OkObjectResult(results);
+
+            }
+
         }
     }
 }

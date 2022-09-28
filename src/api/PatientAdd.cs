@@ -7,6 +7,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace Contoso
 {
@@ -14,8 +15,10 @@ namespace Contoso
     {
         [FunctionName("PatientAdd")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
-            ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)] HttpRequest req, ILogger log, [CosmosDB(
+                databaseName: "patientDb",
+                collectionName: "patientContainer",
+                ConnectionStringSetting = "COSMOS_DB")]IAsyncCollector<dynamic> patientData)
         {
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
@@ -49,37 +52,40 @@ namespace Contoso
 
             var date = getValue(fields, "date");
 
-            // var patient = new Patient
-            // {
-            //     Iso = iso,
-            //     FamilyName = family_name,
-            //     GivenNames = given_names,
-            //     DateOfBirth = date_of_birth,
-            //     AddressUnit = address_unit,
-            //     AddressNumber = address_number,
-            //     AddressStreet = address_street,
-            //     AddressCity = address_city,
-            //     AddressState = address_state,
-            //     Email = email,
-            //     Phone = phone,
-            //     EmergencyName = emergency_name,
-            //     EmergencyRelationship = emergency_relationship,
-            //     EmergencyPhone = emergency_phone,
-            //     EmergencyEmail = emergency_email,
-            //     Allergy1 = allergy_1,
-            //     Allergy2 = allergy_2,
-            //     Allergy3 = allergy_3,
-            //     Reaction1 = reaction_1,
-            //     Reaction2 = reaction_2,
-            //     Reaction3 = reaction_3,
-            //     Date = date
-            // };
+            var patient = new Patient
+            {
+                Iso = iso,
+                FamilyName = family_name,
+                GivenNames = given_names,
+                DateOfBirth = date_of_birth,
+                AddressUnit = address_unit,
+                AddressNumber = address_number,
+                AddressStreet = address_street,
+                AddressCity = address_city,
+                AddressState = address_state,
+                Email = email,
+                Phone = phone,
+                EmergencyName = emergency_name,
+                EmergencyRelationship = emergency_relationship,
+                EmergencyPhone = emergency_phone,
+                EmergencyEmail = emergency_email,
+                Allergies=new List<Allergy>
+                {
+                    new Allergy{Reaction=reaction_1,Medication=allergy_1},
+                    new Allergy{Reaction=reaction_2,Medication=allergy_2},
+                    new Allergy{Reaction=reaction_3,Medication=allergy_3},
+                },
+                Date = date,
+
+            };
+
+            await patientData.AddAsync(patient);
 
             string responseMessage = string.IsNullOrEmpty(given_names)
                 ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
                 : $"Hello, {given_names}. This HTTP triggered function executed successfully.";
 
-            return new OkObjectResult(responseMessage);
+            return new OkObjectResult(patient);
         }
 
         private static string getValue(dynamic fields, string key)

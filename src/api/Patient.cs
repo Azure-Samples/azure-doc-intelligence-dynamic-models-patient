@@ -44,6 +44,7 @@ namespace Contoso
         public List<Gender> Gender { get; set; } = new();
         public List<Pronouns> Pronouns { get; set; } = new();
         public string? PronounsOther { get; set; }
+        public bool IsApproved { get; set; }
 
         public static string GetId(string patiendId) => $"{patiendId}:complete";
     }

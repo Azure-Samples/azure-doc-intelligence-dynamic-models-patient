@@ -6,7 +6,7 @@ using Contoso.Healthcare.Api.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Contoso
+namespace Contoso.Healthcare.Api
 {
     public static class PatientGetNew
     {

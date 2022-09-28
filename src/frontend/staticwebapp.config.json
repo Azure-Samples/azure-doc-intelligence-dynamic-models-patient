@@ -5,8 +5,20 @@
 
   "routes": [
     {
-      "route": "/admin/*",
+      "route": "/surgery/*",
       "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/surgery/admin",
+      "allowedRoles": ["admin"]
+    },
+    {
+      "route": "/surgery/doctor",
+      "allowedRoles": ["doctor"]
+    },
+    {
+      "route": "/surgery/nurse",
+      "allowedRoles": ["nurse"]
     },
     {
       "route": "/api/new-patient/*",
@@ -14,6 +26,10 @@
     },
     {
       "route": "/api/patient/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/api/surgery/*",
       "allowedRoles": ["authenticated"]
     }
   ]

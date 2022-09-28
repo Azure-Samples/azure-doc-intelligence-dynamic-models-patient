@@ -1,14 +1,15 @@
+import { ClientPrincipalContextProvider } from "@aaronpowell/react-static-web-apps-auth";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Nav from "./components/Nav";
 import "./main.css";
-import Upload from "./pages/Upload";
-import Verify from "./pages/Verify";
-import { ClientPrincipalContextProvider } from "@aaronpowell/react-static-web-apps-auth";
 import { main } from "./main.css";
+import Nurse from "./pages/Nurse";
 import PostLogin from "./pages/PostLogin";
 import SurgeryAdmin from "./pages/SurgeryAdmin";
+import Upload from "./pages/Upload";
+import Verify from "./pages/Verify";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
     path: "/surgery/admin",
     element: <SurgeryAdmin />,
     loader: async () => fetch("/api/surgery/new-patients"),
+  },
+  {
+    path: "/surgery/nurse",
+    element: <Nurse />,
   },
 ]);
 

@@ -7,6 +7,7 @@ import "./main.css";
 import { main } from "./main.css";
 import Doctor from "./pages/Doctor";
 import Nurse from "./pages/Nurse";
+import PatientDetails from "./pages/PatientDetails";
 import PostLogin from "./pages/PostLogin";
 import SurgeryAdmin from "./pages/SurgeryAdmin";
 import Upload from "./pages/Upload";
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
   {
     path: "/surgery/doctor",
     element: <Doctor />,
+  },
+  {
+    path: "/surgery/patient/:id",
+    element: <PatientDetails />,
+    loader: async ({ params }) => fetch(`/api/patient/${params.id}`),
   },
 ]);
 

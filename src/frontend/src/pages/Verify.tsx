@@ -74,15 +74,15 @@ const Verify = () => {
           />
         </div>
         <div className={formGroup}>
-          <label htmlFor="dob" className={formField}>
+          <label htmlFor="dateOfBirth" className={formField}>
             Date of Birth
           </label>
           <input
             type="text"
             className={formControl}
-            id="dob"
-            name="dob"
-            value={patient.dob}
+            id="dateOfBirth"
+            name="dateOfBirth"
+            value={patient.dateOfBirth}
             onChange={updatePatientField}
           />
         </div>

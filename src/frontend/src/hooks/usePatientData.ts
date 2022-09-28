@@ -125,7 +125,7 @@ const parseRawData = (patientRaw: PatientRawData): Patient => {
     addressCity: patientRaw.fields["address_city"].item1,
     familyName: patientRaw.fields["family_name"].item1,
     givenNames: patientRaw.fields["given_names"].item1,
-    dob: patientRaw.fields["date_of_birth"].item1,
+    dateOfBirth: patientRaw.fields["date_of_birth"].item1,
     phone: patientRaw.fields["phone"].item1,
     email: patientRaw.fields["email"].item1,
     iso: patientRaw.fields["iso"].item1,

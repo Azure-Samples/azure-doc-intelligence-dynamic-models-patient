@@ -61,3 +61,11 @@ globalStyle("a:hover", {
     },
   },
 });
+
+globalStyle("table", {
+  width: "100%",
+});
+
+globalStyle("table tr:nth-child(odd)", {
+  backgroundColor: "#f5f5f5",
+});

@@ -10,7 +10,7 @@ export type Patient = {
   addressCity: string;
   familyName: string;
   givenNames: string;
-  dob: string;
+  dateOfBirth: string;
   phone: string;
   email: string;
   iso: string;

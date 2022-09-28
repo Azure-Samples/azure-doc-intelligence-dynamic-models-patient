@@ -32,7 +32,6 @@ const router = createBrowserRouter([
   {
     path: "/surgery/admin",
     element: <SurgeryAdmin />,
-    loader: async () => fetch("/api/surgery/new-patients"),
   },
   {
     path: "/surgery/nurse",

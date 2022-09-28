@@ -7,6 +7,6 @@ export const listing = style({
 
 export const listingItemLabel = style({
   display: "inline-block",
-  width: "150px",
+  width: "300px",
   fontWeight: "bold",
 });

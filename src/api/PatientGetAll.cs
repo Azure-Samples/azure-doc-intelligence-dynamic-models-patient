@@ -17,7 +17,7 @@ namespace Contoso
                 databaseName: "patientDb",
                 collectionName: "patientContainer",
                 ConnectionStringSetting = "COSMOS_DB",
-                SqlQuery ="SELECT * FROM c WHERE c.IsApproved = true")] IEnumerable<Patient> patients) =>
+                SqlQuery = "SELECT * FROM c WHERE c.IsApproved = true")] IEnumerable<Patient> patients) =>
                     new OkObjectResult(patients.Select(p => p with { Id = p.Id.Split(':')[0] }));
     }
 }

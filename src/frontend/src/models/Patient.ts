@@ -1,9 +1,4 @@
-import { Gender } from "./Gender";
-import { Pronouns } from "./Pronouns";
-
 export type Patient = {
-  addressUnit: string;
-  addressNumber: string;
   addressStreet: string;
   addressPostcode: string;
   addressState: string;
@@ -14,9 +9,8 @@ export type Patient = {
   phone: string;
   email: string;
   iso: string;
-  gender: Gender[];
-  pronouns: Pronouns[];
-  pronounsOther?: string;
+  gender: string;
+  pronouns: string;
   emergencyName: string;
   emergencyPhone: string;
   emergencyRelationship: string;
@@ -24,4 +18,7 @@ export type Patient = {
   allergies: { medication: string; reaction: string }[];
   date: string;
   id?: string;
+  preferEmail: boolean;
+  preferPhone: boolean;
+  preferText: boolean;
 };

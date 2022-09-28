@@ -1,7 +1,5 @@
 import { useParams } from "react-router-dom";
 import { usePatientData } from "../hooks/usePatientData";
-import { Pronouns } from "../models/Pronouns";
-import { Gender } from "../models/Gender";
 import {
   fieldContainer,
   formGroup,
@@ -90,32 +88,6 @@ const Verify = () => {
       <fieldset className={fieldContainer}>
         <legend>Contact details</legend>
         <div className={formGroup}>
-          <label htmlFor="address-unit" className={formField}>
-            Unit
-          </label>
-          <input
-            type="text"
-            className={formControl}
-            id="address-unit"
-            name="addressUnit"
-            value={patient.addressUnit}
-            onChange={updatePatientField}
-          />
-        </div>
-        <div className={formGroup}>
-          <label htmlFor="address-street-number" className={formField}>
-            Street Number
-          </label>
-          <input
-            type="text"
-            className={formControl}
-            id="address-street-number"
-            name="addressNumber"
-            value={patient.addressNumber}
-            onChange={updatePatientField}
-          />
-        </div>
-        <div className={formGroup}>
           <label htmlFor="address-street" className={formField}>
             Street
           </label>
@@ -193,134 +165,62 @@ const Verify = () => {
             onChange={updatePatientField}
           />
         </div>
+        <div className={formGroup}>
+          <p>Preferred contact method:</p>
+          <label htmlFor="preferEmail" className={formField}>
+            Email
+            <input
+              type="checkbox"
+              id="preferEmail"
+              name="contactMethod"
+              value="Email"
+              checked={patient.preferEmail}
+              onChange={updatePatientField}
+            />
+          </label>
+          <label htmlFor="preferPhone" className={formField}>
+            Phone
+            <input
+              type="checkbox"
+              id="preferPhone"
+              name="contactMethod"
+              value="Phone"
+              checked={patient.preferPhone}
+              onChange={updatePatientField}
+            />
+          </label>
+          <label htmlFor="preferText" className={formField}>
+            Text
+            <input
+              type="checkbox"
+              id="preferText"
+              name="contactMethod"
+              value="Text"
+              checked={patient.preferText}
+              onChange={updatePatientField}
+            />
+          </label>
+        </div>
       </fieldset>
       <fieldset className={genderGroup}>
-        <legend>
-          What is your current gender identity? (Check ALL that apply)
-        </legend>
-        <label htmlFor="gender-male">
-          Male{" "}
-          <input
-            type="checkbox"
-            id="gender-male"
-            name="gender"
-            checked={patient.gender.includes(Gender.male)}
-            onChange={updatePatientField}
-            value={Gender.male}
-          />{" "}
-        </label>
-        <label htmlFor="gender-female">
-          Female{" "}
-          <input
-            type="checkbox"
-            id="gender-female"
-            name="gender"
-            checked={patient.gender.includes(Gender.female)}
-            onChange={updatePatientField}
-            value={Gender.female}
-          />{" "}
-        </label>
-        <label htmlFor="gender-ftm">
-          Transgender Male/Transman/FTM{" "}
-          <input
-            type="checkbox"
-            id="gender-ftm"
-            name="gender"
-            checked={patient.gender.includes(Gender.ftm)}
-            onChange={updatePatientField}
-            value={Gender.ftm}
-          />{" "}
-        </label>
-        <label htmlFor="gender-queer">
-          Gender Queer{" "}
-          <input
-            type="checkbox"
-            id="gender-queer"
-            name="gender"
-            checked={patient.gender.includes(Gender.queer)}
-            onChange={updatePatientField}
-            value={Gender.queer}
-          />{" "}
-        </label>
-        <label htmlFor="gender-decline">
-          Decline{" "}
-          <input
-            type="checkbox"
-            id="gender-decline"
-            name="gender"
-            checked={patient.gender.includes(Gender.decline)}
-            onChange={updatePatientField}
-            value={Gender.decline}
-          />{" "}
-        </label>
-        <label htmlFor="gender-mtf">
-          Transgender Female/Transwoman/MTF{" "}
-          <input
-            type="checkbox"
-            id="gender-mtf"
-            name="gender"
-            checked={patient.gender.includes(Gender.mtf)}
-            onChange={updatePatientField}
-            value={Gender.mtf}
-          />{" "}
-        </label>
+        <legend>My gender identity is:</legend>
+        <input
+          type="text"
+          id="gender"
+          name="gender"
+          onChange={updatePatientField}
+          value={patient.gender}
+        />
       </fieldset>
       <fieldset className={pronounsGroup}>
-        <legend>
-          What pronouns do you prefer that we use when talking about you? (Check
-          ALL that apply)
-        </legend>
-        <label htmlFor="pronouns-he">
-          He/Him/His{" "}
-          <input
-            type="checkbox"
-            id="pronouns-he"
-            name="pronouns"
-            checked={patient.pronouns.includes(Pronouns.he)}
-            onChange={updatePatientField}
-            value={Pronouns.he}
-          />{" "}
-        </label>
-        <label htmlFor="pronouns-she">
-          She/Her/Hers{" "}
-          <input
-            type="checkbox"
-            id="pronouns-she"
-            name="pronouns"
-            checked={patient.pronouns.includes(Pronouns.she)}
-            onChange={updatePatientField}
-            value={Pronouns.she}
-          />{" "}
-        </label>
-        <label htmlFor="pronouns-they">
-          They/Them/Theirs{" "}
-          <input
-            type="checkbox"
-            id="pronouns-they"
-            name="pronouns"
-            checked={patient.pronouns.includes(Pronouns.they)}
-            onChange={updatePatientField}
-            value={Pronouns.they}
-          />{" "}
-        </label>
-        <label htmlFor="pronouns-other">
-          Other{" "}
-          <input
-            type="checkbox"
-            id="pronouns-other"
-            name="pronouns"
-            checked={patient.pronouns.includes(Pronouns.other)}
-            onChange={updatePatientField}
-            value={Pronouns.other}
-          />
-          <input
-            type="text"
-            id="pronouns-other-text"
-            name="pronounsOther"
-            value={patient.pronounsOther}
-            onChange={updatePatientField}
-          />{" "}
-        </label>
+        <legend>My pronouns are:</legend>
+        <input
+          type="text"
+          id="pronouns"
+          name="pronouns"
+          onChange={updatePatientField}
+          value={patient.pronouns}
+        />
       </fieldset>
       <fieldset className={allergiesGroup}>
         <legend>Allergies and medicines</legend>

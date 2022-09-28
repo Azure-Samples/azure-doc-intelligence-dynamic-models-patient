@@ -32,9 +32,7 @@ const PatientDetails = () => {
           </li>
           <li>
             <span className={listingItemLabel}>Address:</span>{" "}
-            {patient.addressUnit ? `${patient.addressUnit}/` : ""}
-            {patient.addressNumber} {patient.addressStreet}{" "}
-            {patient.addressCity} {patient.addressState}{" "}
+            {patient.addressStreet} {patient.addressCity} {patient.addressState}{" "}
             {patient.addressPostcode}
           </li>
           <li>
@@ -59,6 +57,12 @@ const PatientDetails = () => {
                 ))}
               </tbody>
             </table>
+          </li>
+          <li>
+            <span className={listingItemLabel}>Preferred contact options:</span>{" "}
+            {patient.preferEmail ? "Email" : ""}{" "}
+            {patient.preferPhone ? "Phone" : ""}{" "}
+            {patient.preferText ? "Text" : ""}
           </li>
         </ul>
       </div>

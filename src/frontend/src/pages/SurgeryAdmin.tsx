@@ -1,11 +1,16 @@
 import { useLoaderData } from "react-router-dom";
 import { Patient } from "../models/Patient";
 import { PatientList } from "../components/PatientList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SurgeryAdmin = () => {
-  const originalPatients = useLoaderData() as Patient[];
-  const [patients, setPatients] = useState<Patient[]>(originalPatients);
+  const [patients, setPatients] = useState<Patient[]>([]);
+
+  useEffect(() => {
+    fetch("/api/surgery/new-patients")
+      .then((response) => response.json())
+      .then((data) => setPatients(data));
+  }, []);
 
   const refresh = async () => {
     const res = await fetch("/api/surgery/new-patients");

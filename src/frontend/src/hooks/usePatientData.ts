@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import {
-  PatientRawData,
-  Patient,
-  Pronouns,
-  Gender,
-} from "../pages/Verify.types";
+import { Patient } from "../models/Patient";
+import { PatientRawData } from "../models/PatientRawData";
+import { Pronouns } from "../models/Pronouns";
+import { Gender } from "../models/Gender";
 
 const selected = ":selected:";
 

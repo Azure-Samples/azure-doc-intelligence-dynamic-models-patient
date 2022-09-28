@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { usePatientData } from "../hooks/usePatientData";
-import { Gender, Pronouns } from "./Verify.types";
+import { Pronouns } from "../models/Pronouns";
+import { Gender } from "../models/Gender";
 import {
   fieldContainer,
   formGroup,

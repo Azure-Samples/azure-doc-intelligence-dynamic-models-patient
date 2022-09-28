@@ -4,6 +4,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Contoso.Healthcare.Api.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Contoso
 {
@@ -16,6 +17,7 @@ namespace Contoso
                 databaseName: "patientDb",
                 collectionName: "patientContainer",
                 ConnectionStringSetting = "COSMOS_DB",
-                SqlQuery ="SELECT * FROM c WHERE c.IsApproved = false")] IEnumerable<Patient> patients) => new OkObjectResult(patients);
+                SqlQuery ="SELECT * FROM c WHERE c.IsApproved = false")] IEnumerable<Patient> patients) =>
+                    new OkObjectResult(patients.Select(p => p with { Id = p.Id.Split(':')[0] }));
     }
 }

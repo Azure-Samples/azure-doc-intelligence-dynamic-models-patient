@@ -3,23 +3,7 @@ using Newtonsoft.Json;
 
 namespace Contoso.Healthcare.Api.Models
 {
-    public class Allergy
-    {
-        public string? Medication { get; set; }
-        public string? Reaction { get; set; }
-    }
-
-    public enum Gender
-    {
-        Male = 0, Female = 1, Queer = 2, Decline = 3, MTF = 4, FTM = 5
-    }
-
-    public enum Pronouns
-    {
-        He = 0, She = 1, They = 2, Other = 3
-    }
-
-    public class Patient
+    public record Patient
     {
         [JsonProperty("id")]
         public string Id { get; set; } = "";

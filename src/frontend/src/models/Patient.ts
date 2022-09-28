@@ -1,18 +1,5 @@
-export enum Gender {
-  male = 0,
-  female = 1,
-  queer = 2,
-  decline = 3,
-  mtf = 4,
-  ftm = 5,
-}
-
-export enum Pronouns {
-  he = 0,
-  she = 1,
-  they = 2,
-  other = 3,
-}
+import { Gender } from "./Gender";
+import { Pronouns } from "./Pronouns";
 
 export type Patient = {
   addressUnit: string;
@@ -36,14 +23,5 @@ export type Patient = {
   emergencyEmail: string;
   allergies: { medication: string; reaction: string }[];
   date: string;
-};
-
-export type PatientRawData = {
-  id: String;
-  fields: {
-    [key: string]: {
-      item1: string;
-      item2: number;
-    };
-  };
+  id?: string;
 };

@@ -11,12 +11,12 @@ namespace Contoso.Healthcare.Api.Models
 
     public enum Gender
     {
-        Male, Female, Queer, Decline, MTF, FTM
+        Male = 0, Female = 1, Queer = 2, Decline = 3, MTF = 4, FTM = 5
     }
 
     public enum Pronouns
     {
-        He, She, They, Other
+        He = 0, She = 1, They = 2, Other = 3
     }
 
     public class Patient

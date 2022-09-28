@@ -1,17 +1,17 @@
 export enum Gender {
-  male = "Male",
-  female = "Female",
-  mtf = "MTF",
-  ftm = "FTM",
-  queer = "Queer",
-  decline = "Decline",
+  male = 0,
+  female = 1,
+  queer = 2,
+  decline = 3,
+  mtf = 4,
+  ftm = 5,
 }
 
 export enum Pronouns {
-  she = "She",
-  he = "He",
-  they = "They",
-  other = "Other",
+  he = 0,
+  she = 1,
+  they = 2,
+  other = 3,
 }
 
 export type Patient = {

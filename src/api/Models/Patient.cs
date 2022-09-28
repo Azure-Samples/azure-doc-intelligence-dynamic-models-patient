@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Contoso
+namespace Contoso.Healthcare.Api.Models
 {
     public class Allergy
     {

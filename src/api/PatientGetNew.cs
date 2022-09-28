@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Azure.Cosmos;
+using Contoso.Healthcare.Api.Models;
 
 namespace Contoso
 {
@@ -16,7 +17,7 @@ namespace Contoso
     {
         [FunctionName("PatientGetNew")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req, ILogger log, ExecutionContext context)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "patient/new")] HttpRequest req, ILogger log, ExecutionContext context)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 

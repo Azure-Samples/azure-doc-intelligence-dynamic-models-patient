@@ -1,4 +1,3 @@
-using System.IO;
 using System.Threading.Tasks;
 using Contoso.Healthcare.Api.Models;
 using Microsoft.AspNetCore.Http;

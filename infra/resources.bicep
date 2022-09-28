@@ -10,7 +10,7 @@ param name string
 param databaseName string = 'patientDb'
 param containerName string = 'patientContainer'
 
-param swaSku string = 'Standard'
+param swaSku string = 'Free'
 param tags object
 
 // Cosmosdb
@@ -22,19 +22,6 @@ module cosmosdb 'cosmosdb.bicep' = {
     databaseName: databaseName
     containerName: containerName
     accountName: 'cosmos-${name}'
-  }
-}
-
-// Functions
-module functions 'functions.bicep' = {
-  name: '${name}--functions'
-  params: {
-    location: location
-    appInsightsLocation: location
-    tags: union(tags, {
-        'azd-env-name': 'api'
-      })
-    appName: 'api-${name}'
   }
 }
 

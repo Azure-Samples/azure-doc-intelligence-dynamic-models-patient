@@ -18,15 +18,7 @@ public static class VerifyData
                 collectionName: "patientContainer",
                 ConnectionStringSetting = "COSMOS_DB",
                 Id = "{patientId}:raw",
-                PartitionKey = "{patientId}:raw")]FormRecognizerResponse patient)
-    {
-        if (patient == null)
-        {
-            return new NotFoundResult();
-        }
-
-        return new OkObjectResult(patient);
-    }
+                PartitionKey = "{patientId}:raw")]FormRecognizerResponse patient) => patient == null ? new NotFoundResult() : new OkObjectResult(patient);
 
     [FunctionName($"{nameof(VerifyData)}-{nameof(SavePatientData)}")]
     public static async Task<IActionResult> SavePatientData(

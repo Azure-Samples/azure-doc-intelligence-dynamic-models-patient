@@ -7,6 +7,8 @@ import Upload from "./pages/Upload";
 import Verify from "./pages/Verify";
 import { ClientPrincipalContextProvider } from "@aaronpowell/react-static-web-apps-auth";
 import { main } from "./main.css";
+import PostLogin from "./pages/PostLogin";
+import SurgeryAdmin from "./pages/SurgeryAdmin";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
     loader: async ({ params }) => {
       return fetch(`/api/new-patient/${params.id}`);
     },
+  },
+  {
+    path: "/post-login",
+    element: <PostLogin />,
+  },
+  {
+    path: "/surgery/admin",
+    element: <SurgeryAdmin />,
   },
 ]);
 

@@ -4,10 +4,7 @@ import {
   useClientPrincipal,
 } from "@aaronpowell/react-static-web-apps-auth";
 import { loginProviders, nav } from "./Nav.css";
-
-const roleMap: { [key: string]: string } = {
-  admin: "Surgery Admin",
-};
+import { roleMap } from "../roleMap";
 
 const Nav = () => {
   const { loaded, clientPrincipal } = useClientPrincipal();
@@ -37,7 +34,7 @@ const Nav = () => {
         clientPrincipal === null ? (
           <div className={loginProviders}>
             <h2>Social login</h2>
-            <StaticWebAuthLogins />
+            <StaticWebAuthLogins postLoginRedirect="/post-login" />
           </div>
         ) : (
           <div>

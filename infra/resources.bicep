@@ -10,7 +10,6 @@ param name string
 param databaseName string = 'patientDb'
 param containerName string = 'patientContainer'
 
-param swaSku string = 'Free'
 param tags object
 
 // Cosmosdb
@@ -30,12 +29,14 @@ module staticWebApp 'swa.bicep' = {
   name: '${name}--swa'
   params: {
     location: 'westus2'
-    sku: swaSku
     tags: union(tags, {
         'azd-service-name': 'web'
       })
-    name: 'swa-${name}'
+    buildProperties: {
+      skipGithubActionWorkflowGeneration: true
+    }
+    staticSiteName: 'swa-${name}'
   }
 }
 
-output WEB_URI string = staticWebApp.outputs.SWA_URI
+output WEB_URI string = staticWebApp.outputs.uri

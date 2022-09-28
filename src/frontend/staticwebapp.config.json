@@ -1,0 +1,20 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+
+  "routes": [
+    {
+      "route": "/admin/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/api/new-patient/*",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/api/patient/*",
+      "allowedRoles": ["authenticated"]
+    }
+  ]
+}

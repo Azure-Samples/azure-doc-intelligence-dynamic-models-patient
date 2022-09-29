@@ -24,6 +24,16 @@ module cosmosdb 'cosmosdb.bicep' = {
   }
 }
 
+// Storage
+module storage 'storage.bicep' = {
+  name: '${name}--storage'
+  params: {
+    location: location
+    storageAccountName: 'storage${name}'
+    tags: tags
+  }
+}
+
 // Static Web Apps
 module staticWebApp 'swa.bicep' = {
   name: '${name}--swa'
@@ -36,6 +46,15 @@ module staticWebApp 'swa.bicep' = {
       skipGithubActionWorkflowGeneration: true
     }
     staticSiteName: 'swa-${name}'
+    appSettings: {
+      NEW_PATIENT_STORAGE: storage.outputs.CONNECTION_STRING
+      AzureWebJobsStorage: storage.outputs.CONNECTION_STRING
+      COSMOS_DB: cosmosdb.outputs.CONNECTION_STRING
+      FORM_RECOGNIZER_API_KEY: ''
+      FORM_RECOGNIZER_ENDPOINT: ''
+      FORM_RECOGNIZER_MODEL_ID: ''
+      FUNCTIONS_WORKER_RUNTIME: 'dotnet'
+    }
   }
 }
 

@@ -2,7 +2,9 @@ param storageAccountName string
 param location string
 param tags object
 
-resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
+param corsRules array = []
+
+resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   name: storageAccountName
   location: location
   sku: {
@@ -10,16 +12,49 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
   }
   kind: 'Storage'
   tags: tags
+  properties: {
+    dnsEndpointType: 'Standard'
+    defaultToOAuthAuthentication: false
+    publicNetworkAccess: 'Enabled'
+    allowCrossTenantReplication: true
+    minimumTlsVersion: 'TLS1_2'
+    allowBlobPublicAccess: true
+    allowSharedKeyAccess: true
+    networkAcls: {
+      bypass: 'AzureServices'
+      virtualNetworkRules: []
+      ipRules: []
+      defaultAction: 'Allow'
+    }
+    supportsHttpsTrafficOnly: true
+    encryption: {
+      requireInfrastructureEncryption: false
+      services: {
+        blob: {
+          keyType: 'Account'
+          enabled: true
+        }
+      }
+      keySource: 'Microsoft.Storage'
+    }
+  }
 }
 
-resource container 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-08-01' = {
-  name: '${storageAccountName}/default/newpatientforms'
+resource storageAccountDefaults 'Microsoft.Storage/storageAccounts/blobServices@2022-05-01' = {
+  parent: storageAccount
+  name: 'default'
   properties: {
-    publicAccess: 'None'
+    cors: {
+      corsRules: corsRules
+    }
+    deleteRetentionPolicy: {
+      allowPermanentDelete: false
+      enabled: true
+      days: 7
+    }
+    isVersioningEnabled: false
   }
-  dependsOn: [
-    storageAccount
-  ]
 }
 
 output CONNECTION_STRING string = 'DefaultEndpointsProtocol=https;AccountName=${storageAccountName};EndpointSuffix=${environment().suffixes.storage};AccountKey=${storageAccount.listKeys().keys[0].value}'
+output NAME string = storageAccount.name

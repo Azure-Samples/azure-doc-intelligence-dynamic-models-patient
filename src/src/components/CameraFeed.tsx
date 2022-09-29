@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
 import { Button } from "./Button";
-import Icon from "@mdi/react";
+import { Icon } from "@mdi/react";
 import { mdiCameraIris } from "@mdi/js";
 import { hidden } from "../main.css";
 

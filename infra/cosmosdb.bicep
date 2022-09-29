@@ -95,5 +95,4 @@ resource cosmos 'Microsoft.DocumentDB/databaseAccounts@2021-01-15' = {
   }
 }
 
-output documentEndpoint string = cosmos.properties.documentEndpoint
-output primaryMasterKey string = listKeys(cosmos.id, cosmos.apiVersion).primaryMasterKey
+output CONNECTION_STRING string = 'AccountEndpoint=${cosmos.properties.documentEndpoint};AccountKey=${listKeys(cosmos.id, cosmos.apiVersion).primaryMasterKey};'

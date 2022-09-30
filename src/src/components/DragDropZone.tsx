@@ -1,6 +1,6 @@
 import { Button } from "./Button";
 import { dragZone, dragZoneHighlight, fileUpload } from "./DragDropZone.css";
-import Icon from "@mdi/react";
+import { Icon } from "@mdi/react";
 import { mdiCamera, mdiCameraOff } from "@mdi/js";
 import { useCallback, useEffect, useRef } from "react";
 

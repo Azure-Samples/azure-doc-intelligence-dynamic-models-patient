@@ -31,6 +31,62 @@ module storage 'storage.bicep' = {
     location: location
     storageAccountName: 'storage${name}'
     tags: tags
+    corsRules: [ {
+        allowedOrigins: [
+          'https://formrecognizer.appliedai.azure.com'
+        ]
+        allowedMethods: [
+          'DELETE'
+          'GET'
+          'HEAD'
+          'MERGE'
+          'OPTIONS'
+          'PATCH'
+          'POST'
+          'PUT'
+        ]
+        maxAgeInSeconds: 120
+        exposedHeaders: [
+          '*'
+        ]
+        allowedHeaders: [
+          '*'
+        ]
+      } ]
+  }
+}
+
+// Storage Containers
+module uploadContainer 'storage-container.bicep' = {
+  name: '${name}--upload-container'
+  params: {
+    storageAccountName: storage.outputs.NAME
+    containerName: 'newpatientforms'
+  }
+}
+module formRecognizerContainer 'storage-container.bicep' = {
+  name: '${name}--form-recognizer-container'
+  params: {
+    storageAccountName: storage.outputs.NAME
+    containerName: 'trainingdata'
+    containerProperties: {
+      immutableStorageWithVersioning: {
+        enabled: false
+      }
+      defaultEncryptionScope: '$account-encryption-key'
+      denyEncryptionScopeOverride: false
+      publicAccess: 'None'
+    }
+  }
+}
+
+// Form Recognizer
+module formRecognizer 'form-recognizer.bicep' = {
+  name: '${name}--form-recognizer'
+  params: {
+    location: location
+    name: 'form-recognizer-${name}'
+    tags: tags
   }
 }
 
@@ -38,6 +94,10 @@ module storage 'storage.bicep' = {
 module staticWebApp 'swa.bicep' = {
   name: '${name}--swa'
   params: {
+    // sku: {
+    //   name: 'Standard'
+    //   tier: 'Standard'
+    // }
     location: 'westus2'
     tags: union(tags, {
         'azd-service-name': 'web'
@@ -46,15 +106,6 @@ module staticWebApp 'swa.bicep' = {
       skipGithubActionWorkflowGeneration: true
     }
     staticSiteName: 'swa-${name}'
-    appSettings: {
-      NEW_PATIENT_STORAGE: storage.outputs.CONNECTION_STRING
-      AzureWebJobsStorage: storage.outputs.CONNECTION_STRING
-      COSMOS_DB: cosmosdb.outputs.CONNECTION_STRING
-      FORM_RECOGNIZER_API_KEY: ''
-      FORM_RECOGNIZER_ENDPOINT: ''
-      FORM_RECOGNIZER_MODEL_ID: ''
-      FUNCTIONS_WORKER_RUNTIME: 'dotnet'
-    }
   }
 }
 

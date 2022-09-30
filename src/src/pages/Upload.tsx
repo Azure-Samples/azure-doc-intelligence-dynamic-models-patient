@@ -1,6 +1,6 @@
 import useUserMedia from "../hooks/useUserMedia";
 import { useCallback, useEffect, useState } from "react";
-import Icon from "@mdi/react";
+import { Icon } from "@mdi/react";
 import { mdiUpload } from "@mdi/js";
 import { Button } from "../components/Button";
 import CameraFeed from "../components/CameraFeed";

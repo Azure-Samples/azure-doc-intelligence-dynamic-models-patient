@@ -32,3 +32,7 @@ module resources './resources.bicep' = {
 
 output APP_WEB_BASE_URL string = resources.outputs.WEB_URI
 output AZURE_LOCATION string = location
+output COSMOS_CONNECTION_STRING string = resources.outputs.COSMOS_CONNECTION_STRING
+output STORAGE_CONNECTION_STRING string = resources.outputs.STORAGE_ACCOUNT_CONNECTION
+output FORM_RECOGNIZER_ENDPOINT string = resources.outputs.FORM_RECOGNIZER_ENDPOINT
+output FORM_RECOGNIZER_KEY string = resources.outputs.FORM_RECOGNIZER_KEY

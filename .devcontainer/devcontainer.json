@@ -27,7 +27,7 @@
   },
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": ". ${NVM_DIR}/nvm.sh && cd src/frontend && nvm install && npm install && cd ../api && dotnet restore",
+  "postCreateCommand": ". ${NVM_DIR}/nvm.sh && cd src && nvm install && npm install && cd ../api && dotnet restore && npm install -g @azure/static-web-apps-cli",
 
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "vscode"

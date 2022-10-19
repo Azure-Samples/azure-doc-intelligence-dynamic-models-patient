@@ -106,7 +106,18 @@ module staticWebApp 'swa.bicep' = {
       skipGithubActionWorkflowGeneration: true
     }
     staticSiteName: 'swa-${name}'
+    appSettings: {
+      NEW_PATIENT_STORAGE: storage.outputs.CONNECTION_STRING
+      FORM_RECOGNIZER_API_KEY: formRecognizer.outputs.KEY
+      FORM_RECOGNIZER_ENDPOINT: formRecognizer.outputs.ENDPOINT
+      FORM_RECOGNIZER_MODEL_ID: 'new-patient-registration'
+      COSMOS_DB: cosmosdb.outputs.CONNECTION_STRING
+    }
   }
 }
 
 output WEB_URI string = staticWebApp.outputs.uri
+output COSMOS_CONNECTION_STRING string = cosmosdb.outputs.CONNECTION_STRING
+output FORM_RECOGNIZER_ENDPOINT string = formRecognizer.outputs.ENDPOINT
+output FORM_RECOGNIZER_KEY string = formRecognizer.outputs.KEY
+output STORAGE_ACCOUNT_CONNECTION string = storage.outputs.CONNECTION_STRING

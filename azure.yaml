@@ -4,7 +4,7 @@ name: new-patient-e2e
 services:
   web:
     language: ts
-    project: "./src/frontend"
+    project: "./src/web"
     host: staticwebapp
     dist: "dist"
   api:

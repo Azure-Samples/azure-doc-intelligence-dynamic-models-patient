@@ -4,6 +4,10 @@ name: new-patient-e2e
 services:
   web:
     language: ts
-    project: "./src"
+    project: "./app/frontend"
     host: staticwebapp
     dist: "dist"
+  api:
+    language: csharp
+    project: "./app/api"
+    host: function

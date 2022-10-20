@@ -13,7 +13,7 @@ param containerName string = 'patientContainer'
 param tags object
 
 // Cosmosdb
-module cosmosdb 'cosmosdb.bicep' = {
+module cosmosdb './core/cosmosdb.bicep' = {
   name: '${name}--cosmosdb'
   params: {
     location: location
@@ -25,7 +25,7 @@ module cosmosdb 'cosmosdb.bicep' = {
 }
 
 // Storage
-module storage 'storage.bicep' = {
+module storage './core/storage.bicep' = {
   name: '${name}--storage'
   params: {
     location: location
@@ -57,14 +57,14 @@ module storage 'storage.bicep' = {
 }
 
 // Storage Containers
-module uploadContainer 'storage-container.bicep' = {
+module uploadContainer './core/storage-container.bicep' = {
   name: '${name}--upload-container'
   params: {
     storageAccountName: storage.outputs.NAME
     containerName: 'newpatientforms'
   }
 }
-module formRecognizerContainer 'storage-container.bicep' = {
+module formRecognizerContainer './core/storage-container.bicep' = {
   name: '${name}--form-recognizer-container'
   params: {
     storageAccountName: storage.outputs.NAME
@@ -81,7 +81,7 @@ module formRecognizerContainer 'storage-container.bicep' = {
 }
 
 // Form Recognizer
-module formRecognizer 'form-recognizer.bicep' = {
+module formRecognizer './core/form-recognizer.bicep' = {
   name: '${name}--form-recognizer'
   params: {
     location: location
@@ -90,14 +90,56 @@ module formRecognizer 'form-recognizer.bicep' = {
   }
 }
 
+module functions 'app/functions.bicep' = {
+  name: '${name}--functions'
+  params: {
+    location: location
+    appInsightsLocation: location
+    tags: union(tags, {
+        'azd-env-name': 'api'
+      })
+    appName: 'api-${name}'
+    appSettings: [
+      {
+        name: 'AzureWebJobsStorage'
+        value: storage.outputs.CONNECTION_STRING
+      }
+      {
+        name: 'WEBSITE_CONTENTAZUREFILECONNECTIONSTRING'
+        value: storage.outputs.CONNECTION_STRING
+      }
+      {
+        name: 'NEW_PATIENT_STORAGE'
+        value: storage.outputs.CONNECTION_STRING
+      }
+      {
+        name: 'FORM_RECOGNIZER_API_KEY'
+        value: formRecognizer.outputs.KEY
+      }
+      {
+        name: 'FORM_RECOGNIZER_ENDPOINT'
+        value: formRecognizer.outputs.ENDPOINT
+      }
+      {
+        name: 'FORM_RECOGNIZER_MODEL_ID'
+        value: 'new-patient-registration'
+      }
+      {
+        name: 'COSMOS_DB'
+        value: cosmosdb.outputs.CONNECTION_STRING
+      }
+    ]
+  }
+}
+
 // Static Web Apps
-module staticWebApp 'swa.bicep' = {
+module staticWebApp 'app/swa.bicep' = {
   name: '${name}--swa'
   params: {
-    // sku: {
-    //   name: 'Standard'
-    //   tier: 'Standard'
-    // }
+    sku: {
+      name: 'Standard'
+      tier: 'Standard'
+    }
     location: 'westus2'
     tags: union(tags, {
         'azd-service-name': 'web'
@@ -106,13 +148,9 @@ module staticWebApp 'swa.bicep' = {
       skipGithubActionWorkflowGeneration: true
     }
     staticSiteName: 'swa-${name}'
-    appSettings: {
-      NEW_PATIENT_STORAGE: storage.outputs.CONNECTION_STRING
-      FORM_RECOGNIZER_API_KEY: formRecognizer.outputs.KEY
-      FORM_RECOGNIZER_ENDPOINT: formRecognizer.outputs.ENDPOINT
-      FORM_RECOGNIZER_MODEL_ID: 'new-patient-registration'
-      COSMOS_DB: cosmosdb.outputs.CONNECTION_STRING
-    }
+    functionAppName: functions.outputs.NAME
+    functionAppId: functions.outputs.ID
+    functinonAppLocation: location
   }
 }
 

@@ -33,6 +33,14 @@ param stagingEnvironmentPolicy string = 'Enabled'
 @description('Template Options for the static site. https://docs.microsoft.com/en-us/azure/templates/microsoft.web/staticsites?tabs=bicep#staticsitetemplateoptions')
 param templateProperties object = {}
 
+@description('The name of the Functions App for the backend')
+param functionAppName string
+
+@description('The ID of the Functions App for the backend')
+param functionAppId string
+
+param functinonAppLocation string
+
 // https://docs.microsoft.com/en-us/azure/templates/microsoft.web/staticsites?tabs=bicep
 resource staticSite 'Microsoft.Web/staticSites@2022-03-01' = {
   name: staticSiteName
@@ -53,6 +61,19 @@ resource staticSiteAppsettings 'Microsoft.Web/staticSites/config@2022-03-01' = {
   name: 'appsettings'
   kind: 'config'
   properties: appSettings
+}
+
+resource functionsBackend 'Microsoft.Web/sites@2021-03-01' existing = {
+  name: functionAppName
+}
+
+resource symbolicname 'Microsoft.Web/staticSites/linkedBackends@2022-03-01' = {
+  name: 'backend1'
+  parent: staticSite
+  properties: {
+    backendResourceId: functionsBackend.id
+    region: functinonAppLocation
+  }
 }
 
 output defaultHostName string = staticSite.properties.defaultHostname

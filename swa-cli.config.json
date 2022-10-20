@@ -2,20 +2,16 @@
   "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
   "configurations": {
     "frontend": {
-      "apiLocation": "src/api",
-      "apiBuildCommand": "dotnet publish -c Release",
-      "appLocation": "src",
+      "appLocation": "src/web",
       "outputLocation": "dist",
       "appBuildCommand": "npm run build",
       "run": "npm start",
       "appDevserverUrl": "http://localhost:3000",
       "deploy": {
-        "apiLocation": "src/api/bin/Release/net6.0/publish",
-        "apiBuildCommand": "dotnet publish -c Release",
         "appLocation": ".",
         "appBuildCommand": "npm run build",
         "run": "npm start",
-        "outputLocation": "src/dist"
+        "outputLocation": "src/web/dist"
       }
     }
   }

@@ -8,7 +8,7 @@
       "runtimeExecutable": "npm",
       "skipFiles": ["<node_internals>/**"],
       "type": "node",
-      "cwd": "${workspaceFolder}/app/frontend"
+      "cwd": "${workspaceFolder}/src/web"
     },
     {
       "name": "launch: backend",

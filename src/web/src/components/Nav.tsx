@@ -6,7 +6,7 @@ import {
 import { loginMenu, loginMenuButton, loginMenuLabel, nav } from "./Nav.css";
 import { roleMap } from "../roleMap";
 import { useState } from "react";
-import Icon from "@mdi/react";
+import { Icon } from "@mdi/react";
 import { Link } from "react-router-dom";
 import { mdiHome } from "@mdi/js";
 

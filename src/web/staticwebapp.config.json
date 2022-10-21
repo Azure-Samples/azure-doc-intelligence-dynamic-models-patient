@@ -3,36 +3,7 @@
     "rewrite": "/index.html"
   },
 
-  "routes": [
-    {
-      "route": "/surgery/admin",
-      "allowedRoles": ["admin"]
-    },
-    {
-      "route": "/surgery/doctor",
-      "allowedRoles": ["doctor"]
-    },
-    {
-      "route": "/surgery/nurse",
-      "allowedRoles": ["nurse"]
-    },
-    {
-      "route": "/surgery/*",
-      "allowedRoles": ["authenticated"]
-    },
-    {
-      "route": "/api/new-patient/*",
-      "allowedRoles": ["anonymous"]
-    },
-    {
-      "route": "/api/patient/*",
-      "allowedRoles": ["authenticated"]
-    },
-    {
-      "route": "/api/surgery/*",
-      "allowedRoles": ["authenticated"]
-    }
-  ],
+  "routes": [],
   "platform": {
     "apiRuntime": "dotnet:6.0"
   }

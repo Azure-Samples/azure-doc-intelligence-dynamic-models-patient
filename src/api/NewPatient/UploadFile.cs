@@ -39,35 +39,8 @@ public static class UploadFile
 
     private static async Task<Dictionary<string, (string, float?)>> ExtractFormInfo(BlobContainerClient containerClient, string filename)
     {
-        string? endpoint = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_ENDPOINT");
-        string? apiKey = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_API_KEY");
-        string? modelId = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_MODEL_ID");
-
-        if (string.IsNullOrEmpty(endpoint) || string.IsNullOrEmpty(apiKey) || string.IsNullOrEmpty(modelId))
-        {
-            throw new InvalidOperationException("Missing environment variables");
-        }
-
-        var credential = new AzureKeyCredential(apiKey);
-        var client = new DocumentAnalysisClient(new Uri(endpoint), credential);
-
-        var blobClient = containerClient.GetBlobClient(filename);
-        var uri = blobClient.GenerateSasUri(BlobSasPermissions.Read, DateTimeOffset.UtcNow.AddMinutes(5));
-
-        AnalyzeDocumentOperation operation = await client.AnalyzeDocumentFromUriAsync(WaitUntil.Completed, modelId, uri);
-        AnalyzeResult result = operation.Value;
-
-        var outputs = new Dictionary<string, (string, float?)>();
-
-        foreach (AnalyzedDocument document in result.Documents)
-        {
-            foreach ((string fieldName, DocumentField field) in document.Fields)
-            {
-                outputs.Add(fieldName, (field.Content, field.Confidence));
-            }
-        }
-
-        return outputs;
+        // TODO: Call Azure Form Recognizer
+        throw new NotImplementedException("Exercise for the reader");
     }
 
     private static async Task<(string, string)> StoreFile(IFormFile file, BlobContainerClient containerClient)

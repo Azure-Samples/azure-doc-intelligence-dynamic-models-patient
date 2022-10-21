@@ -122,7 +122,7 @@ module functions 'app/functions.bicep' = {
       }
       {
         name: 'FORM_RECOGNIZER_MODEL_ID'
-        value: 'new-patient-registration'
+        value: 'patient-registration-model'
       }
       {
         name: 'COSMOS_DB'

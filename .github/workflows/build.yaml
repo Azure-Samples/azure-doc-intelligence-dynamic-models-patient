@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
-          node-version-file: 'src/.nvmrc'
+          node-version-file: 'src/web/.nvmrc'
       - run: npm ci
       - run: npm run build
       - run: npm test

@@ -1,4 +1,5 @@
 import { Patient } from "../models/Patient";
+import { container, group, item } from "./PatientList.css";
 
 type Props = {
   patients: Patient[];
@@ -7,23 +8,21 @@ type Props = {
 
 export const PatientList = ({ patients, action }: Props) => {
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Action</th>
-          <th>Patient</th>
-        </tr>
-      </thead>
-      <tbody>
-        {patients.map((patient) => (
-          <tr key={patient.id}>
-            <td>{action(patient)}</td>
-            <td>
+    <div className={container}>
+      <div className={group}>
+        <h2 className={item}>Action</h2>
+        <h2 className={item}>Patient</h2>
+      </div>
+      {patients.map((patient) => (
+        <div key={patient.id} className={group}>
+          <>
+            <div className={item}>{action(patient)}</div>
+            <span className={item}>
               {patient.givenNames} {patient.familyName}
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+            </span>
+          </>
+        </div>
+      ))}
+    </div>
   );
 };

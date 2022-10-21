@@ -1,5 +1,9 @@
 import { globalStyle, style } from "@vanilla-extract/css";
 
+export const breakpoints = {
+  small: "400px",
+};
+
 export const hidden = style({
   display: "none",
 });
@@ -9,6 +13,14 @@ export const main = style({
   margin: "0 auto",
   padding: "2rem",
   textAlign: "center",
+
+  "@media": {
+    [`screen and (max-width: ${breakpoints.small})`]: {
+      maxWidth: 320,
+      padding: 0,
+      fontSize: "0.8em",
+    },
+  },
 });
 
 globalStyle("#root", {
@@ -50,6 +62,10 @@ globalStyle("a", {
   fontWeight: 500,
   color: "#646cff",
   textDecoration: "inherit",
+});
+
+globalStyle("a.logout", {
+  color: "#fff",
 });
 
 globalStyle("a:hover", {

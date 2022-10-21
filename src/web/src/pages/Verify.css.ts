@@ -1,10 +1,16 @@
 import { style } from "@vanilla-extract/css";
 
+export const formContainer = style({
+  border: "1px solid #ccc",
+  textAlign: "left",
+});
+
 export const fieldContainer = style({
   display: "flex",
   gap: 10,
   flexDirection: "column",
   borderRadius: 5,
+  border: "none",
 });
 
 export const formGroup = style({
@@ -28,23 +34,20 @@ export const formControl = style({
   },
 });
 
-export const genderGroup = style([
-  fieldContainer,
-  {
-    display: "grid",
-    gridTemplateColumns: "20% 20% 60%",
-    justifyItems: "left",
-  },
-]);
+export const checkboxGroup = style({
+  flex: 2,
+  display: "flex",
+});
 
-export const pronounsGroup = style([
-  fieldContainer,
-  {
-    display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
-    justifyItems: "left",
-  },
-]);
+export const checkboxItem = style({
+  flex: 1,
+});
+
+export const checkbox = style({
+  height: 20,
+  width: 20,
+  accentColor: "#0F6CBC",
+});
 
 export const allergiesGroup = style([
   fieldContainer,
@@ -60,20 +63,3 @@ export const buttonGroup = style({
   margin: 10,
   gap: 10,
 });
-
-export const button = style({
-  padding: 10,
-  borderRadius: 5,
-  backgroundColor: "#f5f5f5",
-  color: "#000",
-  cursor: "pointer",
-  fontSize: 16,
-});
-
-export const buttonPrimary = style([
-  button,
-  {
-    backgroundColor: "#4caf50",
-    color: "#fff",
-  },
-]);

@@ -1,6 +1,6 @@
-import { style, globalStyle } from "@vanilla-extract/css";
+import { style, styleVariants } from "@vanilla-extract/css";
 
-export const button = style({
+const base = style({
   borderRadius: "8px",
   border: "1px solid transparent",
   padding: "0.6em 1.2em",
@@ -30,4 +30,20 @@ export const button = style({
       backgroundColor: "#f9f9f9",
     },
   },
+});
+
+export const button = styleVariants({
+  primary: [
+    base,
+    {
+      backgroundColor: "#4caf50",
+      color: "#fff",
+      "@media": {
+        "(prefers-color-scheme: light)": {
+          backgroundColor: "#4caf50",
+        },
+      },
+    },
+  ],
+  default: [base],
 });

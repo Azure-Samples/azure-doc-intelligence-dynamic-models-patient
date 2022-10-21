@@ -3,6 +3,7 @@ import { Button } from "./Button";
 import { Icon } from "@mdi/react";
 import { mdiCameraIris } from "@mdi/js";
 import { hidden } from "../main.css";
+import { cameraDisplay } from "./Camera.css";
 
 export default function CameraFeed({
   mediaStream,
@@ -48,7 +49,7 @@ export default function CameraFeed({
   }, [captureImage, videoRef, canvasRef]);
   return (
     <>
-      <video ref={videoRef} className={mediaStream ? "" : hidden} />
+      <video ref={videoRef} className={mediaStream ? cameraDisplay : hidden} />
       {mediaStream && (
         <div>
           <Button onClick={buttonClick}>

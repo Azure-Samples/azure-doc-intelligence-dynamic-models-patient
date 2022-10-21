@@ -7,6 +7,8 @@ import CameraFeed from "../components/CameraFeed";
 import { DragDropZone } from "../components/DragDropZone";
 import FileToUpload from "../components/FileToUpload";
 import { useNavigate } from "react-router-dom";
+import { buttonZone } from "./Upload.css";
+import { FullPageSpinner } from "../components/FullPageSpinner";
 
 function Upload() {
   const [cameraActive, setCameraActive] = useState(false);
@@ -45,11 +47,13 @@ function Upload() {
   }, [fileToUpload]);
 
   return (
-    <>
+    <div style={{ opacity: uploading ? "50%" : "100%" }}>
+      {uploading && <FullPageSpinner />}
       <DragDropZone
         cameraActive={cameraActive}
         setCameraActiveState={setCameraActive}
         fileSelected={setFileToUpload}
+        disabled={uploading}
       />
       <CameraFeed mediaStream={mediaStream} captureImage={setFileToUpload} />
       {fileToUpload && (
@@ -59,14 +63,14 @@ function Upload() {
             width={videoDimensions?.width}
             height={videoDimensions?.height}
           />
-          <Button onClick={uploadFile}>
-            <>
+          <div className={buttonZone}>
+            <Button onClick={uploadFile} disabled={uploading}>
               <Icon path={mdiUpload} size={1} />
-            </>
-          </Button>
+            </Button>
+          </div>
         </>
       )}
-    </>
+    </div>
   );
 }
 

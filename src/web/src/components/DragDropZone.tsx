@@ -1,17 +1,23 @@
 import { Button } from "./Button";
-import { dragZone, dragZoneHighlight, fileUpload } from "./DragDropZone.css";
-import { Icon } from "@mdi/react";
-import { mdiCamera, mdiCameraOff } from "@mdi/js";
+import {
+  dragZone,
+  dragZoneHighlight,
+  fileUpload,
+  messaging,
+} from "./DragDropZone.css";
 import { useCallback, useEffect, useRef } from "react";
+import uploadImage from "../assets/upload.svg";
 
 export function DragDropZone({
   setCameraActiveState,
   cameraActive,
   fileSelected,
+  disabled,
 }: {
   setCameraActiveState: (cb: (state: boolean) => boolean) => void;
   cameraActive: boolean;
   fileSelected: (file: File) => void;
+  disabled?: boolean;
 }) {
   const dropZoneRef = useRef<HTMLDivElement>(null);
 
@@ -74,15 +80,20 @@ export function DragDropZone({
           onChange={(e) => {
             e.target.files && fileSelected(e.target.files[0]);
           }}
+          disabled={disabled}
         />
-        <label htmlFor="fileElem">Drop file here</label>
-        <br />
-        <Button onClick={() => setCameraActiveState((state) => !state)}>
-          <>
-            <Icon path={cameraActive ? mdiCamera : mdiCameraOff} size={1} />
-            <br />
-            {cameraActive ? "Turn off camera" : "Use the Camera"}
-          </>
+        <img src={uploadImage} alt="Upload file for processing" width={50} />
+        <p className={messaging}>Drag and drop files here</p>
+        <p className={messaging}>or</p>
+        <Button disabled={disabled}>
+          <label htmlFor="fileElem">Browse for a file</label>
+        </Button>
+        <p className={messaging}>or</p>
+        <Button
+          onClick={() => setCameraActiveState((state) => !state)}
+          disabled={disabled}
+        >
+          <>{cameraActive ? "Turn off camera" : "Take a photo"}</>
         </Button>
       </form>
     </div>

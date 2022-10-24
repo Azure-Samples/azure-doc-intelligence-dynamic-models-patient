@@ -12,7 +12,7 @@ namespace Contoso.Healthcare.Api
     {
         [FunctionName(nameof(PatientGetAll))]
         public static IActionResult Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "patient")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "patient")] HttpRequest req,
             [CosmosDB(
                 databaseName: "patientDb",
                 collectionName: "patientContainer",

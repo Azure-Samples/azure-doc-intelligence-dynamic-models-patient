@@ -4,6 +4,8 @@
 #   2. The webhook endpoint named ENDPOINT_REPO_REPORT
 #   3. Reporting group/team GROUP_REPO_REPORT
 
+name: "Repo report"
+
 on:
   schedule:
     # Run this once per day, towards the end of the day for keeping the most

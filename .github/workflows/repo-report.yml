@@ -2,6 +2,7 @@
 # Requirements. Two secrets:
 #   1. A PAT with repo rights named PAT_REPO_REPORT
 #   2. The webhook endpoint named ENDPOINT_REPO_REPORT
+#   3. Reporting group/team GROUP_REPO_REPORT
 
 on:
   schedule:
@@ -20,7 +21,7 @@ jobs:
     env:
       PAT_REPO_REPORT: ${{ secrets.PAT_REPO_REPORT }}
       ENDPOINT_REPO_REPORT: ${{ secrets.ENDPOINT_REPO_REPORT }}
-      REPORT_GROUP: "aiml" # Hard coded for now, but should come from a secret
+      REPORT_GROUP: ${{ secrets.GROUP_REPO_REPORT }}
       
     steps:
       - name: get clones traffic

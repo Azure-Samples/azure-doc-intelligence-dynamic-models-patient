@@ -34,7 +34,7 @@ jobs:
             --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
             https://api.github.com/repos/${{ github.repository }}/traffic/clones \
             | tee - \
-            | jq '.["clones"] | map(.clones = .count) | .[] += {repo: "${{ github.repository }}" } | .[] += {group: "${{ env.REPORT_GROUP }}" } | .[] += {owner: "${{ github.repository_owner }}" } | del(.. | .count?) | {"stats":.}' \
+            | jq '.clones[] += {repo: "${{ github.repository }}"} | .clones[] += {group: "${{ env.REPORT_GROUP }}"} | .clones[] += {owner: "${{ github.repository_owner }}"}' \
             | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubCloneCount
             
       - name: get views traffic
@@ -45,6 +45,6 @@ jobs:
             --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
             https://api.github.com/repos/${{ github.repository }}/traffic/views \
             | tee - \
-            | jq '.["views"] | map(.views = .count) | .[] += {repo: "${{ github.repository }}" } | .[] += {group: "${{ env.REPORT_GROUP }}" } | .[] += {owner: "${{ github.repository_owner }}" } | del(.. | .count?) | {"stats":.}' \
+            | jq '.views[] += {repo: "${{ github.repository }}"} | .views[] += {group: "${{ env.REPORT_GROUP }}"} | .views[] += {owner: "${{ github.repository_owner }}"}' \
             | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubViewCount
             

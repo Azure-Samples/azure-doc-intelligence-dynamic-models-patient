@@ -25,7 +25,7 @@ jobs:
       
     steps:
       - name: get clones traffic
-        if: "${{ env.PAT_REPO_REPORT != '' && env.ENDPOINT_REPO_REPORT != '' && env.REPORT_GROUP != '' }}"
+        if: ${{ env.PAT_REPO_REPORT != '' && env.ENDPOINT_REPO_REPORT != '' && env.REPORT_GROUP != '' }}
         run: |
           curl \
             --header "Accept: application/vnd.github+json" \
@@ -36,7 +36,7 @@ jobs:
             | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubCloneCount
             
       - name: get views traffic
-        if: "${{ env.PAT_REPO_REPORT != '' && env.ENDPOINT_REPO_REPORT != '' && env.REPORT_GROUP != '' }}"
+        if: ${{ env.PAT_REPO_REPORT != '' && env.ENDPOINT_REPO_REPORT != '' && env.REPORT_GROUP != '' }}
         run: |
           curl \
             --header "Accept: application/vnd.github+json" \

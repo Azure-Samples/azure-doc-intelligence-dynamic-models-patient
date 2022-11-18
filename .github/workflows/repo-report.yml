@@ -1,0 +1,49 @@
+# GitHub Action to post GitHub Clone traffic stats to a webhook
+# Requirements. Two secrets:
+#   1. A PAT with repo rights named PAT_REPO_REPORT
+#   2. The webhook endpoint named ENDPOINT_REPO_REPORT
+
+on:
+  schedule:
+    # Run this once per day, towards the end of the day for keeping the most
+    # recent data point most meaningful (hours are interpreted in UTC).
+    - cron: "0 23 * * *"
+  workflow_dispatch: # Allow for running this manually.
+
+jobs:
+  report_clones_job:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        
+    env:
+      PAT_REPO_REPORT: ${{ secrets.PAT_REPO_REPORT }}
+      ENDPOINT_REPO_REPORT: ${{ secrets.ENDPOINT_REPO_REPORT }}
+      REPORT_GROUP: "aiml" # Hard coded for now, but should come from a secret
+      
+    steps:
+      - name: get clones traffic
+        if: "${{ env.PAT_REPO_REPORT != '' }}"
+        run: |
+          curl \
+            --header "Accept: application/vnd.github+json" \
+            --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
+            https://api.github.com/repos/${{ github.repository }}/traffic/clones \
+            | tee - \
+            | jq '.["clones"] | map(.clones = .count) | .[] += {repo: "${{ github.repository }}" } | .[] += {group: "${{ env.REPORT_GROUP }}" } | .[] += {owner: "${{ github.repository_owner }}" } | del(.. | .count?) | {"stats":.}' \
+            | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubCloneCount
+            
+      - name: get views traffic
+        if: "${{ env.PAT_CLONES_REPORT != '' }}"
+        run: |
+          echo ${{ github.repository }}
+          echo $REPO_NAME
+          curl \
+            --header "Accept: application/vnd.github+json" \
+            --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
+            https://api.github.com/repos/${{ github.repository }}/traffic/views \
+            | tee - \
+            | jq '.["views"] | map(.views = .count) | .[] += {repo: "${{ github.repository }}" } | .[] += {group: "${{ env.REPORT_GROUP }}" } | .[] += {owner: "${{ github.repository_owner }}" } | del(.. | .count?) | {"stats":.}' \
+            | curl -H "Content-Type: application/json" -X POST --data-binary @- https://1db8-103-217-166-193.au.ngrok.io/api/GitHubViewCount
+            

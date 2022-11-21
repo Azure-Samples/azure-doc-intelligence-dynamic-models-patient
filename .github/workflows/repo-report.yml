@@ -26,15 +26,28 @@ jobs:
       REPORT_GROUP: ${{ secrets.GROUP_REPO_REPORT }}
       
     steps:
-      - name: get clones traffic
-        if: ${{ env.PAT_REPO_REPORT != '' && env.ENDPOINT_REPO_REPORT != '' && env.REPORT_GROUP != '' }}
+      - name: set output vars
+        id: vars
         run: |
+          META_DATA=$(curl \
+            --header "Accept: application/vnd.github+json" \
+            --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
+            https://api.github.com/repos/${{ github.repository }})
+          REPO_ID=$(echo $META_DATA | jq '.id')
+          REPO_STARS=$(echo $META_DATA | jq '.stargazers_count')
+          echo "REPO_ID=${REPO_ID}" >> $GITHUB_OUTPUT
+          echo "REPO_STARS=${REPO_STARS}" >> $GITHUB_OUTPUT
+          
+      - name: get clones traffic
+
+        if: ${{ env.PAT_REPO_REPORT != '' && env.ENDPOINT_REPO_REPORT != '' && env.REPORT_GROUP != '' }}
+        run: |        
           curl \
             --header "Accept: application/vnd.github+json" \
             --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
             https://api.github.com/repos/${{ github.repository }}/traffic/clones \
             | tee - \
-            | jq '.clones[] += {repo: "${{ github.repository }}"} | .clones[] += {group: "${{ env.REPORT_GROUP }}"} | .clones[] += {owner: "${{ github.repository_owner }}"}' \
+            | jq '.clones[] += {repo: "${{ github.repository }}"} | .clones[] += {group: "${{ env.REPORT_GROUP }}"} | .clones[] += {owner: "${{ github.repository_owner }}"} | .clones[] += {repo_id: ${{ steps.vars.outputs.REPO_ID }} } | .clones[] += {stars: ${{ steps.vars.outputs.REPO_STARS }} }' \
             | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubCloneCount
             
       - name: get views traffic
@@ -45,6 +58,6 @@ jobs:
             --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
             https://api.github.com/repos/${{ github.repository }}/traffic/views \
             | tee - \
-            | jq '.views[] += {repo: "${{ github.repository }}"} | .views[] += {group: "${{ env.REPORT_GROUP }}"} | .views[] += {owner: "${{ github.repository_owner }}"}' \
+            | jq '.views[] += {repo: "${{ github.repository }}"} | .views[] += {group: "${{ env.REPORT_GROUP }}"} | .views[] += {owner: "${{ github.repository_owner }}"} | .views[] += {repo_id: ${{ steps.vars.outputs.REPO_ID }} } ' \
             | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubViewCount
             

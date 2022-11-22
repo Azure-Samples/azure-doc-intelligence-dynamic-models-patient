@@ -26,6 +26,7 @@ jobs:
       REPORT_GROUP: ${{ secrets.GROUP_REPO_REPORT }}
       
     steps:
+       
       - name: set output vars
         id: vars
         run: |
@@ -33,13 +34,23 @@ jobs:
             --header "Accept: application/vnd.github+json" \
             --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
             https://api.github.com/repos/${{ github.repository }})
+            
           REPO_ID=$(echo $META_DATA | jq '.id')
           REPO_STARS=$(echo $META_DATA | jq '.stargazers_count')
+          REPO_WATCHERS=$(echo $META_DATA | jq '.watchers_count')
+          REPO_FORKS=$(echo $META_DATA | jq '.forks_count')
+          
           echo "REPO_ID=${REPO_ID}" >> $GITHUB_OUTPUT
           echo "REPO_STARS=${REPO_STARS}" >> $GITHUB_OUTPUT
+          echo "REPO_WATCHERS=${REPO_WATCHERS}" >> $GITHUB_OUTPUT
+          echo "REPO_FORKS=${REPO_FORKS}" >> $GITHUB_OUTPUT
+          
+      - name: get public stats
+        run: |
+            echo {} | jq '{repo: "${{ github.repository }}", repo_id: ${{ steps.vars.outputs.REPO_ID }}, group: "${{ env.REPORT_GROUP }}", stars: ${{ steps.vars.outputs.REPO_STARS }} }' \
+            | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubPublicStats
           
       - name: get clones traffic
-
         if: ${{ env.PAT_REPO_REPORT != '' && env.ENDPOINT_REPO_REPORT != '' && env.REPORT_GROUP != '' }}
         run: |        
           curl \
@@ -47,7 +58,7 @@ jobs:
             --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
             https://api.github.com/repos/${{ github.repository }}/traffic/clones \
             | tee - \
-            | jq '.clones[] += {repo: "${{ github.repository }}"} | .clones[] += {group: "${{ env.REPORT_GROUP }}"} | .clones[] += {owner: "${{ github.repository_owner }}"} | .clones[] += {repo_id: ${{ steps.vars.outputs.REPO_ID }} } | .clones[] += {stars: ${{ steps.vars.outputs.REPO_STARS }} }' \
+            | jq '.clones[] += {repo: "${{ github.repository }}"} | .clones[] += {group: "${{ env.REPORT_GROUP }}"} | .clones[] += {repo_id: ${{ steps.vars.outputs.REPO_ID }} } ' \
             | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubCloneCount
             
       - name: get views traffic
@@ -58,6 +69,6 @@ jobs:
             --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
             https://api.github.com/repos/${{ github.repository }}/traffic/views \
             | tee - \
-            | jq '.views[] += {repo: "${{ github.repository }}"} | .views[] += {group: "${{ env.REPORT_GROUP }}"} | .views[] += {owner: "${{ github.repository_owner }}"} | .views[] += {repo_id: ${{ steps.vars.outputs.REPO_ID }} } ' \
+            | jq '.views[] += {repo: "${{ github.repository }}"} | .views[] += {group: "${{ env.REPORT_GROUP }}"} | .views[] += {repo_id: ${{ steps.vars.outputs.REPO_ID }} } ' \
             | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubViewCount
             

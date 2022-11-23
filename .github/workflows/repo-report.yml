@@ -1,5 +1,5 @@
 # https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action
-# GitHub Action to post GitHub Clone traffic stats to a webhook
+# GitHub Action to post GitHub metrics to a webhook
 # Requirements. Two secrets:
 #   1. A PAT with repo rights named PAT_REPO_REPORT
 #   2. The webhook endpoint named ENDPOINT_REPO_REPORT

@@ -1,10 +1,11 @@
+# https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action
 # GitHub Action to post GitHub Clone traffic stats to a webhook
 # Requirements. Two secrets:
 #   1. A PAT with repo rights named PAT_REPO_REPORT
 #   2. The webhook endpoint named ENDPOINT_REPO_REPORT
 #   3. Reporting group/team GROUP_REPO_REPORT
 
-name: "Repo report"
+name: "Repo metrics report"
 
 on:
   schedule:
@@ -14,61 +15,16 @@ on:
   workflow_dispatch: # Allow for running this manually.
 
 jobs:
-  report_clones_job:
+  report_metrics_job:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        
-    env:
-      PAT_REPO_REPORT: ${{ secrets.PAT_REPO_REPORT }}
-      ENDPOINT_REPO_REPORT: ${{ secrets.ENDPOINT_REPO_REPORT }}
-      REPORT_GROUP: ${{ secrets.GROUP_REPO_REPORT }}
-      
-    steps:
+    name: report github metrics
+    steps:       
+      - name: run github metrics image
+        id: github_metrics
+        uses: gloveboxes/GitHubReportAction@v1
+        with:
+          github_personal_access_token: ${{ secrets.PAT_REPO_REPORT }}
+          github_repo: ${{ github.repository }}
+          reporting_endpoint: ${{ secrets.ENDPOINT_REPO_REPORT }}
+          reporting_group: $${{ secrets.GROUP_REPO_REPORT }}
        
-      - name: set output vars
-        id: vars
-        run: |
-          META_DATA=$(curl \
-            --header "Accept: application/vnd.github+json" \
-            --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
-            https://api.github.com/repos/${{ github.repository }})
-            
-          REPO_ID=$(echo $META_DATA | jq '.id')
-          REPO_STARS=$(echo $META_DATA | jq '.stargazers_count')
-          REPO_WATCHERS=$(echo $META_DATA | jq '.watchers_count')
-          REPO_FORKS=$(echo $META_DATA | jq '.forks_count')
-          
-          echo "REPO_ID=${REPO_ID}" >> $GITHUB_OUTPUT
-          echo "REPO_STARS=${REPO_STARS}" >> $GITHUB_OUTPUT
-          echo "REPO_WATCHERS=${REPO_WATCHERS}" >> $GITHUB_OUTPUT
-          echo "REPO_FORKS=${REPO_FORKS}" >> $GITHUB_OUTPUT
-          
-      - name: get public stats
-        run: |
-            echo {} | jq '{repo: "${{ github.repository }}", repo_id: ${{ steps.vars.outputs.REPO_ID }}, group: "${{ env.REPORT_GROUP }}", stars: ${{ steps.vars.outputs.REPO_STARS }}, forks: ${{ steps.vars.outputs.REPO_FORKS }} }' \
-            | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubPublicStats
-          
-      - name: get clones traffic
-        if: ${{ env.PAT_REPO_REPORT != '' && env.ENDPOINT_REPO_REPORT != '' && env.REPORT_GROUP != '' }}
-        run: |        
-          curl \
-            --header "Accept: application/vnd.github+json" \
-            --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
-            https://api.github.com/repos/${{ github.repository }}/traffic/clones \
-            | tee - \
-            | jq '.clones[] += {repo: "${{ github.repository }}"} | .clones[] += {group: "${{ env.REPORT_GROUP }}"} | .clones[] += {repo_id: ${{ steps.vars.outputs.REPO_ID }} } ' \
-            | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubCloneCount
-            
-      - name: get views traffic
-        if: ${{ env.PAT_REPO_REPORT != '' && env.ENDPOINT_REPO_REPORT != '' && env.REPORT_GROUP != '' }}
-        run: |
-          curl \
-            --header "Accept: application/vnd.github+json" \
-            --header "Authorization: Bearer ${{ env.PAT_REPO_REPORT }}" \
-            https://api.github.com/repos/${{ github.repository }}/traffic/views \
-            | tee - \
-            | jq '.views[] += {repo: "${{ github.repository }}"} | .views[] += {group: "${{ env.REPORT_GROUP }}"} | .views[] += {repo_id: ${{ steps.vars.outputs.REPO_ID }} } ' \
-            | curl -H "Content-Type: application/json" -X POST --data-binary @- ${{ env.ENDPOINT_REPO_REPORT }}/api/GitHubViewCount
-            

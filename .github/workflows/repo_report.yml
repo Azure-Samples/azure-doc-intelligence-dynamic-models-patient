@@ -1,0 +1,30 @@
+# https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action
+# GitHub Action to post GitHub metrics to a webhook
+# Requirements. Two secrets:
+#   1. A PAT with repo rights named PAT_REPO_REPORT
+#   2. The webhook endpoint named ENDPOINT_REPO_REPORT
+#   3. Reporting group/team GROUP_REPO_REPORT
+
+name: "Repo metrics report"
+
+on:
+  schedule:
+    # Run this once per day, towards the end of the day for keeping the most
+    # recent data point most meaningful (hours are interpreted in UTC).
+    - cron: "0 23 * * *"
+  workflow_dispatch: # Allow for running this manually.
+
+jobs:
+  report_metrics_job:
+    runs-on: ubuntu-latest
+    name: report github metrics
+    steps:       
+      - name: run github metrics image
+        id: github_metrics
+        uses: gloveboxes/GitHubReportAction@v2
+        with:
+          github_personal_access_token: ${{ secrets.PAT_REPO_REPORT }}
+          github_repo: ${{ github.repository }}
+          reporting_endpoint_url: ${{ secrets.ENDPOINT_REPORT_URL }}
+          reporting_endpoint_key: ${{ secrets.ENDPOINT_REPORT_KEY }}
+          reporting_group: $${{ secrets.GROUP_REPO_REPORT }}

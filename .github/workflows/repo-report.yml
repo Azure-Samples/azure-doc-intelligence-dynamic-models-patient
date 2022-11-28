@@ -25,7 +25,7 @@ jobs:
         with:
           github_personal_access_token: ${{ secrets.PAT_REPO_REPORT }}
           github_repo: ${{ github.repository }}
-          reporting_endpoint_url: ${{ secrets.ENDPOINT_REPO_REPORT_URL }}
-          reporting_endpoint_key: ${{ secrets.ENDPOINT_REPO_REPORT_KEY }}
+          reporting_endpoint_url: ${{ secrets.ENDPOINT_REPORT_URL }}
+          reporting_endpoint_key: ${{ secrets.ENDPOINT_REPORT_KEY }}
           reporting_group: $${{ secrets.GROUP_REPO_REPORT }}
        

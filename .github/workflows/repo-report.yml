@@ -1,9 +1,9 @@
-# https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action
-# GitHub Action to post GitHub metrics to a webhook
-# Requirements. Two secrets:
-#   1. A PAT with repo rights named PAT_REPO_REPORT
-#   2. The webhook endpoint named ENDPOINT_REPO_REPORT
-#   3. Reporting group/team GROUP_REPO_REPORT
+# GitHub Action to post GitHub metrics to a Azure Function App webhook
+# Requiremented secrets
+#   1. A PAT with repo rights:    PAT_REPO_REPORT
+#   2. The webhook endpoint url:  REPORTING_ENDPOINT_URL
+#   3. The webhook endpoint key:  REPORTING_ENDPOINT_KEY
+#   4. Reporting group/team:      REPORTING_GROUP
 
 name: "Repo metrics report"
 
@@ -23,9 +23,8 @@ jobs:
         id: github_metrics
         uses: gloveboxes/GitHubReportAction@v2
         with:
-          github_personal_access_token: ${{ secrets.PAT_REPO_REPORT }}
           github_repo: ${{ github.repository }}
-          reporting_endpoint_url: ${{ secrets.ENDPOINT_REPORT_URL }}
-          reporting_endpoint_key: ${{ secrets.ENDPOINT_REPORT_KEY }}
-          reporting_group: $${{ secrets.GROUP_REPO_REPORT }}
-       
+          github_personal_access_token: ${{ secrets.REPORTING_PAT }}
+          reporting_endpoint_url: ${{ secrets.REPORTING_ENDPOINT_URL }}
+          reporting_endpoint_key: ${{ secrets.REPORTING_ENDPOINT_KEY }}
+          reporting_group: $${{ secrets.REPORTING_GROUP }}

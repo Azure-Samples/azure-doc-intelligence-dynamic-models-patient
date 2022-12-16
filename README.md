@@ -1,3 +1,3 @@
-# Contoso-New-Patient-App
+# Contoso Azure Form Recognizer Workshop 
 
-Docs for this workshop can be found [here](https://newpatiente2e.github.io/docs/)
+Documentation for this workshop can be found [here](https://newpatiente2e.github.io/docs/)

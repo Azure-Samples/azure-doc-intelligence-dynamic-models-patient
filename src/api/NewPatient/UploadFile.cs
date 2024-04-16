@@ -39,7 +39,7 @@ public static class UploadFile
 
     private static async Task<Dictionary<string, (string, float?)>> ExtractFormInfo(BlobContainerClient containerClient, string filename)
     {
-        // TODO: Call Azure Form Recognizer
+        // TODO: Call Azure AI Document Intelligence
         throw new NotImplementedException("Exercise for the reader");
     }
 

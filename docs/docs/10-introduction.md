@@ -17,8 +17,8 @@ Most of the forms we complete nowadays are online but there are still times when
 <Social
     page_url="https://aka.ms/PatientRegistration"
     image_url="https://newpatiente2e.github.io/docs/assets/images/registration_process-43dca5d4795ea05a0b16a2046696e41e.png"
-    title="New Patient Azure Form Recognizer Workshop"
-    description= "🏭 Learn how to build a new patient registration system using Azure Form Recognizer @dglover"
+    title="New Patient Azure AI Document Intelligence Workshop"
+    description= "🏭 Learn how to build a new patient registration system using Azure AI Document Intelligence @dglover"
     hashtags="AzureFormRecognizer"
     hashtag=""
 />
@@ -38,7 +38,7 @@ The goal of this workshop is for you to learn how to infuse AI technologies into
 
 ## Introduction to Form Recognizer
 
-The solution will build on Azure Form Recognizer. Azure Form Recognizer is a new Cognitive Service that uses machine learning to extract text and table data from form documents. You can train custom models to extract data specific to your forms, or use the prebuilt models to extract common fields from receipts, invoices, and business cards.
+The solution will build on Azure AI Document Intelligence. Azure AI Document Intelligence is a new Cognitive Service that uses machine learning to extract text and table data from form documents. You can train custom models to extract data specific to your forms, or use the prebuilt models to extract common fields from receipts, invoices, and business cards.
 
 ## Workshop Personas
 
@@ -53,7 +53,7 @@ The solution will build on Azure Form Recognizer. Azure Form Recognizer is a new
 The following is an outline of the workshop:
 
 1. Learn about and create the Azure services for the app.
-1. Train a custom Azure Form Recognizer model.
+1. Train a custom Azure AI Document Intelligence model.
 1. Create a web app that integrates with Form Recognizer.
 1. Define application roles that map to the workshop roles.
 1. Implement app functions to support surgery admin, nurse, and doctor roles.

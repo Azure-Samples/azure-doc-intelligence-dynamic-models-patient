@@ -8,7 +8,7 @@ id: create-azure-services
 
 The following services will be created in your Azure subscription:
 
-1. [Azure Form Recognizer](https://azure.microsoft.com/services/form-recognizer?WT.mc_id=aiml-77396-cxa).
+1. [Azure AI Document Intelligence](https://azure.microsoft.com/products/ai-services/ai-document-intelligence?WT.mc_id=aiml-77396-cxa).
 1. [Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/introduction?WT.mc_id=aiml-77396-cxa).
 1. [Azure Static Web Apps](https://azure.microsoft.com/services/app-service/static/?WT.mc_id=aiml-77396-cxa).
 
@@ -51,7 +51,7 @@ From the terminal window, run the following commands to create the Azure Patient
 
     :::tip
 
-    - You can only have one free Azure Form Recognizer service in your Azure subscription.
+    - You can only have one free Azure AI Document Intelligence service in your Azure subscription.
     - If your azd environment fails to deploy, you can delete the environment by deleting the `.azure` folder in the `contoso_new_patient_app` folder.
 
     :::

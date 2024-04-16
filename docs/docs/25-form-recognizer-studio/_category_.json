@@ -1,7 +1,7 @@
 {
-    "label": "Azure Form Recognizer",
+    "label": "Azure AI Document Intelligence",
     "link": {
       "type": "generated-index",
-      "description": "Learn about Azure Form Recognizer."
+      "description": "Learn about Azure AI Document Intelligence."
     }
   }

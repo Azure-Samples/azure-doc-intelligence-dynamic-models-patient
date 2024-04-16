@@ -6,7 +6,7 @@ In this section, we're going to be updating an Azure Function to call Form Recog
 
 1. Switch back to VS Code, you should still have the **contoso_new_patient_app** open in VS Code.
 1. Open the **UploadFile.cs** file, located at **src/api/NewPatient/UploadFile.cs**.
-1. Scroll down to the **// TODO: Call Azure Form Recognizer** section.
+1. Scroll down to the **// TODO: Call Azure AI Document Intelligence** section.
 1. Replace the **// TODO comment and throw** statement with the following code
 
    ```csharp

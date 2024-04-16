@@ -1,0 +1,7 @@
+{
+    "label": "Deploy new patient app",
+    "link": {
+      "type": "generated-index",
+      "description": "Learn how to deploy the new patient static web app."
+    }
+  }

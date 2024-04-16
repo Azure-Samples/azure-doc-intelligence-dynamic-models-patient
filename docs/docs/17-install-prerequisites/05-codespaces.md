@@ -3,9 +3,9 @@ pagination_prev: install-prerequisites
 pagination_next: create-azure-services
 ---
 
-# Load the workshop in GitHub Codespaces
+# Load the workshop
 
-GitHub Codespaces is a cloud-based development environment that allows you to code from anywhere. It's a great way to get started with the workshop. Follow these steps to create a codespace.
+We're going to load the workshop using GitHub Codespaces. GitHub Codespaces is a cloud-based development environment that allows you to code from anywhere. Follow these steps to create a codespace.
 
 1. Navigate to the [Contoso New Patient App](https://github.com/newpatiente2e/Contoso-New-Patient-App) repo and click the **Code** button, then select **Codespaces**.
 1. If prompted, select the smallest size VM to use for the codespace. As at Feburary 2023, this will be 2 vCPUs and 4GB of RAM.

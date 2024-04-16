@@ -7,10 +7,10 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "New Patient Registration Demo",
-  tagline: "New Patient Registration Azure Form Recognizer Workshop",
+  tagline: "New Patient Registration Azure AI Document Intelligence Workshop",
 
   url: "https://patiente2e.github.io/",
-  baseUrl: "/docs/",
+  baseUrl: "/Contoso-New-Patient-App/",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "newpatiente2e", // Usually your GitHub org/user name.
-  projectName: "docs", // Usually your repo name.
+  projectName: "Contoso-New-Patient-App", // Usually your repo name.
 
   deploymentBranch: "gh-pages", // Branch that GitHub pages will deploy from.
 
@@ -43,7 +43,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/newpatiente2e/docs/tree/main",
+          editUrl: "https://github.com/Contoso-New-Patient-App/docs/tree/main",
         },
         blog: false,
         theme: {
@@ -57,7 +57,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "New Patient Registration with Azure Form Recognizer",
+        title: "New Patient Registration with Azure AI Document Intelligence",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.png",

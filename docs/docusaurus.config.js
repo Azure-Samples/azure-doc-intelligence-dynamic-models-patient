@@ -43,7 +43,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/Contoso-New-Patient-App/docs/tree/main",
+          editUrl: "https://github.com/Contoso-New-Patient-App/tree/main/docs/",
         },
         blog: false,
         theme: {

@@ -57,7 +57,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "New Patient Registration with Azure AI Document Intelligence",
+        title: "Crafting Dynamic Document Models with Document Intelligence and Azure",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.png",

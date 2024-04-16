@@ -36,13 +36,13 @@ Follow these steps to clone the patient registration assets repo to your local m
    git clone https://github.com/newpatiente2e/Contoso-New-Patient-Assets.git contoso_new_patient_assets
    ```
 
-## Set up the workshop environment
+<!-- ## Set up the workshop environment
 
 The are two ways to set up the workshop environment. The option you choose will depend on your computer's capabilities and your preference.
 
 ### GitHub Codespaces
 
-This is the recommended option, follow the [GitHub Codespaces](../install-prerequisites/codespaces) instructions.
+This is the recommended option, follow the [GitHub Codespaces](../install-prerequisites/codespaces) instructions. -->
 
 <!-- ### Azure Container Instances
 
@@ -52,6 +52,6 @@ If you don't have access to GitHub Codespaces, then follow the [Azure Container 
 
 This option requires the least amount of computer resources, but it is the most time-consuming to install. Follow the [Local installation instructions](../install-prerequisites/local-install). Installing the prerequisites locally will take approximately 10 minutes, and is supported on Windows, macOS, and Linux. -->
 
-### Docker Dev Containers
+<!-- ### Docker Dev Containers
 
-If you run Docker on your computer, follow the [Dev Container](../install-prerequisites/dev-containers) instructions.
+If you run Docker on your computer, follow the [Dev Container](../install-prerequisites/dev-containers) instructions. -->

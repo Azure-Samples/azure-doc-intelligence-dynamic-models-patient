@@ -64,7 +64,7 @@ The following outlines the process of the solution:
 
 1. A new patient completes the patient registration form.
 1. The patient then uploads the form to the web app.
-1. The web app uses Form Recognizer to extract the data from the form.
+1. The web app uses Document Intelligence to extract the data from the form.
 1. The app returns the extracted data to the patient.
 1. The patient submits the verified new data.
 1. The surgery admin verifies registration and adds it to the doctor's surgery system.

@@ -2,9 +2,9 @@
 
 Document Intelligence Studio is a web-based tool that allows you to create custom models. You can use it to label your training documents and train your custom model.
 
-## Custom Form Recognizer models
+## Custom Document Intelligence models
 
-Form Recognizer uses advanced machine learning to extract text and table data from your documents. You can train custom models to extract data specific to your forms, or use the prebuilt models to extract common fields from receipts, invoices, and business cards.
+Document Intelligence uses advanced machine learning to extract text and table data from your documents. You can train custom models to extract data specific to your forms, or use the prebuilt models to extract common fields from receipts, invoices, and business cards.
 
 To train a custom model, you need to provide a set of labeled training documents. The training documents should be in the same format as the documents you want to recognize. For example, if you want to recognize receipts, you should provide labeled training receipts.
 

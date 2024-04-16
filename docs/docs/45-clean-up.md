@@ -22,22 +22,22 @@ A "core hour" is a measure used for included compute usage. On a 2-core machine,
 
 :::
 
-## Purging the Form Recognizer resource
+## Purging the Document Intelligence resource
 
-When deleting an Azure AI Document Intelligence resource, it's _soft deleted_ so you can recover it in the event of an accidental deletion. You have a 48hrs to recover a Form Recognizer resource. For more information, see [Recover deleted Cognitive Services resources](https://learn.microsoft.com/azure/cognitive-services/manage-resources?WT.mc_id=aiml-77396-cxa)
+When deleting an Azure AI Document Intelligence resource, it's _soft deleted_ so you can recover it in the event of an accidental deletion. You have a 48hrs to recover a Document Intelligence resource. For more information, see [Recover deleted Cognitive Services resources](https://learn.microsoft.com/azure/cognitive-services/manage-resources?WT.mc_id=aiml-77396-cxa)
 
 This is optional, as Azure will perform a hard delete after 48hrs. You can force an immediate *hard delete* using the following command:
 
 ```bash
 region=<Azure Region selected>
-resourceName=<Form Recognizer resource name>
+resourceName=<Document Intelligence resource name>
 resourceGroupName=<Resource group name>
 az cognitiveservices account purge -l $region -n $resourceName -g $resourceGroupName
 ```
 
 :::note
 
-The resource group name and region were specified when you setup the project during the [Create Azure resources](./20-create-azure-services.md) step. The name of the Form Recognizer resource is prefixed with `form-recognizer-` and then a unique hash, that will be present in the logs when you cleaned up the resources in the previous step.
+The resource group name and region were specified when you setup the project during the [Create Azure resources](./20-create-azure-services.md) step. The name of the Document Intelligence resource is prefixed with `form-recognizer-` and then a unique hash, that will be present in the logs when you cleaned up the resources in the previous step.
 
 :::
 

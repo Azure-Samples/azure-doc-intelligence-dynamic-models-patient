@@ -21,11 +21,11 @@ The Document Intelligence Studio provides and orchestrates all the API calls req
 
     1. Select your Azure subscription.
     2. Select the resource group whose name starts with **rg-contoso-health-app-NNNNNN**.
-    3. Select the Form Recognizer service Resource.
+    3. Select the Document Intelligence service Resource.
     4. Select API version **2022-08-31 (General Availability)**.
     5. Select **Continue**.
 
-    ![Select the Form Recognizer resource](./img/create-service-resources.png)
+    ![Select the Document Intelligence resource](./img/create-service-resources.png)
 
 3. Next, select the storage account where you uploaded your custom model training dataset.
 
@@ -39,8 +39,8 @@ The Document Intelligence Studio provides and orchestrates all the API calls req
 
     ![The image shows how to select the training data source](./img/connect_training_data_source.png)
 
-The form recognizer service will now be created and configured. Once the service is created, the Studio will open the project and display the **Label data** page along with the first pre-labeled document. 
+The Document Intelligence service will now be created and configured. Once the service is created, the Studio will open the project and display the **Label data** page along with the first pre-labeled document. 
 
-Close the **Upload a document** dialogue as you have already uploaded the documents to the Azure Storage account used by this Form Recognizer project.
+Close the **Upload a document** dialogue as you have already uploaded the documents to the Azure Storage account used by this Document Intelligence project.
 
 ![The image shows the first form](./img/first_pre_labeled_form.png)

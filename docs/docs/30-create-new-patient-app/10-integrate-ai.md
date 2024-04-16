@@ -1,6 +1,6 @@
 # Integrate Form Recognizer
 
-In this section, we're going to be updating an Azure Function to call Form Recognizer to extract the patient's information from the uploaded image.
+In this section, we're going to be updating an Azure Function to call Document Intelligence to extract the patient's information from the uploaded image.
 
 ## Updating the Azure Function
 
@@ -66,14 +66,14 @@ var credential = new AzureKeyCredential(apiKey);
 var client = new DocumentAnalysisClient(new Uri(endpoint), credential);
 ```
 
-Here, we're creating the connection to Form Recognizer using the endpoint and API key.
+Here, we're creating the connection to Document Intelligence using the endpoint and API key.
 
 ```csharp
 var blobClient = containerClient.GetBlobClient(filename);
 var uri = blobClient.GenerateSasUri(BlobSasPermissions.Read, DateTimeOffset.UtcNow.AddMinutes(5));
 ```
 
-Form Recognizer will need a URL to the image that we want to analyze, so we're creating a SAS token for the image that we uploaded to Azure Storage, which will mean that only the Form Recognizer service can access the image.
+Document Intelligence will need a URL to the image that we want to analyze, so we're creating a SAS token for the image that we uploaded to Azure Storage, which will mean that only the Document Intelligence service can access the image.
 
 ```csharp
 AnalyzeDocumentOperation operation = await client.AnalyzeDocumentFromUriAsync(WaitUntil.Completed, modelId, uri);
@@ -159,7 +159,7 @@ Once all the environment variables have been set, you can run the application lo
 
 ### Test the Application
 
-1. Drag and drop one of the training images from the `contoso_new_patient_assets/training_labeled/<language>` folder into the drop zone. Be sure to use an image from the folder that matches the language you used to train the Form Recognizer model.
+1. Drag and drop one of the training images from the `contoso_new_patient_assets/training_labeled/<language>` folder into the drop zone. Be sure to use an image from the folder that matches the language you used to train the Document Intelligence model.
 1. Next, select **Upload**.
 1. Once the image has been uploaded, and after a few seconds, you'll see the fields that were extracted from the form.
 1. Select **Save** to save the data to Patient Registration Cosmos DB.

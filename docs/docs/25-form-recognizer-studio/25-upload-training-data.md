@@ -1,6 +1,6 @@
 # Upload training data
 
-This topic describes how to upload your training data to [Form Recognizer Studio](https://learn.microsoft.com/azure/applied-ai-services/form-recognizer/concept-form-recognizer-studio?WT.mc_id=aiml-77396-cxa).
+This topic describes how to upload your training data to [Document Intelligence Studio](https://learn.microsoft.com/azure/applied-ai-services/form-recognizer/concept-form-recognizer-studio?WT.mc_id=aiml-77396-cxa).
 
 ## New patient registration form
 
@@ -8,7 +8,7 @@ In this workshop, you'll create a _custom template model_ to recognize the field
 
 This workshop includes a *New Patient Registration Form* and matching label data you need to upload to an Azure storage container.
 
-The label data describes the location of the fields on the forms and was created for the workshop using Form recognizer Studio. The label data is in a JSON file that is named the same as the form file. For example, the label data for the form named `form1.pdf` is in the file named `form1.pdf.json`. The label data is in the same folder as the form files.
+The label data describes the location of the fields on the forms and was created for the workshop using Document Intelligence Studio. The label data is in a JSON file that is named the same as the form file. For example, the label data for the form named `form1.pdf` is in the file named `form1.pdf.json`. The label data is in the same folder as the form files.
 
 <!-- ## Create a storage container
 
@@ -25,7 +25,7 @@ The label data describes the location of the fields on the forms and was created
 
 ## Configure CORS
 
-[CORS (Cross Origin Resource Sharing)](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services?WT.mc_id=aiml-77396-cxa) needs to be configured on your Azure storage account for it to be accessible from the Form Recognizer Studio. To configure CORS in the Azure portal, you'll need access to the CORS tab of your storage account.
+[CORS (Cross Origin Resource Sharing)](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services?WT.mc_id=aiml-77396-cxa) needs to be configured on your Azure storage account for it to be accessible from the Document Intelligence Studio. To configure CORS in the Azure portal, you'll need access to the CORS tab of your storage account.
 
 1. Select the CORS tab for the storage account.
 
@@ -47,7 +47,7 @@ The label data describes the location of the fields on the forms and was created
 
 1. Select the save button at the top of the page to save the changes.
 
-CORS should now be configured to use the storage account from Form Recognizer Studio. -->
+CORS should now be configured to use the storage account from Document Intelligence Studio. -->
 
 ## Upload new patient registration form training data
 

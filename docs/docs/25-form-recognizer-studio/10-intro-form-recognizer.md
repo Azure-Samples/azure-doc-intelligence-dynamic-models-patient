@@ -1,6 +1,6 @@
-# Form recognizer studio
+# Document Intelligence Studio
 
-Form recognizer studio is a web-based tool that allows you to create custom models. You can use it to label your training documents and train your custom model.
+Document Intelligence Studio is a web-based tool that allows you to create custom models. You can use it to label your training documents and train your custom model.
 
 ## Custom Form Recognizer models
 

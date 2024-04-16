@@ -1,8 +1,8 @@
 # Create a project
 
-The Form Recognizer Studio provides and orchestrates all the API calls required to complete your dataset and train your model.
+The Document Intelligence Studio provides and orchestrates all the API calls required to complete your dataset and train your model.
 
-1. Start by navigating to [Form Recognizer Studio](https://formrecognizer.appliedai.azure.com/studio).
+1. Start by navigating to [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio).
 
 1. Select the **Custom models** tile, on the custom models page.
 

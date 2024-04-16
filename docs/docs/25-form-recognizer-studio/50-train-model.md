@@ -29,11 +29,11 @@ With your training forms labeled, you're now ready to train your model. Follow t
 
 Once the model training is complete, you can test your model by selecting the model on the models list page.
 
-1. Select **Test** from the Form Recognizer Studio menu.
+1. Select **Test** from the Document Intelligence Studio menu.
 1. Browse for a file or drag and drop a file into the *Test model* page. Select a .jpeg or .pdf file from the **contoso_new_patient_assets/training_labeled** folder that matches the language you used to train your model.
 1. With a file selected, choose the **Analyze** button to test the model.
 1. The model results are displayed in the main window and the fields extracted are listed in the right navigation bar on the *fields* tab.
 1. Validate your model by evaluating the results for each field.
 1. The right navigation bar also includes sample code to invoke your model and the JSON results from the API.
 
-Congratulations you've trained a custom model in the Form Recognizer Studio! Your model is ready for use with the patient registration app.
+Congratulations you've trained a custom model in the Document Intelligence Studio! Your model is ready for use with the patient registration app.

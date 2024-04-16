@@ -3,7 +3,7 @@ sidebar_position: 1
 slug : /
 
 image: https://newpatiente2e.github.io/docs/assets/images/registration_process-43dca5d4795ea05a0b16a2046696e41e.png
-description: "🏭 Learn how to build a new patient registration system using Azure Form Recognizer"
+description: "🏭 Learn how to build a new patient registration system using Azure AI Document Intelligence"
 ---
 
 import Social from '@site/src/components/social';

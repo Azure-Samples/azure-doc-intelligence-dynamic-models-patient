@@ -3,7 +3,7 @@ pagination_prev: install-prerequisites
 pagination_next: create-azure-services
 ---
 
-# GitHub Codespaces
+# Load the workshop in GitHub Codespaces
 
 GitHub Codespaces is a cloud-based development environment that allows you to code from anywhere. It's a great way to get started with the workshop. Follow these steps to create a codespace.
 

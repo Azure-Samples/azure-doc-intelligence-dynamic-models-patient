@@ -80,7 +80,7 @@ module formRecognizerContainer './core/storage-container.bicep' = {
   }
 }
 
-// Form Recognizer
+// Azure AI Document Intelligence
 module formRecognizer './core/form-recognizer.bicep' = {
   name: '${name}--form-recognizer'
   params: {

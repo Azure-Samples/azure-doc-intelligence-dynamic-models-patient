@@ -70,7 +70,7 @@ From the terminal window, run the following commands to create the Azure Patient
     Provisioning Azure resources can take some time
 
     (✓) Done: Resource group: rg-contoso-health-app-767678
-    (✓) Done: Form recognizer: form-recognizer-r2qoh4og4cf6a
+    (✓) Done: Azure AI Document Intelligence: form-recognizer-r2qoh4og4cf6a
     (✓) Done: Storage account: storager2qoh4og4cf6a
     (✓) Done: Azure Cosmos DB: cosmos-r2qoh4og4cf6a
     (✓) Done: Application Insights: api-r2qoh4og4cf6a

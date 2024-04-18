@@ -36,7 +36,7 @@ The goal of this workshop is for you to learn how to infuse AI technologies into
 1. The workshop solution is a simplified version of a real-world scenario, simple enough to be completed in a workshop but complex enough to demonstrate the power of AI technologies.
 1. The workshop provides a step-by-step guide, taking you through the process of deploying the solution to Azure. You'll learn a little about Azure Static Web Apps, Azure Functions, Azure AI Services, Azure Storage, and Azure Cosmos DB.
 
-## Introduction to Form Recognizer
+## Introduction to Azure AI Document Intelligence
 
 The solution will build on Azure AI Document Intelligence. Azure AI Document Intelligence is a service that uses machine learning to extract text and table data from form documents. You can train custom models to extract data specific to your forms, or use the prebuilt models to extract common fields from receipts, invoices, and business cards.
 
@@ -54,7 +54,7 @@ The following is an outline of the workshop:
 
 1. Learn about and create the Azure services for the app.
 1. Train a custom Azure AI Document Intelligence model.
-1. Create a web app that integrates with Form Recognizer.
+1. Create a web app that integrates with Azure AI Document Intelligence.
 1. Define application roles that map to the workshop roles.
 1. Implement app functions to support surgery admin, nurse, and doctor roles.
 

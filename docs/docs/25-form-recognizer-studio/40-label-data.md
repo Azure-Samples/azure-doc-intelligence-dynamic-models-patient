@@ -2,7 +2,7 @@
 
 In your project, there are five documents, four of the documents have a green dot to indicate the documents have been analyzed and labeled. The fifth document needs to be analyzed and labeled.
 
-## Video introduction to labeling forms with Form Recognizer
+## Video introduction to labeling forms with Azure AI Document Intelligence
 
 Watch this YouTube to understand how to label an English language version of a form. Open the video on Youtube to watch in full screen.
 

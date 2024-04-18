@@ -1,4 +1,4 @@
-# Integrate Form Recognizer
+# Integrate Azure AI Document Intelligence
 
 In this section, we're going to be updating an Azure Function to call Document Intelligence to extract the patient's information from the uploaded image.
 
@@ -59,7 +59,7 @@ if (string.IsNullOrEmpty(endpoint) || string.IsNullOrEmpty(apiKey) || string.IsN
 }
 ```
 
-This first piece of code is retrieving the environment variables that contain the keys and other secret information for Form Recognizer, avoiding us from hard-coding them into the code. We've also got some `null` checking, to ensure that we have set the values.
+This first piece of code is retrieving the environment variables that contain the keys and other secret information for Azure AI Document Intelligence, avoiding us from hard-coding them into the code. We've also got some `null` checking, to ensure that we have set the values.
 
 ```csharp
 var credential = new AzureKeyCredential(apiKey);
@@ -92,7 +92,7 @@ foreach (AnalyzedDocument document in result.Documents)
 return outputs;
 ```
 
-Lastly, we'll call Form Recognizer, telling it which image we want to analyze and what trained model to use for that. When the result comes back, we'll loop through the fields that were found and return them as a dictionary, which will later be stored in Cosmos DB.
+Lastly, we'll call Azure AI Document Intelligence, telling it which image we want to analyze and what trained model to use for that. When the result comes back, we'll loop through the fields that were found and return them as a dictionary, which will later be stored in Cosmos DB.
 
 </details>
 

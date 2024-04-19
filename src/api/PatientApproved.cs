@@ -13,14 +13,14 @@ namespace Contoso.Healthcare.Api
             [HttpTrigger(AuthorizationLevel.Anonymous, "POST", Route = "patient/{id}/approve")] HttpRequest req,
             [CosmosDB(
                 databaseName: "patientDb",
-                collectionName: "patientContainer",
-                ConnectionStringSetting = "COSMOS_DB",
+                containerName: "patientContainer",
+                Connection = "COSMOS_DB",
                 Id = "{id}:complete",
                 PartitionKey = "{id}:complete")] Patient? patient,
             [CosmosDB(
                 databaseName: "patientDb",
-                collectionName: "patientContainer",
-                ConnectionStringSetting = "COSMOS_DB")] out Patient? updatedPatient)
+                containerName: "patientContainer",
+                Connection = "COSMOS_DB")] out Patient? updatedPatient)
         {
             if (patient == null)
             {

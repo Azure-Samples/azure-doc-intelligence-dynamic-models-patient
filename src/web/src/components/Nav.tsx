@@ -46,7 +46,7 @@ const Nav = () => {
             </button>
             {showMenu && (
               <div className={loginMenu}>
-                <StaticWebAuthLogins postLoginRedirect="/post-login" />
+                <StaticWebAuthLogins postLoginRedirect="/post-login" twitter={false} />
               </div>
             )}
           </div>

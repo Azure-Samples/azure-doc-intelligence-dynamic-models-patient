@@ -13,8 +13,8 @@ namespace Contoso.Healthcare.Api
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "patient/{id}")] HttpRequest req,
             [CosmosDB(
                 databaseName: "patientDb",
-                collectionName: "patientContainer",
-                ConnectionStringSetting = "COSMOS_DB",
+                containerName: "patientContainer",
+                Connection = "COSMOS_DB",
                 Id = "{id}:complete",
                 PartitionKey = "{id}:complete")] Patient? patient) => patient == null ? new NotFoundResult() : new OkObjectResult(patient);
     }

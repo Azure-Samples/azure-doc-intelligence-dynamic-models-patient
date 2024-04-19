@@ -15,8 +15,8 @@ public static class VerifyData
         [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "new-patient/{patientId}")] HttpRequest req,
         [CosmosDB(
                 databaseName: "patientDb",
-                collectionName: "patientContainer",
-                ConnectionStringSetting = "COSMOS_DB",
+                containerName: "patientContainer",
+                Connection = "COSMOS_DB",
                 Id = "{patientId}:raw",
                 PartitionKey = "{patientId}:raw")]FormRecognizerResponse patient) => patient == null ? new NotFoundResult() : new OkObjectResult(patient);
 
@@ -25,14 +25,20 @@ public static class VerifyData
         [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "new-patient/{patientId}")] HttpRequest req,
         [CosmosDB(
                 databaseName: "patientDb",
-                collectionName: "patientContainer",
-                ConnectionStringSetting = "COSMOS_DB")]IAsyncCollector<Patient> patientCollector,
+                containerName: "patientContainer",
+                Connection = "COSMOS_DB")]IAsyncCollector<Patient> patientCollector,
         string patientId)
     {
         var patient = JsonConvert.DeserializeObject<Patient>(await req.ReadAsStringAsync());
-        patient.Id = Patient.GetId(patientId);
-        await patientCollector.AddAsync(patient);
-
-        return new OkObjectResult(patient);
+        if (patient != null)
+        {
+            patient.Id = Patient.GetId(patientId);
+            await patientCollector.AddAsync(patient);
+            return new OkObjectResult(patient);
+        }
+        else
+        {
+            return new BadRequestResult();
+        }
     }
 }

@@ -1,5 +1,5 @@
 using Azure;
-using Azure.AI.DocumentIntelligence;
+using Azure.AI.FormRecognizer.DocumentAnalysis;
 using Azure.Storage.Blobs;
 using Azure.Storage.Sas;
 using Contoso.Healthcare.Api.Models;
@@ -49,17 +49,12 @@ public static class UploadFile
         }
 
         var credential = new AzureKeyCredential(apiKey);
-        var client = new DocumentIntelligenceClient(new Uri(endpoint), credential);
+        var client = new DocumentAnalysisClient(new Uri(endpoint), credential);
 
         var blobClient = containerClient.GetBlobClient(filename);
         var uri = blobClient.GenerateSasUri(BlobSasPermissions.Read, DateTimeOffset.UtcNow.AddMinutes(5));
 
-        var content = new AnalyzeDocumentContent()
-        {
-            UrlSource = uri
-        };
-
-        Operation<AnalyzeResult> operation = await client.AnalyzeDocumentAsync(WaitUntil.Completed, modelId, content);
+        AnalyzeDocumentOperation operation = await client.AnalyzeDocumentFromUriAsync(WaitUntil.Completed, modelId, uri);
         AnalyzeResult result = operation.Value;
 
         var outputs = new Dictionary<string, (string, float?)>();

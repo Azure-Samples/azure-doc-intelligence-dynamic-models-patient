@@ -9,37 +9,34 @@ In this section, we're going to be updating an Azure Function to call Document I
 1. Scroll down to the **// TODO: Call Azure AI Document Intelligence** section.
 1. Replace the **// TODO comment and throw** statement with the following code
 
-   ```csharp
-   string? endpoint = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_ENDPOINT");
-   string? apiKey = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_API_KEY");
-   string? modelId = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_MODEL_ID");
+    ```csharp
+    string? endpoint = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_ENDPOINT");
+    string? apiKey = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_API_KEY");
+    string? modelId = Environment.GetEnvironmentVariable("FORM_RECOGNIZER_MODEL_ID");
 
-   if (string.IsNullOrEmpty(endpoint) || string.IsNullOrEmpty(apiKey) || string.IsNullOrEmpty(modelId))
-   {
-       throw new InvalidOperationException("Missing environment variables");
-   }
+    if (string.IsNullOrEmpty(endpoint) || string.IsNullOrEmpty(apiKey) || string.IsNullOrEmpty(modelId))
+    {
+        throw new InvalidOperationException("Missing environment variables");
+    }
 
-   var credential = new AzureKeyCredential(apiKey);
-   var client = new DocumentAnalysisClient(new Uri(endpoint), credential);
+    var credential = new AzureKeyCredential(apiKey);
+    var client = new DocumentAnalysisClient(new Uri(endpoint), credential);
 
-   var blobClient = containerClient.GetBlobClient(filename);
-   var uri = blobClient.GenerateSasUri(BlobSasPermissions.Read, DateTimeOffset.UtcNow.AddMinutes(5));
+    AnalyzeDocumentOperation operation = await client.AnalyzeDocumentAsync(WaitUntil.Completed, modelId, file.OpenReadStream());
+    AnalyzeResult result = operation.Value;
 
-   AnalyzeDocumentOperation operation = await client.AnalyzeDocumentFromUriAsync(WaitUntil.Completed, modelId, uri);
-   AnalyzeResult result = operation.Value;
+    var outputs = new Dictionary<string, (string, float?)>();
 
-   var outputs = new Dictionary<string, (string, float?)>();
+    foreach (AnalyzedDocument document in result.Documents)
+    {
+        foreach ((string fieldName, DocumentField field) in document.Fields)
+        {
+            outputs.Add(fieldName, (field.Content, field.Confidence));
+        }
+    }
 
-   foreach (AnalyzedDocument document in result.Documents)
-   {
-       foreach ((string fieldName, DocumentField field) in document.Fields)
-       {
-           outputs.Add(fieldName, (field.Content, field.Confidence));
-       }
-   }
-
-   return outputs;
-   ```
+    return outputs;
+    ```
 
 1. You must **Save** the file.
 
@@ -69,14 +66,7 @@ var client = new DocumentAnalysisClient(new Uri(endpoint), credential);
 Here, we're creating the connection to Document Intelligence using the endpoint and API key.
 
 ```csharp
-var blobClient = containerClient.GetBlobClient(filename);
-var uri = blobClient.GenerateSasUri(BlobSasPermissions.Read, DateTimeOffset.UtcNow.AddMinutes(5));
-```
-
-Document Intelligence will need a URL to the image that we want to analyze, so we're creating a SAS token for the image that we uploaded to Azure Storage, which will mean that only the Document Intelligence service can access the image.
-
-```csharp
-AnalyzeDocumentOperation operation = await client.AnalyzeDocumentFromUriAsync(WaitUntil.Completed, modelId, uri);
+AnalyzeDocumentOperation operation = await client.AnalyzeDocumentAsync(WaitUntil.Completed, modelId, file.OpenReadStream());
 AnalyzeResult result = operation.Value;
 
 var outputs = new Dictionary<string, (string, float?)>();

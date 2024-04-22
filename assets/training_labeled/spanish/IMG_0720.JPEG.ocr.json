@@ -1,0 +1,4131 @@
+{
+	"status": "succeeded",
+	"createdDateTime": "2022-10-20T04:52:20Z",
+	"lastUpdatedDateTime": "2022-10-20T04:52:23Z",
+	"analyzeResult": {
+		"apiVersion": "2022-08-31",
+		"modelId": "prebuilt-layout",
+		"stringIndexType": "utf16CodeUnit",
+		"content": "Es-ES\nContoso Healthcare Información del nuevo paciente (https://newpatiente2e.github.io/docs/)\nDetalles del paciente:\nNombre\nSarmiento\nApellido\nPedro\nFecha de nacimiento (dd/mm/yy)\n4/4/\n1994\nDetalles de contacto:\nDirección\nMy Street Address\nCiudad\nCity\nEstado\nState\nCorreo electrónico\nPedro@example.com\nMétodo de contacto preferido\nCorreo electrónico\nCódigo\n11492673\nTeléfono\n62931659\nTeléfono Z Mensaje de texto\nMi identidad de género es: Male\nMis pronombres son: he\nContacto de emergencia ::\nNombre\nMro Sarmiento\nGrado de parentesco\nWife\nCorreo electrónico mrs@example.com\nTeléfono\n93112611\nAlergias y medicamentos:\nLista de alergias e intolerancias a medicamentos Wine\nDescribe tu reacción. headache\nBread\nbloating\nFirma\nFecha\n27/8/62022 :unselected: :unselected: :selected:",
+		"pages": [
+			{
+				"pageNumber": 1,
+				"angle": 0,
+				"width": 1474,
+				"height": 2118,
+				"unit": "pixel",
+				"words": [
+					{
+						"content": "Es-ES",
+						"polygon": [
+							1285,
+							131,
+							1349,
+							131,
+							1349,
+							153,
+							1285,
+							154
+						],
+						"confidence": 0.969,
+						"span": {
+							"offset": 0,
+							"length": 5
+						}
+					},
+					{
+						"content": "Contoso",
+						"polygon": [
+							309,
+							157,
+							643,
+							151,
+							645,
+							225,
+							310,
+							226
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 6,
+							"length": 7
+						}
+					},
+					{
+						"content": "Healthcare",
+						"polygon": [
+							678,
+							150,
+							1127,
+							149,
+							1128,
+							219,
+							679,
+							225
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 14,
+							"length": 10
+						}
+					},
+					{
+						"content": "Información",
+						"polygon": [
+							268,
+							243,
+							420,
+							243,
+							420,
+							277,
+							268,
+							277
+						],
+						"confidence": 0.888,
+						"span": {
+							"offset": 25,
+							"length": 11
+						}
+					},
+					{
+						"content": "del",
+						"polygon": [
+							427,
+							243,
+							465,
+							242,
+							465,
+							277,
+							427,
+							277
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 37,
+							"length": 3
+						}
+					},
+					{
+						"content": "nuevo",
+						"polygon": [
+							472,
+							242,
+							553,
+							242,
+							553,
+							276,
+							472,
+							277
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 41,
+							"length": 5
+						}
+					},
+					{
+						"content": "paciente",
+						"polygon": [
+							560,
+							242,
+							674,
+							241,
+							673,
+							275,
+							560,
+							276
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 47,
+							"length": 8
+						}
+					},
+					{
+						"content": "(https://newpatiente2e.github.io/docs/)",
+						"polygon": [
+							680,
+							241,
+							1179,
+							237,
+							1178,
+							266,
+							680,
+							275
+						],
+						"confidence": 0.772,
+						"span": {
+							"offset": 56,
+							"length": 39
+						}
+					},
+					{
+						"content": "Detalles",
+						"polygon": [
+							94,
+							315,
+							193,
+							314,
+							193,
+							347,
+							93,
+							347
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 96,
+							"length": 8
+						}
+					},
+					{
+						"content": "del",
+						"polygon": [
+							200,
+							314,
+							239,
+							313,
+							238,
+							346,
+							199,
+							347
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 105,
+							"length": 3
+						}
+					},
+					{
+						"content": "paciente:",
+						"polygon": [
+							245,
+							313,
+							367,
+							312,
+							368,
+							345,
+							245,
+							346
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 109,
+							"length": 9
+						}
+					},
+					{
+						"content": "Nombre",
+						"polygon": [
+							101,
+							388,
+							203,
+							385,
+							203,
+							417,
+							101,
+							418
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 119,
+							"length": 6
+						}
+					},
+					{
+						"content": "Sarmiento",
+						"polygon": [
+							417,
+							368,
+							717,
+							359,
+							718,
+							415,
+							417,
+							415
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 126,
+							"length": 9
+						}
+					},
+					{
+						"content": "Apellido",
+						"polygon": [
+							99,
+							437,
+							205,
+							437,
+							203,
+							470,
+							100,
+							470
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 136,
+							"length": 8
+						}
+					},
+					{
+						"content": "Pedro",
+						"polygon": [
+							287,
+							423,
+							425,
+							424,
+							424,
+							462,
+							285,
+							462
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 145,
+							"length": 5
+						}
+					},
+					{
+						"content": "Fecha",
+						"polygon": [
+							98,
+							487,
+							178,
+							487,
+							177,
+							520,
+							98,
+							519
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 151,
+							"length": 5
+						}
+					},
+					{
+						"content": "de",
+						"polygon": [
+							184,
+							487,
+							218,
+							487,
+							217,
+							520,
+							184,
+							520
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 157,
+							"length": 2
+						}
+					},
+					{
+						"content": "nacimiento",
+						"polygon": [
+							224,
+							487,
+							369,
+							487,
+							368,
+							522,
+							224,
+							520
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 160,
+							"length": 10
+						}
+					},
+					{
+						"content": "(dd/mm/yy)",
+						"polygon": [
+							376,
+							487,
+							525,
+							487,
+							525,
+							524,
+							375,
+							522
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 171,
+							"length": 10
+						}
+					},
+					{
+						"content": "4/4/",
+						"polygon": [
+							595,
+							478,
+							866,
+							473,
+							865,
+							517,
+							594,
+							516
+						],
+						"confidence": 0.803,
+						"span": {
+							"offset": 182,
+							"length": 4
+						}
+					},
+					{
+						"content": "1994",
+						"polygon": [
+							874,
+							474,
+							987,
+							474,
+							988,
+							511,
+							874,
+							513
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 187,
+							"length": 4
+						}
+					},
+					{
+						"content": "Detalles",
+						"polygon": [
+							95,
+							609,
+							196,
+							611,
+							196,
+							641,
+							95,
+							640
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 192,
+							"length": 8
+						}
+					},
+					{
+						"content": "de",
+						"polygon": [
+							202,
+							611,
+							236,
+							611,
+							236,
+							642,
+							202,
+							641
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 201,
+							"length": 2
+						}
+					},
+					{
+						"content": "contacto:",
+						"polygon": [
+							242,
+							611,
+							365,
+							611,
+							365,
+							642,
+							242,
+							642
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 204,
+							"length": 9
+						}
+					},
+					{
+						"content": "Dirección",
+						"polygon": [
+							100,
+							683,
+							220,
+							684,
+							219,
+							713,
+							100,
+							712
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 214,
+							"length": 9
+						}
+					},
+					{
+						"content": "My",
+						"polygon": [
+							379,
+							665,
+							447,
+							664,
+							444,
+							714,
+							375,
+							714
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 224,
+							"length": 2
+						}
+					},
+					{
+						"content": "Street",
+						"polygon": [
+							524,
+							662,
+							667,
+							660,
+							667,
+							714,
+							521,
+							714
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 227,
+							"length": 6
+						}
+					},
+					{
+						"content": "Address",
+						"polygon": [
+							716,
+							660,
+							915,
+							658,
+							918,
+							712,
+							717,
+							713
+						],
+						"confidence": 0.607,
+						"span": {
+							"offset": 234,
+							"length": 7
+						}
+					},
+					{
+						"content": "Ciudad",
+						"polygon": [
+							101,
+							734,
+							193,
+							733,
+							193,
+							763,
+							102,
+							763
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 242,
+							"length": 6
+						}
+					},
+					{
+						"content": "City",
+						"polygon": [
+							294,
+							721,
+							387,
+							724,
+							386,
+							763,
+							293,
+							760
+						],
+						"confidence": 0.844,
+						"span": {
+							"offset": 249,
+							"length": 4
+						}
+					},
+					{
+						"content": "Estado",
+						"polygon": [
+							101,
+							785,
+							191,
+							785,
+							191,
+							812,
+							101,
+							812
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 254,
+							"length": 6
+						}
+					},
+					{
+						"content": "State",
+						"polygon": [
+							480,
+							771,
+							596,
+							771,
+							596,
+							812,
+							480,
+							810
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 261,
+							"length": 5
+						}
+					},
+					{
+						"content": "Correo",
+						"polygon": [
+							103,
+							835,
+							190,
+							833,
+							191,
+							864,
+							103,
+							863
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 267,
+							"length": 6
+						}
+					},
+					{
+						"content": "electrónico",
+						"polygon": [
+							197,
+							833,
+							340,
+							832,
+							340,
+							864,
+							197,
+							864
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 274,
+							"length": 11
+						}
+					},
+					{
+						"content": "Pedro@example.com",
+						"polygon": [
+							360,
+							822,
+							818,
+							825,
+							817,
+							869,
+							357,
+							860
+						],
+						"confidence": 0.907,
+						"span": {
+							"offset": 286,
+							"length": 17
+						}
+					},
+					{
+						"content": "Método",
+						"polygon": [
+							102,
+							885,
+							198,
+							885,
+							197,
+							918,
+							101,
+							917
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 304,
+							"length": 6
+						}
+					},
+					{
+						"content": "de",
+						"polygon": [
+							204,
+							886,
+							239,
+							886,
+							238,
+							918,
+							204,
+							918
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 311,
+							"length": 2
+						}
+					},
+					{
+						"content": "contacto",
+						"polygon": [
+							245,
+							886,
+							357,
+							886,
+							357,
+							919,
+							245,
+							918
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 314,
+							"length": 8
+						}
+					},
+					{
+						"content": "preferido",
+						"polygon": [
+							363,
+							886,
+							481,
+							886,
+							482,
+							919,
+							363,
+							919
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 323,
+							"length": 9
+						}
+					},
+					{
+						"content": "Correo",
+						"polygon": [
+							561,
+							887,
+							650,
+							885,
+							650,
+							917,
+							560,
+							917
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 333,
+							"length": 6
+						}
+					},
+					{
+						"content": "electrónico",
+						"polygon": [
+							657,
+							885,
+							799,
+							884,
+							799,
+							917,
+							656,
+							917
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 340,
+							"length": 11
+						}
+					},
+					{
+						"content": "Código",
+						"polygon": [
+							859,
+							784,
+							950,
+							784,
+							950,
+							815,
+							859,
+							815
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 352,
+							"length": 6
+						}
+					},
+					{
+						"content": "11492673",
+						"polygon": [
+							1014,
+							777,
+							1305,
+							767,
+							1306,
+							806,
+							1014,
+							814
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 359,
+							"length": 8
+						}
+					},
+					{
+						"content": "Teléfono",
+						"polygon": [
+							884,
+							835,
+							994,
+							835,
+							993,
+							863,
+							885,
+							863
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 368,
+							"length": 8
+						}
+					},
+					{
+						"content": "62931659",
+						"polygon": [
+							1061,
+							823,
+							1327,
+							817,
+							1329,
+							857,
+							1059,
+							861
+						],
+						"confidence": 0.989,
+						"span": {
+							"offset": 377,
+							"length": 8
+						}
+					},
+					{
+						"content": "Teléfono",
+						"polygon": [
+							876,
+							887,
+							988,
+							884,
+							988,
+							916,
+							876,
+							913
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 386,
+							"length": 8
+						}
+					},
+					{
+						"content": "Z",
+						"polygon": [
+							1028,
+							883,
+							1046,
+							883,
+							1046,
+							916,
+							1028,
+							916
+						],
+						"confidence": 0.01,
+						"span": {
+							"offset": 395,
+							"length": 1
+						}
+					},
+					{
+						"content": "Mensaje",
+						"polygon": [
+							1061,
+							883,
+							1175,
+							882,
+							1175,
+							916,
+							1061,
+							916
+						],
+						"confidence": 0.955,
+						"span": {
+							"offset": 397,
+							"length": 7
+						}
+					},
+					{
+						"content": "de",
+						"polygon": [
+							1181,
+							882,
+							1217,
+							882,
+							1217,
+							916,
+							1181,
+							916
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 405,
+							"length": 2
+						}
+					},
+					{
+						"content": "texto",
+						"polygon": [
+							1223,
+							882,
+							1291,
+							883,
+							1291,
+							915,
+							1223,
+							916
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 408,
+							"length": 5
+						}
+					},
+					{
+						"content": "Mi",
+						"polygon": [
+							96,
+							978,
+							125,
+							978,
+							125,
+							1007,
+							96,
+							1007
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 414,
+							"length": 2
+						}
+					},
+					{
+						"content": "identidad",
+						"polygon": [
+							131,
+							978,
+							252,
+							977,
+							252,
+							1008,
+							131,
+							1007
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 417,
+							"length": 9
+						}
+					},
+					{
+						"content": "de",
+						"polygon": [
+							258,
+							977,
+							292,
+							977,
+							292,
+							1008,
+							259,
+							1008
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 427,
+							"length": 2
+						}
+					},
+					{
+						"content": "género",
+						"polygon": [
+							298,
+							977,
+							390,
+							978,
+							390,
+							1009,
+							298,
+							1008
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 430,
+							"length": 6
+						}
+					},
+					{
+						"content": "es:",
+						"polygon": [
+							396,
+							978,
+							438,
+							979,
+							438,
+							1009,
+							396,
+							1009
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 437,
+							"length": 3
+						}
+					},
+					{
+						"content": "Male",
+						"polygon": [
+							210,
+							1022,
+							314,
+							1021,
+							315,
+							1070,
+							211,
+							1071
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 441,
+							"length": 4
+						}
+					},
+					{
+						"content": "Mis",
+						"polygon": [
+							100,
+							1148,
+							144,
+							1148,
+							143,
+							1176,
+							99,
+							1176
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 446,
+							"length": 3
+						}
+					},
+					{
+						"content": "pronombres",
+						"polygon": [
+							150,
+							1148,
+							306,
+							1148,
+							306,
+							1176,
+							149,
+							1176
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 450,
+							"length": 10
+						}
+					},
+					{
+						"content": "son:",
+						"polygon": [
+							312,
+							1148,
+							370,
+							1148,
+							370,
+							1176,
+							312,
+							1176
+						],
+						"confidence": 0.985,
+						"span": {
+							"offset": 461,
+							"length": 4
+						}
+					},
+					{
+						"content": "he",
+						"polygon": [
+							212,
+							1196,
+							261,
+							1196,
+							261,
+							1237,
+							212,
+							1237
+						],
+						"confidence": 0.985,
+						"span": {
+							"offset": 466,
+							"length": 2
+						}
+					},
+					{
+						"content": "Contacto",
+						"polygon": [
+							99,
+							1315,
+							213,
+							1315,
+							214,
+							1347,
+							100,
+							1346
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 469,
+							"length": 8
+						}
+					},
+					{
+						"content": "de",
+						"polygon": [
+							220,
+							1315,
+							254,
+							1315,
+							255,
+							1347,
+							220,
+							1347
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 478,
+							"length": 2
+						}
+					},
+					{
+						"content": "emergencia",
+						"polygon": [
+							261,
+							1315,
+							404,
+							1315,
+							404,
+							1346,
+							261,
+							1347
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 481,
+							"length": 10
+						}
+					},
+					{
+						"content": "::",
+						"polygon": [
+							410,
+							1315,
+							429,
+							1315,
+							429,
+							1346,
+							410,
+							1346
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 492,
+							"length": 2
+						}
+					},
+					{
+						"content": "Nombre",
+						"polygon": [
+							107,
+							1388,
+							208,
+							1388,
+							208,
+							1415,
+							108,
+							1416
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 495,
+							"length": 6
+						}
+					},
+					{
+						"content": "Mro",
+						"polygon": [
+							297,
+							1365,
+							376,
+							1365,
+							376,
+							1410,
+							297,
+							1409
+						],
+						"confidence": 0.908,
+						"span": {
+							"offset": 502,
+							"length": 3
+						}
+					},
+					{
+						"content": "Sarmiento",
+						"polygon": [
+							431,
+							1365,
+							686,
+							1361,
+							687,
+							1411,
+							432,
+							1410
+						],
+						"confidence": 0.989,
+						"span": {
+							"offset": 506,
+							"length": 9
+						}
+					},
+					{
+						"content": "Grado",
+						"polygon": [
+							109,
+							1437,
+							187,
+							1437,
+							186,
+							1468,
+							109,
+							1469
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 516,
+							"length": 5
+						}
+					},
+					{
+						"content": "de",
+						"polygon": [
+							193,
+							1437,
+							225,
+							1437,
+							225,
+							1468,
+							193,
+							1468
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 522,
+							"length": 2
+						}
+					},
+					{
+						"content": "parentesco",
+						"polygon": [
+							231,
+							1437,
+							378,
+							1436,
+							376,
+							1466,
+							231,
+							1468
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 525,
+							"length": 10
+						}
+					},
+					{
+						"content": "Wife",
+						"polygon": [
+							479,
+							1421,
+							572,
+							1420,
+							572,
+							1461,
+							479,
+							1460
+						],
+						"confidence": 0.677,
+						"span": {
+							"offset": 536,
+							"length": 4
+						}
+					},
+					{
+						"content": "Correo",
+						"polygon": [
+							111,
+							1489,
+							191,
+							1486,
+							191,
+							1516,
+							111,
+							1519
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 541,
+							"length": 6
+						}
+					},
+					{
+						"content": "electrónico",
+						"polygon": [
+							198,
+							1485,
+							349,
+							1481,
+							349,
+							1514,
+							198,
+							1516
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 548,
+							"length": 11
+						}
+					},
+					{
+						"content": "mrs@example.com",
+						"polygon": [
+							372,
+							1480,
+							784,
+							1474,
+							785,
+							1515,
+							373,
+							1514
+						],
+						"confidence": 0.917,
+						"span": {
+							"offset": 560,
+							"length": 15
+						}
+					},
+					{
+						"content": "Teléfono",
+						"polygon": [
+							861,
+							1489,
+							964,
+							1490,
+							963,
+							1516,
+							861,
+							1516
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 576,
+							"length": 8
+						}
+					},
+					{
+						"content": "93112611",
+						"polygon": [
+							1033,
+							1476,
+							1255,
+							1476,
+							1255,
+							1513,
+							1032,
+							1515
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 585,
+							"length": 8
+						}
+					},
+					{
+						"content": "Alergias",
+						"polygon": [
+							103,
+							1589,
+							195,
+							1589,
+							195,
+							1621,
+							103,
+							1621
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 594,
+							"length": 8
+						}
+					},
+					{
+						"content": "y",
+						"polygon": [
+							202,
+							1589,
+							216,
+							1589,
+							216,
+							1621,
+							201,
+							1621
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 603,
+							"length": 1
+						}
+					},
+					{
+						"content": "medicamentos:",
+						"polygon": [
+							223,
+							1589,
+							402,
+							1588,
+							401,
+							1620,
+							222,
+							1621
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 605,
+							"length": 13
+						}
+					},
+					{
+						"content": "Lista",
+						"polygon": [
+							113,
+							1624,
+							173,
+							1624,
+							173,
+							1656,
+							113,
+							1656
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 619,
+							"length": 5
+						}
+					},
+					{
+						"content": "de",
+						"polygon": [
+							180,
+							1624,
+							214,
+							1624,
+							214,
+							1656,
+							180,
+							1656
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 625,
+							"length": 2
+						}
+					},
+					{
+						"content": "alergias",
+						"polygon": [
+							220,
+							1624,
+							323,
+							1624,
+							323,
+							1655,
+							220,
+							1656
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 628,
+							"length": 8
+						}
+					},
+					{
+						"content": "e",
+						"polygon": [
+							329,
+							1624,
+							346,
+							1624,
+							346,
+							1655,
+							329,
+							1655
+						],
+						"confidence": 0.998,
+						"span": {
+							"offset": 637,
+							"length": 1
+						}
+					},
+					{
+						"content": "intolerancias",
+						"polygon": [
+							352,
+							1624,
+							516,
+							1624,
+							516,
+							1655,
+							352,
+							1655
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 639,
+							"length": 13
+						}
+					},
+					{
+						"content": "a",
+						"polygon": [
+							522,
+							1624,
+							538,
+							1624,
+							538,
+							1655,
+							522,
+							1655
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 653,
+							"length": 1
+						}
+					},
+					{
+						"content": "medicamentos",
+						"polygon": [
+							544,
+							1624,
+							736,
+							1625,
+							736,
+							1654,
+							544,
+							1655
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 655,
+							"length": 12
+						}
+					},
+					{
+						"content": "Wine",
+						"polygon": [
+							213,
+							1672,
+							319,
+							1672,
+							320,
+							1721,
+							212,
+							1719
+						],
+						"confidence": 0.985,
+						"span": {
+							"offset": 668,
+							"length": 4
+						}
+					},
+					{
+						"content": "Describe",
+						"polygon": [
+							826,
+							1625,
+							930,
+							1627,
+							930,
+							1655,
+							826,
+							1654
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 673,
+							"length": 8
+						}
+					},
+					{
+						"content": "tu",
+						"polygon": [
+							936,
+							1627,
+							960,
+							1627,
+							960,
+							1656,
+							936,
+							1655
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 682,
+							"length": 2
+						}
+					},
+					{
+						"content": "reacción.",
+						"polygon": [
+							965,
+							1628,
+							1076,
+							1629,
+							1076,
+							1657,
+							965,
+							1656
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 685,
+							"length": 9
+						}
+					},
+					{
+						"content": "headache",
+						"polygon": [
+							870,
+							1669,
+							1129,
+							1666,
+							1131,
+							1722,
+							868,
+							1720
+						],
+						"confidence": 0.936,
+						"span": {
+							"offset": 695,
+							"length": 8
+						}
+					},
+					{
+						"content": "Bread",
+						"polygon": [
+							173,
+							1790,
+							306,
+							1790,
+							305,
+							1835,
+							171,
+							1834
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 704,
+							"length": 5
+						}
+					},
+					{
+						"content": "bloating",
+						"polygon": [
+							901,
+							1787,
+							1120,
+							1789,
+							1119,
+							1846,
+							899,
+							1836
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 710,
+							"length": 8
+						}
+					},
+					{
+						"content": "Firma",
+						"polygon": [
+							99,
+							1960,
+							171,
+							1960,
+							171,
+							1991,
+							99,
+							1990
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 719,
+							"length": 5
+						}
+					},
+					{
+						"content": "Fecha",
+						"polygon": [
+							872,
+							1966,
+							951,
+							1967,
+							950,
+							1996,
+							872,
+							1994
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 725,
+							"length": 5
+						}
+					},
+					{
+						"content": "27/8/62022",
+						"polygon": [
+							1016,
+							1941,
+							1355,
+							1944,
+							1355,
+							1989,
+							1015,
+							1992
+						],
+						"confidence": 0.797,
+						"span": {
+							"offset": 731,
+							"length": 10
+						}
+					}
+				],
+				"selectionMarks": [
+					{
+						"state": "unselected",
+						"polygon": [
+							523,
+							889,
+							547,
+							889,
+							547,
+							913,
+							523,
+							913
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 742,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"polygon": [
+							834,
+							888,
+							858,
+							888,
+							858,
+							913,
+							834,
+							913
+						],
+						"confidence": 1,
+						"span": {
+							"offset": 755,
+							"length": 12
+						}
+					},
+					{
+						"state": "selected",
+						"polygon": [
+							1025,
+							888,
+							1048,
+							888,
+							1048,
+							911,
+							1025,
+							911
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 768,
+							"length": 10
+						}
+					}
+				],
+				"lines": [
+					{
+						"content": "Es-ES",
+						"polygon": [
+							1285,
+							131,
+							1353,
+							130,
+							1353,
+							152,
+							1285,
+							153
+						],
+						"spans": [
+							{
+								"offset": 0,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Contoso Healthcare",
+						"polygon": [
+							308,
+							153,
+							1139,
+							148,
+							1140,
+							219,
+							309,
+							226
+						],
+						"spans": [
+							{
+								"offset": 6,
+								"length": 18
+							}
+						]
+					},
+					{
+						"content": "Información del nuevo paciente (https://newpatiente2e.github.io/docs/)",
+						"polygon": [
+							268,
+							243,
+							1179,
+							237,
+							1180,
+							269,
+							268,
+							277
+						],
+						"spans": [
+							{
+								"offset": 25,
+								"length": 70
+							}
+						]
+					},
+					{
+						"content": "Detalles del paciente:",
+						"polygon": [
+							93,
+							314,
+							368,
+							312,
+							369,
+							344,
+							93,
+							347
+						],
+						"spans": [
+							{
+								"offset": 96,
+								"length": 22
+							}
+						]
+					},
+					{
+						"content": "Nombre",
+						"polygon": [
+							101,
+							386,
+							205,
+							385,
+							205,
+							417,
+							101,
+							418
+						],
+						"spans": [
+							{
+								"offset": 119,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "Sarmiento",
+						"polygon": [
+							402,
+							364,
+							722,
+							358,
+							723,
+							414,
+							402,
+							415
+						],
+						"spans": [
+							{
+								"offset": 126,
+								"length": 9
+							}
+						]
+					},
+					{
+						"content": "Apellido",
+						"polygon": [
+							99,
+							436,
+							206,
+							436,
+							206,
+							469,
+							99,
+							469
+						],
+						"spans": [
+							{
+								"offset": 136,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Pedro",
+						"polygon": [
+							274,
+							422,
+							425,
+							422,
+							425,
+							461,
+							274,
+							461
+						],
+						"spans": [
+							{
+								"offset": 145,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Fecha de nacimiento (dd/mm/yy)",
+						"polygon": [
+							97,
+							487,
+							526,
+							487,
+							526,
+							523,
+							97,
+							520
+						],
+						"spans": [
+							{
+								"offset": 151,
+								"length": 30
+							}
+						]
+					},
+					{
+						"content": "4/4/",
+						"polygon": [
+							587,
+							475,
+							873,
+							473,
+							874,
+							516,
+							587,
+							518
+						],
+						"spans": [
+							{
+								"offset": 182,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "1994",
+						"polygon": [
+							873,
+							474,
+							989,
+							474,
+							989,
+							511,
+							873,
+							512
+						],
+						"spans": [
+							{
+								"offset": 187,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Detalles de contacto:",
+						"polygon": [
+							94,
+							609,
+							365,
+							610,
+							365,
+							641,
+							94,
+							640
+						],
+						"spans": [
+							{
+								"offset": 192,
+								"length": 21
+							}
+						]
+					},
+					{
+						"content": "Dirección",
+						"polygon": [
+							99,
+							683,
+							223,
+							683,
+							223,
+							712,
+							99,
+							711
+						],
+						"spans": [
+							{
+								"offset": 214,
+								"length": 9
+							}
+						]
+					},
+					{
+						"content": "My Street Address",
+						"polygon": [
+							346,
+							663,
+							918,
+							658,
+							919,
+							710,
+							346,
+							714
+						],
+						"spans": [
+							{
+								"offset": 224,
+								"length": 17
+							}
+						]
+					},
+					{
+						"content": "Ciudad",
+						"polygon": [
+							100,
+							732,
+							195,
+							732,
+							195,
+							762,
+							100,
+							762
+						],
+						"spans": [
+							{
+								"offset": 242,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "City",
+						"polygon": [
+							278,
+							721,
+							393,
+							725,
+							394,
+							762,
+							277,
+							760
+						],
+						"spans": [
+							{
+								"offset": 249,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Estado",
+						"polygon": [
+							101,
+							784,
+							194,
+							784,
+							194,
+							811,
+							101,
+							811
+						],
+						"spans": [
+							{
+								"offset": 254,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "State",
+						"polygon": [
+							474,
+							771,
+							600,
+							771,
+							599,
+							812,
+							474,
+							811
+						],
+						"spans": [
+							{
+								"offset": 261,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Correo electrónico",
+						"polygon": [
+							102,
+							833,
+							343,
+							831,
+							343,
+							863,
+							102,
+							864
+						],
+						"spans": [
+							{
+								"offset": 267,
+								"length": 18
+							}
+						]
+					},
+					{
+						"content": "Pedro@example.com",
+						"polygon": [
+							357,
+							820,
+							818,
+							823,
+							817,
+							868,
+							356,
+							862
+						],
+						"spans": [
+							{
+								"offset": 286,
+								"length": 17
+							}
+						]
+					},
+					{
+						"content": "Método de contacto preferido",
+						"polygon": [
+							100,
+							884,
+							487,
+							886,
+							487,
+							919,
+							100,
+							917
+						],
+						"spans": [
+							{
+								"offset": 304,
+								"length": 28
+							}
+						]
+					},
+					{
+						"content": "Correo electrónico",
+						"polygon": [
+							557,
+							885,
+							802,
+							884,
+							802,
+							916,
+							557,
+							917
+						],
+						"spans": [
+							{
+								"offset": 333,
+								"length": 18
+							}
+						]
+					},
+					{
+						"content": "Código",
+						"polygon": [
+							858,
+							783,
+							952,
+							783,
+							952,
+							815,
+							858,
+							815
+						],
+						"spans": [
+							{
+								"offset": 352,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "11492673",
+						"polygon": [
+							1008,
+							774,
+							1306,
+							767,
+							1307,
+							805,
+							1008,
+							814
+						],
+						"spans": [
+							{
+								"offset": 359,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Teléfono",
+						"polygon": [
+							883,
+							833,
+							997,
+							834,
+							997,
+							862,
+							883,
+							862
+						],
+						"spans": [
+							{
+								"offset": 368,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "62931659",
+						"polygon": [
+							1048,
+							822,
+							1328,
+							816,
+							1329,
+							856,
+							1048,
+							861
+						],
+						"spans": [
+							{
+								"offset": 377,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Teléfono Z Mensaje de texto",
+						"polygon": [
+							874,
+							882,
+							1292,
+							882,
+							1292,
+							915,
+							874,
+							916
+						],
+						"spans": [
+							{
+								"offset": 386,
+								"length": 27
+							}
+						]
+					},
+					{
+						"content": "Mi identidad de género es:",
+						"polygon": [
+							95,
+							977,
+							439,
+							978,
+							438,
+							1008,
+							95,
+							1006
+						],
+						"spans": [
+							{
+								"offset": 414,
+								"length": 26
+							}
+						]
+					},
+					{
+						"content": "Male",
+						"polygon": [
+							184,
+							1025,
+							315,
+							1021,
+							316,
+							1070,
+							184,
+							1071
+						],
+						"spans": [
+							{
+								"offset": 441,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Mis pronombres son:",
+						"polygon": [
+							99,
+							1147,
+							370,
+							1147,
+							370,
+							1175,
+							99,
+							1175
+						],
+						"spans": [
+							{
+								"offset": 446,
+								"length": 19
+							}
+						]
+					},
+					{
+						"content": "he",
+						"polygon": [
+							196,
+							1196,
+							263,
+							1196,
+							263,
+							1237,
+							195,
+							1237
+						],
+						"spans": [
+							{
+								"offset": 466,
+								"length": 2
+							}
+						]
+					},
+					{
+						"content": "Contacto de emergencia ::",
+						"polygon": [
+							99,
+							1315,
+							430,
+							1315,
+							430,
+							1346,
+							99,
+							1346
+						],
+						"spans": [
+							{
+								"offset": 469,
+								"length": 25
+							}
+						]
+					},
+					{
+						"content": "Nombre",
+						"polygon": [
+							107,
+							1387,
+							211,
+							1386,
+							211,
+							1414,
+							107,
+							1415
+						],
+						"spans": [
+							{
+								"offset": 495,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "Mro Sarmiento",
+						"polygon": [
+							278,
+							1361,
+							692,
+							1360,
+							692,
+							1410,
+							278,
+							1411
+						],
+						"spans": [
+							{
+								"offset": 502,
+								"length": 13
+							}
+						]
+					},
+					{
+						"content": "Grado de parentesco",
+						"polygon": [
+							109,
+							1436,
+							381,
+							1436,
+							382,
+							1466,
+							109,
+							1468
+						],
+						"spans": [
+							{
+								"offset": 516,
+								"length": 19
+							}
+						]
+					},
+					{
+						"content": "Wife",
+						"polygon": [
+							447,
+							1420,
+							578,
+							1420,
+							577,
+							1460,
+							447,
+							1459
+						],
+						"spans": [
+							{
+								"offset": 536,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Correo electrónico mrs@example.com",
+						"polygon": [
+							105,
+							1482,
+							792,
+							1473,
+							793,
+							1513,
+							106,
+							1519
+						],
+						"spans": [
+							{
+								"offset": 541,
+								"length": 34
+							}
+						]
+					},
+					{
+						"content": "Teléfono",
+						"polygon": [
+							857,
+							1488,
+							964,
+							1489,
+							964,
+							1516,
+							857,
+							1515
+						],
+						"spans": [
+							{
+								"offset": 576,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "93112611",
+						"polygon": [
+							1026,
+							1475,
+							1258,
+							1475,
+							1259,
+							1512,
+							1026,
+							1514
+						],
+						"spans": [
+							{
+								"offset": 585,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Alergias y medicamentos:",
+						"polygon": [
+							102,
+							1589,
+							402,
+							1588,
+							402,
+							1620,
+							102,
+							1621
+						],
+						"spans": [
+							{
+								"offset": 594,
+								"length": 24
+							}
+						]
+					},
+					{
+						"content": "Lista de alergias e intolerancias a medicamentos",
+						"polygon": [
+							113,
+							1623,
+							737,
+							1623,
+							737,
+							1654,
+							113,
+							1655
+						],
+						"spans": [
+							{
+								"offset": 619,
+								"length": 48
+							}
+						]
+					},
+					{
+						"content": "Wine",
+						"polygon": [
+							179,
+							1671,
+							322,
+							1671,
+							322,
+							1720,
+							178,
+							1718
+						],
+						"spans": [
+							{
+								"offset": 668,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Describe tu reacción.",
+						"polygon": [
+							826,
+							1625,
+							1075,
+							1628,
+							1075,
+							1657,
+							825,
+							1653
+						],
+						"spans": [
+							{
+								"offset": 673,
+								"length": 21
+							}
+						]
+					},
+					{
+						"content": "headache",
+						"polygon": [
+							866,
+							1666,
+							1136,
+							1665,
+							1136,
+							1721,
+							866,
+							1722
+						],
+						"spans": [
+							{
+								"offset": 695,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Bread",
+						"polygon": [
+							164,
+							1789,
+							315,
+							1789,
+							315,
+							1834,
+							164,
+							1834
+						],
+						"spans": [
+							{
+								"offset": 704,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "bloating",
+						"polygon": [
+							900,
+							1786,
+							1122,
+							1788,
+							1120,
+							1846,
+							898,
+							1840
+						],
+						"spans": [
+							{
+								"offset": 710,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Firma",
+						"polygon": [
+							100,
+							1960,
+							171,
+							1960,
+							172,
+							1991,
+							99,
+							1990
+						],
+						"spans": [
+							{
+								"offset": 719,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Fecha",
+						"polygon": [
+							872,
+							1966,
+							955,
+							1966,
+							954,
+							1995,
+							871,
+							1994
+						],
+						"spans": [
+							{
+								"offset": 725,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "27/8/62022",
+						"polygon": [
+							1014,
+							1940,
+							1360,
+							1940,
+							1360,
+							1993,
+							1014,
+							1992
+						],
+						"spans": [
+							{
+								"offset": 731,
+								"length": 10
+							}
+						]
+					}
+				],
+				"spans": [
+					{
+						"offset": 0,
+						"length": 778
+					}
+				],
+				"kind": "document"
+			}
+		],
+		"tables": [
+			{
+				"rowCount": 4,
+				"columnCount": 4,
+				"cells": [
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 0,
+						"columnSpan": 3,
+						"content": "Lista de alergias e intolerancias a medicamentos Wine",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									103,
+									1620,
+									780,
+									1620,
+									782,
+									1723,
+									103,
+									1722
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 619,
+								"length": 53
+							}
+						]
+					},
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 3,
+						"content": "Describe tu reacción. headache",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									780,
+									1620,
+									1358,
+									1628,
+									1358,
+									1732,
+									782,
+									1723
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 673,
+								"length": 30
+							}
+						]
+					},
+					{
+						"rowIndex": 1,
+						"columnIndex": 0,
+						"columnSpan": 3,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									103,
+									1722,
+									782,
+									1723,
+									782,
+									1781,
+									103,
+									1778
+								]
+							}
+						],
+						"spans": []
+					},
+					{
+						"rowIndex": 1,
+						"columnIndex": 3,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									782,
+									1723,
+									1358,
+									1732,
+									1358,
+									1790,
+									782,
+									1781
+								]
+							}
+						],
+						"spans": []
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 0,
+						"columnSpan": 3,
+						"content": "Bread",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									103,
+									1778,
+									782,
+									1781,
+									783,
+									1838,
+									103,
+									1834
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 704,
+								"length": 5
+							}
+						]
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 3,
+						"content": "bloating",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									782,
+									1781,
+									1358,
+									1790,
+									1358,
+									1847,
+									783,
+									1838
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 710,
+								"length": 8
+							}
+						]
+					},
+					{
+						"rowIndex": 3,
+						"columnIndex": 0,
+						"columnSpan": 3,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									103,
+									1834,
+									783,
+									1838,
+									783,
+									1892,
+									104,
+									1888
+								]
+							}
+						],
+						"spans": []
+					},
+					{
+						"rowIndex": 3,
+						"columnIndex": 3,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									783,
+									1838,
+									1358,
+									1847,
+									1357,
+									1900,
+									783,
+									1892
+								]
+							}
+						],
+						"spans": []
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							101,
+							1613,
+							1363,
+							1624,
+							1361,
+							1902,
+							99,
+							1891
+						]
+					}
+				],
+				"spans": [
+					{
+						"offset": 619,
+						"length": 99
+					}
+				]
+			}
+		],
+		"paragraphs": [
+			{
+				"spans": [
+					{
+						"offset": 0,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1285,
+							131,
+							1353,
+							130,
+							1353,
+							152,
+							1285,
+							153
+						]
+					}
+				],
+				"role": "pageNumber",
+				"content": "Es-ES"
+			},
+			{
+				"spans": [
+					{
+						"offset": 6,
+						"length": 89
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							267,
+							153,
+							1179,
+							145,
+							1180,
+							269,
+							268,
+							277
+						]
+					}
+				],
+				"role": "title",
+				"content": "Contoso Healthcare Información del nuevo paciente (https://newpatiente2e.github.io/docs/)"
+			},
+			{
+				"spans": [
+					{
+						"offset": 96,
+						"length": 22
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							93,
+							314,
+							369,
+							311,
+							369,
+							344,
+							93,
+							347
+						]
+					}
+				],
+				"content": "Detalles del paciente:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 119,
+						"length": 6
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							101,
+							386,
+							205,
+							385,
+							205,
+							417,
+							101,
+							418
+						]
+					}
+				],
+				"content": "Nombre"
+			},
+			{
+				"spans": [
+					{
+						"offset": 126,
+						"length": 9
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							402,
+							364,
+							722,
+							358,
+							723,
+							414,
+							402,
+							415
+						]
+					}
+				],
+				"content": "Sarmiento"
+			},
+			{
+				"spans": [
+					{
+						"offset": 136,
+						"length": 8
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							99,
+							436,
+							206,
+							436,
+							206,
+							469,
+							99,
+							469
+						]
+					}
+				],
+				"content": "Apellido"
+			},
+			{
+				"spans": [
+					{
+						"offset": 145,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							274,
+							422,
+							425,
+							422,
+							425,
+							461,
+							274,
+							461
+						]
+					}
+				],
+				"content": "Pedro"
+			},
+			{
+				"spans": [
+					{
+						"offset": 151,
+						"length": 30
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							97,
+							487,
+							526,
+							487,
+							526,
+							523,
+							97,
+							520
+						]
+					}
+				],
+				"content": "Fecha de nacimiento (dd/mm/yy)"
+			},
+			{
+				"spans": [
+					{
+						"offset": 182,
+						"length": 4
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							587,
+							475,
+							873,
+							473,
+							874,
+							516,
+							587,
+							518
+						]
+					}
+				],
+				"content": "4/4/"
+			},
+			{
+				"spans": [
+					{
+						"offset": 187,
+						"length": 4
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							873,
+							474,
+							989,
+							474,
+							989,
+							511,
+							873,
+							512
+						]
+					}
+				],
+				"content": "1994"
+			},
+			{
+				"spans": [
+					{
+						"offset": 192,
+						"length": 21
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							94,
+							609,
+							365,
+							610,
+							365,
+							641,
+							94,
+							640
+						]
+					}
+				],
+				"content": "Detalles de contacto:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 214,
+						"length": 9
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							99,
+							683,
+							223,
+							683,
+							223,
+							712,
+							99,
+							711
+						]
+					}
+				],
+				"content": "Dirección"
+			},
+			{
+				"spans": [
+					{
+						"offset": 224,
+						"length": 17
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							346,
+							663,
+							918,
+							658,
+							919,
+							710,
+							346,
+							714
+						]
+					}
+				],
+				"content": "My Street Address"
+			},
+			{
+				"spans": [
+					{
+						"offset": 242,
+						"length": 6
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							100,
+							732,
+							195,
+							732,
+							195,
+							762,
+							100,
+							762
+						]
+					}
+				],
+				"content": "Ciudad"
+			},
+			{
+				"spans": [
+					{
+						"offset": 249,
+						"length": 4
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							278,
+							721,
+							393,
+							725,
+							394,
+							762,
+							277,
+							760
+						]
+					}
+				],
+				"content": "City"
+			},
+			{
+				"spans": [
+					{
+						"offset": 254,
+						"length": 6
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							101,
+							784,
+							194,
+							784,
+							194,
+							811,
+							101,
+							811
+						]
+					}
+				],
+				"content": "Estado"
+			},
+			{
+				"spans": [
+					{
+						"offset": 261,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							474,
+							771,
+							600,
+							771,
+							599,
+							812,
+							474,
+							811
+						]
+					}
+				],
+				"content": "State"
+			},
+			{
+				"spans": [
+					{
+						"offset": 267,
+						"length": 18
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							102,
+							833,
+							343,
+							831,
+							343,
+							863,
+							102,
+							864
+						]
+					}
+				],
+				"content": "Correo electrónico"
+			},
+			{
+				"spans": [
+					{
+						"offset": 286,
+						"length": 17
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							357,
+							820,
+							818,
+							823,
+							817,
+							868,
+							356,
+							862
+						]
+					}
+				],
+				"content": "Pedro@example.com"
+			},
+			{
+				"spans": [
+					{
+						"offset": 304,
+						"length": 28
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							100,
+							884,
+							487,
+							886,
+							487,
+							919,
+							100,
+							917
+						]
+					}
+				],
+				"content": "Método de contacto preferido"
+			},
+			{
+				"spans": [
+					{
+						"offset": 333,
+						"length": 18
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							557,
+							885,
+							802,
+							884,
+							802,
+							916,
+							557,
+							917
+						]
+					}
+				],
+				"content": "Correo electrónico"
+			},
+			{
+				"spans": [
+					{
+						"offset": 352,
+						"length": 6
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							858,
+							783,
+							952,
+							783,
+							952,
+							815,
+							858,
+							815
+						]
+					}
+				],
+				"content": "Código"
+			},
+			{
+				"spans": [
+					{
+						"offset": 359,
+						"length": 8
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1008,
+							774,
+							1306,
+							767,
+							1307,
+							805,
+							1008,
+							814
+						]
+					}
+				],
+				"content": "11492673"
+			},
+			{
+				"spans": [
+					{
+						"offset": 368,
+						"length": 8
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							883,
+							833,
+							997,
+							834,
+							997,
+							862,
+							883,
+							862
+						]
+					}
+				],
+				"content": "Teléfono"
+			},
+			{
+				"spans": [
+					{
+						"offset": 377,
+						"length": 8
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1048,
+							822,
+							1328,
+							816,
+							1329,
+							856,
+							1048,
+							861
+						]
+					}
+				],
+				"content": "62931659"
+			},
+			{
+				"spans": [
+					{
+						"offset": 386,
+						"length": 27
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							874,
+							882,
+							1292,
+							882,
+							1292,
+							916,
+							874,
+							916
+						]
+					}
+				],
+				"content": "Teléfono Z Mensaje de texto"
+			},
+			{
+				"spans": [
+					{
+						"offset": 414,
+						"length": 31
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							95,
+							977,
+							439,
+							978,
+							439,
+							1072,
+							95,
+							1071
+						]
+					}
+				],
+				"content": "Mi identidad de género es: Male"
+			},
+			{
+				"spans": [
+					{
+						"offset": 446,
+						"length": 22
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							99,
+							1147,
+							370,
+							1147,
+							370,
+							1237,
+							99,
+							1237
+						]
+					}
+				],
+				"content": "Mis pronombres son: he"
+			},
+			{
+				"spans": [
+					{
+						"offset": 469,
+						"length": 25
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							99,
+							1315,
+							430,
+							1315,
+							430,
+							1346,
+							99,
+							1346
+						]
+					}
+				],
+				"content": "Contacto de emergencia ::"
+			},
+			{
+				"spans": [
+					{
+						"offset": 495,
+						"length": 6
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							107,
+							1387,
+							211,
+							1386,
+							211,
+							1414,
+							107,
+							1415
+						]
+					}
+				],
+				"content": "Nombre"
+			},
+			{
+				"spans": [
+					{
+						"offset": 502,
+						"length": 13
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							278,
+							1361,
+							692,
+							1360,
+							692,
+							1410,
+							278,
+							1411
+						]
+					}
+				],
+				"content": "Mro Sarmiento"
+			},
+			{
+				"spans": [
+					{
+						"offset": 516,
+						"length": 19
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							109,
+							1436,
+							381,
+							1436,
+							382,
+							1466,
+							109,
+							1468
+						]
+					}
+				],
+				"content": "Grado de parentesco"
+			},
+			{
+				"spans": [
+					{
+						"offset": 536,
+						"length": 4
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							447,
+							1420,
+							578,
+							1420,
+							577,
+							1460,
+							447,
+							1459
+						]
+					}
+				],
+				"content": "Wife"
+			},
+			{
+				"spans": [
+					{
+						"offset": 541,
+						"length": 34
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							105,
+							1482,
+							792,
+							1473,
+							793,
+							1513,
+							106,
+							1522
+						]
+					}
+				],
+				"content": "Correo electrónico mrs@example.com"
+			},
+			{
+				"spans": [
+					{
+						"offset": 576,
+						"length": 8
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							857,
+							1488,
+							964,
+							1489,
+							964,
+							1516,
+							857,
+							1515
+						]
+					}
+				],
+				"content": "Teléfono"
+			},
+			{
+				"spans": [
+					{
+						"offset": 585,
+						"length": 8
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1026,
+							1475,
+							1258,
+							1475,
+							1259,
+							1512,
+							1026,
+							1514
+						]
+					}
+				],
+				"content": "93112611"
+			},
+			{
+				"spans": [
+					{
+						"offset": 594,
+						"length": 24
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							102,
+							1589,
+							402,
+							1588,
+							402,
+							1620,
+							102,
+							1621
+						]
+					}
+				],
+				"content": "Alergias y medicamentos:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 619,
+						"length": 53
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							103,
+							1620,
+							780,
+							1620,
+							782,
+							1723,
+							103,
+							1722
+						]
+					}
+				],
+				"content": "Lista de alergias e intolerancias a medicamentos Wine"
+			},
+			{
+				"spans": [
+					{
+						"offset": 673,
+						"length": 30
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							780,
+							1620,
+							1358,
+							1628,
+							1358,
+							1732,
+							782,
+							1723
+						]
+					}
+				],
+				"content": "Describe tu reacción. headache"
+			},
+			{
+				"spans": [
+					{
+						"offset": 704,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							103,
+							1778,
+							782,
+							1781,
+							783,
+							1838,
+							103,
+							1834
+						]
+					}
+				],
+				"content": "Bread"
+			},
+			{
+				"spans": [
+					{
+						"offset": 710,
+						"length": 8
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							782,
+							1781,
+							1358,
+							1790,
+							1358,
+							1847,
+							783,
+							1838
+						]
+					}
+				],
+				"content": "bloating"
+			},
+			{
+				"spans": [
+					{
+						"offset": 719,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							99,
+							1959,
+							172,
+							1960,
+							172,
+							1991,
+							99,
+							1990
+						]
+					}
+				],
+				"content": "Firma"
+			},
+			{
+				"spans": [
+					{
+						"offset": 725,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							872,
+							1966,
+							955,
+							1966,
+							954,
+							1995,
+							871,
+							1994
+						]
+					}
+				],
+				"content": "Fecha"
+			},
+			{
+				"spans": [
+					{
+						"offset": 731,
+						"length": 10
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1014,
+							1940,
+							1360,
+							1940,
+							1360,
+							1993,
+							1014,
+							1992
+						]
+					}
+				],
+				"content": "27/8/62022"
+			}
+		],
+		"styles": [
+			{
+				"confidence": 1,
+				"spans": [
+					{
+						"offset": 126,
+						"length": 9
+					},
+					{
+						"offset": 145,
+						"length": 5
+					},
+					{
+						"offset": 182,
+						"length": 4
+					},
+					{
+						"offset": 224,
+						"length": 17
+					},
+					{
+						"offset": 249,
+						"length": 4
+					},
+					{
+						"offset": 261,
+						"length": 5
+					},
+					{
+						"offset": 286,
+						"length": 17
+					},
+					{
+						"offset": 377,
+						"length": 8
+					},
+					{
+						"offset": 502,
+						"length": 13
+					},
+					{
+						"offset": 536,
+						"length": 4
+					},
+					{
+						"offset": 585,
+						"length": 8
+					},
+					{
+						"offset": 668,
+						"length": 4
+					},
+					{
+						"offset": 695,
+						"length": 23
+					},
+					{
+						"offset": 731,
+						"length": 10
+					}
+				],
+				"isHandwritten": true
+			},
+			{
+				"confidence": 0.95,
+				"spans": [
+					{
+						"offset": 187,
+						"length": 4
+					},
+					{
+						"offset": 359,
+						"length": 8
+					},
+					{
+						"offset": 441,
+						"length": 4
+					}
+				],
+				"isHandwritten": true
+			},
+			{
+				"confidence": 0.9,
+				"spans": [
+					{
+						"offset": 466,
+						"length": 2
+					}
+				],
+				"isHandwritten": true
+			},
+			{
+				"confidence": 0.8,
+				"spans": [
+					{
+						"offset": 541,
+						"length": 34
+					}
+				],
+				"isHandwritten": true
+			}
+		]
+	}
+}

@@ -10,7 +10,7 @@ const config = {
   tagline: "New Patient Registration Azure AI Document Intelligence Workshop",
 
   url: "https://patiente2e.github.io/",
-  baseUrl: "/Contoso-New-Patient-App/",
+  baseUrl: "/azure-doc-intelligence-dynamic-models-patient/",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "newpatiente2e", // Usually your GitHub org/user name.
-  projectName: "Contoso-New-Patient-App", // Usually your repo name.
+  projectName: "azure-doc-intelligence-dynamic-models-patient", // Usually your repo name.
 
   deploymentBranch: "gh-pages", // Branch that GitHub pages will deploy from.
 
@@ -43,7 +43,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/Contoso-New-Patient-App/tree/main/docs/",
+          editUrl: "https://github.com/azure-doc-intelligence-dynamic-models-patient/tree/main/docs/",
         },
         blog: false,
         theme: {

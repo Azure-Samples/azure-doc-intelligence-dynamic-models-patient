@@ -9,7 +9,7 @@ const config = {
   title: "New Patient Registration Demo",
   tagline: "New Patient Registration Azure AI Document Intelligence Workshop",
 
-  url: "https://Azure-Samples.github.io/",
+  url: "https://azure-samples.github.io/",
   baseUrl: "/azure-doc-intelligence-dynamic-models-patient/",
 
   onBrokenLinks: "throw",
@@ -20,7 +20,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Azure-Samples", // Usually your GitHub org/user name.
+  organizationName: "azure-samples", // Usually your GitHub org/user name.
   projectName: "azure-doc-intelligence-dynamic-models-patient", // Usually your repo name.
 
   deploymentBranch: "gh-pages", // Branch that GitHub pages will deploy from.

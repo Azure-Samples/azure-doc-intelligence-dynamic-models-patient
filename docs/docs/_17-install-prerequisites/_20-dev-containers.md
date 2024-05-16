@@ -1,7 +1,7 @@
----
+<!-- ---
 pagination_prev: install-prerequisites
 pagination_next: create-azure-services
----
+--- -->
 
 # Docker Dev Containers
 

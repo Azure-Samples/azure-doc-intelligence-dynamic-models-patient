@@ -6,7 +6,7 @@ id: create-azure-services
 
 ## Deploy Azure services
 
-The following services will be created in your Azure subscription:
+The following services will be created in the lab Azure subscription:
 
 1. [Azure AI Document Intelligence](https://azure.microsoft.com/products/ai-services/ai-document-intelligence?WT.mc_id=aiml-77396-cxa).
 1. [Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/introduction?WT.mc_id=aiml-77396-cxa).
@@ -23,7 +23,7 @@ From the terminal window, run the following commands to create the Azure Patient
 1. Authenticate to Azure by running the following command. Note, it may take up to 30 seconds for the `azd login --use-device-code` command to complete.
     
     ```bash
-    azd auth login --use-device-code
+    azd auth login
     ```
 
 1. Initialize your Azure environment with the following command.
@@ -45,16 +45,18 @@ From the terminal window, run the following commands to create the Azure Patient
 
     :::note
 
-    It will take approximately 5 to 10 minutes to deploy the Azure services. So now is a great time to grab a cup of coffee or tea or read the next section of the workshop documentation.
+    <!-- It will take approximately 5 to 10 minutes to deploy the Azure services. So, now is a great time to grab a cup of coffee or tea or read the next section of the workshop documentation. -->
+
+    It will take approximately 5 minutes to deploy the Azure services. So, now is a great time to read the next section of the workshop documentation.
 
     :::
 
-    :::tip
+    <!-- :::tip
 
     - You can only have one free Azure AI Document Intelligence service in your Azure subscription.
     - If your azd environment fails to deploy, you can delete the environment by deleting the `.azure` folder in the `contoso_new_patient_app` folder.
 
-    :::
+    ::: -->
 
 1. The output from the `azd up` command will look similar to the following.
 

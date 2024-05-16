@@ -20,15 +20,17 @@ The following steps will show you how to label your data.
 
 <!-- The document language will match the folder of documents you uploaded to your Azure Storage Account. For example, if you uploaded the English folder, the document language will be English. -->
 
-1. Select the document named _sample.pdf_. 
+1. Select the document named _Complete_Me.pdf_.
 2. Select `Run layout` the document will analyze and then open the document for labeling.
-3. Select the ISO language code for the document. You'll find this field in the top right-hand corner of the document, then from the list of labels, select **iso**.
-4. Now repeat this labeling process for all the fields in the document. See the tables below for the list of form fields and their associated labels for:
+3. The form will be displayed in the document viewer. In the interests of time, most of the fields in the form have already been labeled. You need to label the remaining fields in the form.
+4. Select  _Smith_, then from the list of labels, select **family_name**.
+5. Select _Alex_, then from the list of labels, select **given_names**.
+<!-- 4. Now repeat this labeling process for all the fields in the document. See the tables below for the list of form fields and their associated labels for:
 
     - [English Labels](#english-labels),
     - [Etiquetas Españolas](#etiquetas-españolas),
     - [Etiquetas Portuguêsas ](#etiquetas-portuguêsas), and
-    - [普通话标签](#普通话标签).
+    - [普通话标签](#普通话标签). -->
 
 :::note
 
@@ -43,7 +45,7 @@ You can filter the list of labels by typing the label name in the list of labels
 - [Etiquetas Portuguêsas ](#etiquetas-portuguêsas)
 - [普通话标签](#普通话标签) -->
 
-## English Labels
+<!-- ## English Labels
 
 ![This image is the english registration form](./img/new_patient_form.png)
 
@@ -79,9 +81,9 @@ You can filter the list of labels by typing the label name in the list of labels
     | Reaction row 3 | reaction_3 |
     | date | date |
 
-You now have all the documents in your dataset labeled. If you look at the storage account, you'll find a _.labels.json_ and _.ocr.json_ files that correspond to each document in your training dataset and a new fields.json file. This training dataset will be submitted to train the model.
+You now have all the documents in your dataset labeled. If you look at the storage account, you'll find a _.labels.json_ and _.ocr.json_ files that correspond to each document in your training dataset and a new fields.json file. This training dataset will be submitted to train the model. -->
 
-## Etiquetas Españolas
+<!-- ## Etiquetas Españolas
 
 ![This image is the spanish registration form](./img/new_patient_form_spanish.png)
 
@@ -156,7 +158,7 @@ Ahora tiene todos los documentos en su conjunto de datos etiquetados. Si observa
     | Linha de reação 3 | reaction_3 |
     | Data| Date |
 
-Agora você tem todos os documentos em seu conjunto de dados rotulados. Se você observar a conta de armazenamento, encontrará arquivos .labels.json e .ocr.json que correspondem a cada documento em seu conjunto de dados de treinamento e um novo arquivo fields.json. Este conjunto de dados de treinamento será enviado para treinar o modelo
+Agora você tem todos os documentos em seu conjunto de dados rotulados. Se você observar a conta de armazenamento, encontrará arquivos .labels.json e .ocr.json que correspondem a cada documento em seu conjunto de dados de treinamento e um novo arquivo fields.json. Este conjunto de dados de treinamento será enviado para treinar o modelo -->
 
 <!-- ## 普通话标签
 

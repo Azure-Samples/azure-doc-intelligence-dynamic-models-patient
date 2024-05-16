@@ -10,6 +10,6 @@ To train a custom model, you need to provide a set of labeled training documents
 
 You need at least five examples of a document type to train a custom model. For example, if you want to recognize receipts, you'd need five labeled receipts examples.
 
-## Custom model types
+<!-- ## Custom model types
 
-Custom models can be one of two types, [**custom template**](https://docs.microsoft.com/azure/applied-ai-services/form-recognizer/concept-custom-template?WT.mc_id=aiml-77396-cxa) or custom form and [**custom neural**](https://docs.microsoft.com/azure/applied-ai-services/form-recognizer/concept-custom-neural?WT.mc_id=aiml-77396-cxa) or custom document models. The labeling and training process for both models is identical, but the models differ as follows:
+Custom models can be one of two types, [**custom template**](https://docs.microsoft.com/azure/applied-ai-services/form-recognizer/concept-custom-template?WT.mc_id=aiml-77396-cxa) or custom form and [**custom neural**](https://docs.microsoft.com/azure/applied-ai-services/form-recognizer/concept-custom-neural?WT.mc_id=aiml-77396-cxa) or custom document models. -->

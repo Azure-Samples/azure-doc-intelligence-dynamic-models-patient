@@ -1,0 +1,4325 @@
+{
+	"status": "succeeded",
+	"createdDateTime": "2024-05-16T08:10:22Z",
+	"lastUpdatedDateTime": "2024-05-16T08:10:24Z",
+	"analyzeResult": {
+		"apiVersion": "2023-07-31",
+		"modelId": "prebuilt-layout",
+		"stringIndexType": "utf16CodeUnit",
+		"content": "en-AU\nContoso Healthcare New Patient Information\nPatient details:\nFamily name\nSmith\nGiven names Alex\nDate of birth (dd/mm/yy)\n_06\n/\n10_/_90\nContact details:\nStreet address\n123 Main St\nCity Anytown\nState California\nEmail\npatient@example.com\nPreferred contact method :selected: Email\nMy gender identity is:\nMale\nMy pronouns are:\nHe/Him\nEmergency contact:\nName\nJames Johnson\nEmail\nemergency@example.com :unselected: Phone\nCode\n90210\nPhone\n(555) 123-4567 :unselected: Text\nRelationship to you\nFriend\nPhone\n(555) 987-6543\nAllergies and medicines\nList of allergies and intolerances to medications. Allergic to penicillin\nDescribe your reaction.\nDifficulty breathing\nIntolerant to lactose\nBloating\nSignature\nAlex Smith\nDate\n18/Nov/2025 :unselected: :unselected: :unselected: :unselected: :unselected: :unselected:",
+		"pages": [
+			{
+				"pageNumber": 1,
+				"angle": 0,
+				"width": 8.25,
+				"height": 11.6667,
+				"unit": "inch",
+				"words": [
+					{
+						"content": "en-AU",
+						"polygon": [
+							7.2878,
+							0.5266,
+							7.6524,
+							0.5216,
+							7.6575,
+							0.6481,
+							7.2878,
+							0.6431
+						],
+						"confidence": 0.93,
+						"span": {
+							"offset": 0,
+							"length": 5
+						}
+					},
+					{
+						"content": "Contoso",
+						"polygon": [
+							1.7928,
+							0.6026,
+							3.6971,
+							0.6026,
+							3.692,
+							0.9874,
+							1.7928,
+							0.9874
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 6,
+							"length": 7
+						}
+					},
+					{
+						"content": "Healthcare",
+						"polygon": [
+							3.925,
+							0.6026,
+							6.4369,
+							0.5975,
+							6.4319,
+							0.9874,
+							3.9199,
+							0.9874
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 14,
+							"length": 10
+						}
+					},
+					{
+						"content": "New",
+						"polygon": [
+							3.2311,
+							1.0836,
+							3.5299,
+							1.0836,
+							3.535,
+							1.2609,
+							3.2311,
+							1.2609
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 25,
+							"length": 3
+						}
+					},
+					{
+						"content": "Patient",
+						"polygon": [
+							3.611,
+							1.0836,
+							4.1377,
+							1.0836,
+							4.1377,
+							1.2609,
+							3.616,
+							1.2609
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 29,
+							"length": 7
+						}
+					},
+					{
+						"content": "Information",
+						"polygon": [
+							4.168,
+							1.0836,
+							4.9986,
+							1.0786,
+							4.9986,
+							1.2558,
+							4.1731,
+							1.2609
+						],
+						"confidence": 0.976,
+						"span": {
+							"offset": 37,
+							"length": 11
+						}
+					},
+					{
+						"content": "Patient",
+						"polygon": [
+							0.4862,
+							1.4634,
+							1.018,
+							1.4685,
+							1.018,
+							1.6406,
+							0.4862,
+							1.6406
+						],
+						"confidence": 0.988,
+						"span": {
+							"offset": 49,
+							"length": 7
+						}
+					},
+					{
+						"content": "details:",
+						"polygon": [
+							1.0534,
+							1.4685,
+							1.6004,
+							1.4583,
+							1.6004,
+							1.6406,
+							1.0534,
+							1.6406
+						],
+						"confidence": 0.962,
+						"span": {
+							"offset": 57,
+							"length": 8
+						}
+					},
+					{
+						"content": "Family",
+						"polygon": [
+							0.5419,
+							1.8786,
+							1.023,
+							1.8837,
+							1.023,
+							2.071,
+							0.5368,
+							2.071
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 66,
+							"length": 6
+						}
+					},
+					{
+						"content": "name",
+						"polygon": [
+							1.0635,
+							1.8837,
+							1.4991,
+							1.8887,
+							1.494,
+							2.066,
+							1.0585,
+							2.071
+						],
+						"confidence": 0.979,
+						"span": {
+							"offset": 73,
+							"length": 4
+						}
+					},
+					{
+						"content": "Smith",
+						"polygon": [
+							1.9245,
+							1.8786,
+							2.3246,
+							1.8786,
+							2.3246,
+							2.0457,
+							1.9245,
+							2.0457
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 78,
+							"length": 5
+						}
+					},
+					{
+						"content": "Given",
+						"polygon": [
+							0.5419,
+							2.1622,
+							0.9622,
+							2.1672,
+							0.9622,
+							2.3394,
+							0.547,
+							2.3394
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 84,
+							"length": 5
+						}
+					},
+					{
+						"content": "names",
+						"polygon": [
+							1.0129,
+							2.1672,
+							1.5345,
+							2.1774,
+							1.5345,
+							2.3343,
+							1.018,
+							2.3394
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 90,
+							"length": 5
+						}
+					},
+					{
+						"content": "Alex",
+						"polygon": [
+							1.9448,
+							2.1672,
+							2.2689,
+							2.1672,
+							2.2689,
+							2.3293,
+							1.9397,
+							2.3293
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 96,
+							"length": 4
+						}
+					},
+					{
+						"content": "Date",
+						"polygon": [
+							0.5368,
+							2.4508,
+							0.8964,
+							2.4508,
+							0.9015,
+							2.6382,
+							0.5368,
+							2.6382
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 101,
+							"length": 4
+						}
+					},
+					{
+						"content": "of",
+						"polygon": [
+							0.9369,
+							2.4508,
+							1.0737,
+							2.4508,
+							1.0737,
+							2.6382,
+							0.9369,
+							2.6382
+						],
+						"confidence": 0.961,
+						"span": {
+							"offset": 106,
+							"length": 2
+						}
+					},
+					{
+						"content": "birth",
+						"polygon": [
+							1.1091,
+							2.4508,
+							1.4383,
+							2.4508,
+							1.4383,
+							2.6432,
+							1.1142,
+							2.6432
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 109,
+							"length": 5
+						}
+					},
+					{
+						"content": "(dd/mm/yy)",
+						"polygon": [
+							1.489,
+							2.4508,
+							2.3499,
+							2.4508,
+							2.3499,
+							2.6483,
+							1.489,
+							2.6432
+						],
+						"confidence": 0.962,
+						"span": {
+							"offset": 115,
+							"length": 10
+						}
+					},
+					{
+						"content": "_06",
+						"polygon": [
+							2.4309,
+							2.4356,
+							2.7905,
+							2.4356,
+							2.7905,
+							2.6382,
+							2.4309,
+							2.6432
+						],
+						"confidence": 0.694,
+						"span": {
+							"offset": 126,
+							"length": 3
+						}
+					},
+					{
+						"content": "/",
+						"polygon": [
+							3.2514,
+							2.4559,
+							3.3071,
+							2.4559,
+							3.3071,
+							2.6128,
+							3.2514,
+							2.6128
+						],
+						"confidence": 0.595,
+						"span": {
+							"offset": 130,
+							"length": 1
+						}
+					},
+					{
+						"content": "10_/_90",
+						"polygon": [
+							3.616,
+							2.4508,
+							4.4517,
+							2.4559,
+							4.4567,
+							2.628,
+							3.616,
+							2.628
+						],
+						"confidence": 0.75,
+						"span": {
+							"offset": 132,
+							"length": 7
+						}
+					},
+					{
+						"content": "Contact",
+						"polygon": [
+							0.4963,
+							3.1445,
+							1.0838,
+							3.1496,
+							1.0838,
+							3.3167,
+							0.4963,
+							3.3218
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 140,
+							"length": 7
+						}
+					},
+					{
+						"content": "details:",
+						"polygon": [
+							1.1142,
+							3.1547,
+							1.6459,
+							3.1496,
+							1.6459,
+							3.3218,
+							1.1142,
+							3.3167
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 148,
+							"length": 8
+						}
+					},
+					{
+						"content": "Street",
+						"polygon": [
+							0.5419,
+							3.5648,
+							0.9977,
+							3.5699,
+							0.9977,
+							3.7319,
+							0.5419,
+							3.7269
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 157,
+							"length": 6
+						}
+					},
+					{
+						"content": "address",
+						"polygon": [
+							1.0281,
+							3.5699,
+							1.6257,
+							3.5699,
+							1.6257,
+							3.7319,
+							1.0331,
+							3.7319
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 164,
+							"length": 7
+						}
+					},
+					{
+						"content": "123",
+						"polygon": [
+							2.046,
+							3.5648,
+							2.3043,
+							3.5598,
+							2.3094,
+							3.7319,
+							2.0511,
+							3.7319
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 172,
+							"length": 3
+						}
+					},
+					{
+						"content": "Main",
+						"polygon": [
+							2.3398,
+							3.5598,
+							2.6994,
+							3.5598,
+							2.7044,
+							3.737,
+							2.3448,
+							3.7319
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 176,
+							"length": 4
+						}
+					},
+					{
+						"content": "St",
+						"polygon": [
+							2.7703,
+							3.5598,
+							2.9323,
+							3.5598,
+							2.9323,
+							3.737,
+							2.7703,
+							3.737
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 181,
+							"length": 2
+						}
+					},
+					{
+						"content": "City",
+						"polygon": [
+							0.5368,
+							3.8433,
+							0.8204,
+							3.8484,
+							0.8204,
+							4.0256,
+							0.5318,
+							4.0205
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 184,
+							"length": 4
+						}
+					},
+					{
+						"content": "Anytown",
+						"polygon": [
+							1.8384,
+							3.8534,
+							2.4715,
+							3.8534,
+							2.4715,
+							4.0307,
+							1.8435,
+							4.0256
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 189,
+							"length": 7
+						}
+					},
+					{
+						"content": "State",
+						"polygon": [
+							0.552,
+							4.1471,
+							0.9167,
+							4.1471,
+							0.9167,
+							4.3041,
+							0.547,
+							4.3041
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 197,
+							"length": 5
+						}
+					},
+					{
+						"content": "California",
+						"polygon": [
+							1.57,
+							4.1471,
+							2.279,
+							4.1522,
+							2.279,
+							4.3092,
+							1.57,
+							4.3142
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 203,
+							"length": 10
+						}
+					},
+					{
+						"content": "Email",
+						"polygon": [
+							0.5318,
+							4.4358,
+							0.9724,
+							4.4358,
+							0.9673,
+							4.6181,
+							0.5267,
+							4.613
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 214,
+							"length": 5
+						}
+					},
+					{
+						"content": "patient@example.com",
+						"polygon": [
+							1.3117,
+							4.451,
+							2.9222,
+							4.451,
+							2.9222,
+							4.6181,
+							1.3066,
+							4.6282
+						],
+						"confidence": 0.961,
+						"span": {
+							"offset": 220,
+							"length": 19
+						}
+					},
+					{
+						"content": "Preferred",
+						"polygon": [
+							0.5318,
+							4.7446,
+							1.2155,
+							4.7446,
+							1.2155,
+							4.9168,
+							0.5318,
+							4.9117
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 240,
+							"length": 9
+						}
+					},
+					{
+						"content": "contact",
+						"polygon": [
+							1.2712,
+							4.7446,
+							1.8181,
+							4.7497,
+							1.8181,
+							4.9117,
+							1.2712,
+							4.9168
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 250,
+							"length": 7
+						}
+					},
+					{
+						"content": "method",
+						"polygon": [
+							1.8485,
+							4.7497,
+							2.4056,
+							4.7497,
+							2.4056,
+							4.9067,
+							1.8485,
+							4.9117
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 258,
+							"length": 6
+						}
+					},
+					{
+						"content": "Email",
+						"polygon": [
+							2.8614,
+							4.7548,
+							3.2919,
+							4.7497,
+							3.2868,
+							4.9016,
+							2.8614,
+							4.8915
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 276,
+							"length": 5
+						}
+					},
+					{
+						"content": "My",
+						"polygon": [
+							0.4811,
+							5.2713,
+							0.7242,
+							5.2713,
+							0.7192,
+							5.4637,
+							0.4761,
+							5.4637
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 282,
+							"length": 2
+						}
+					},
+					{
+						"content": "gender",
+						"polygon": [
+							0.7597,
+							5.2713,
+							1.2762,
+							5.2713,
+							1.2712,
+							5.4586,
+							0.7546,
+							5.4637
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 285,
+							"length": 6
+						}
+					},
+					{
+						"content": "identity",
+						"polygon": [
+							1.3117,
+							5.2713,
+							1.8536,
+							5.2713,
+							1.8485,
+							5.4586,
+							1.3066,
+							5.4586
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 292,
+							"length": 8
+						}
+					},
+					{
+						"content": "is:",
+						"polygon": [
+							1.889,
+							5.2713,
+							2.0764,
+							5.2713,
+							2.0764,
+							5.4586,
+							1.889,
+							5.4586
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 301,
+							"length": 3
+						}
+					},
+					{
+						"content": "Male",
+						"polygon": [
+							0.9268,
+							5.6561,
+							1.3117,
+							5.6561,
+							1.3168,
+							5.8384,
+							0.9268,
+							5.8384
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 305,
+							"length": 4
+						}
+					},
+					{
+						"content": "My",
+						"polygon": [
+							0.4862,
+							6.2536,
+							0.7141,
+							6.2536,
+							0.7141,
+							6.4359,
+							0.4862,
+							6.4359
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 310,
+							"length": 2
+						}
+					},
+					{
+						"content": "pronouns",
+						"polygon": [
+							0.7495,
+							6.2536,
+							1.4636,
+							6.2587,
+							1.4636,
+							6.4308,
+							0.7495,
+							6.4359
+						],
+						"confidence": 0.983,
+						"span": {
+							"offset": 313,
+							"length": 8
+						}
+					},
+					{
+						"content": "are:",
+						"polygon": [
+							1.4991,
+							6.2587,
+							1.7928,
+							6.2587,
+							1.7928,
+							6.4258,
+							1.4991,
+							6.4308
+						],
+						"confidence": 0.986,
+						"span": {
+							"offset": 322,
+							"length": 4
+						}
+					},
+					{
+						"content": "He/Him",
+						"polygon": [
+							0.8407,
+							6.6435,
+							1.3471,
+							6.6435,
+							1.3471,
+							6.8157,
+							0.8407,
+							6.8106
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 327,
+							"length": 6
+						}
+					},
+					{
+						"content": "Emergency",
+						"polygon": [
+							0.4913,
+							7.2309,
+							1.3471,
+							7.2309,
+							1.3471,
+							7.4183,
+							0.4862,
+							7.4183
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 334,
+							"length": 9
+						}
+					},
+					{
+						"content": "contact:",
+						"polygon": [
+							1.3877,
+							7.2309,
+							1.9802,
+							7.236,
+							1.9751,
+							7.4183,
+							1.3826,
+							7.4183
+						],
+						"confidence": 0.987,
+						"span": {
+							"offset": 344,
+							"length": 8
+						}
+					},
+					{
+						"content": "Name",
+						"polygon": [
+							0.5368,
+							7.6461,
+							0.9724,
+							7.6461,
+							0.9724,
+							7.8132,
+							0.5368,
+							7.798
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 353,
+							"length": 4
+						}
+					},
+					{
+						"content": "James",
+						"polygon": [
+							1.3066,
+							7.6411,
+							1.7979,
+							7.6411,
+							1.7979,
+							7.8183,
+							1.3066,
+							7.8183
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 358,
+							"length": 5
+						}
+					},
+					{
+						"content": "Johnson",
+						"polygon": [
+							1.8435,
+							7.6411,
+							2.4613,
+							7.6461,
+							2.4613,
+							7.8132,
+							1.8435,
+							7.8183
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 364,
+							"length": 7
+						}
+					},
+					{
+						"content": "Email",
+						"polygon": [
+							0.5267,
+							7.9246,
+							0.9774,
+							7.9246,
+							0.9774,
+							8.1069,
+							0.5267,
+							8.1069
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 372,
+							"length": 5
+						}
+					},
+					{
+						"content": "emergency@example.com",
+						"polygon": [
+							1.2256,
+							7.9348,
+							3.1501,
+							7.9246,
+							3.145,
+							8.117,
+							1.2205,
+							8.117
+						],
+						"confidence": 0.948,
+						"span": {
+							"offset": 378,
+							"length": 21
+						}
+					},
+					{
+						"content": "Phone",
+						"polygon": [
+							3.9047,
+							4.7396,
+							4.3858,
+							4.7396,
+							4.3858,
+							4.9117,
+							3.9047,
+							4.9117
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 413,
+							"length": 5
+						}
+					},
+					{
+						"content": "Code",
+						"polygon": [
+							4.8315,
+							4.1471,
+							5.2215,
+							4.1471,
+							5.2164,
+							4.3092,
+							4.8315,
+							4.3092
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 419,
+							"length": 4
+						}
+					},
+					{
+						"content": "90210",
+						"polygon": [
+							5.7735,
+							4.1421,
+							6.2343,
+							4.137,
+							6.2394,
+							4.3142,
+							5.7785,
+							4.3193
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 424,
+							"length": 5
+						}
+					},
+					{
+						"content": "Phone",
+						"polygon": [
+							4.7859,
+							4.4408,
+							5.262,
+							4.4459,
+							5.262,
+							4.6079,
+							4.791,
+							4.5978
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 430,
+							"length": 5
+						}
+					},
+					{
+						"content": "(555)",
+						"polygon": [
+							5.738,
+							4.4358,
+							6.1331,
+							4.4358,
+							6.1331,
+							4.6332,
+							5.733,
+							4.6332
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 436,
+							"length": 5
+						}
+					},
+					{
+						"content": "123-4567",
+						"polygon": [
+							6.1736,
+							4.4358,
+							6.8623,
+							4.4256,
+							6.8623,
+							4.6231,
+							6.1736,
+							4.6332
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 442,
+							"length": 8
+						}
+					},
+					{
+						"content": "Text",
+						"polygon": [
+							5.0239,
+							4.7446,
+							5.3379,
+							4.7446,
+							5.3379,
+							4.9016,
+							5.0189,
+							4.9016
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 464,
+							"length": 4
+						}
+					},
+					{
+						"content": "Relationship",
+						"polygon": [
+							4.1275,
+							7.636,
+							5.0442,
+							7.6411,
+							5.0442,
+							7.8284,
+							4.1275,
+							7.8234
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 469,
+							"length": 12
+						}
+					},
+					{
+						"content": "to",
+						"polygon": [
+							5.0797,
+							7.6411,
+							5.2417,
+							7.6411,
+							5.2417,
+							7.8335,
+							5.0797,
+							7.8284
+						],
+						"confidence": 0.997,
+						"span": {
+							"offset": 482,
+							"length": 2
+						}
+					},
+					{
+						"content": "you",
+						"polygon": [
+							5.2772,
+							7.6411,
+							5.5506,
+							7.6461,
+							5.5506,
+							7.8385,
+							5.2772,
+							7.8335
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 485,
+							"length": 3
+						}
+					},
+					{
+						"content": "Friend",
+						"polygon": [
+							5.8697,
+							7.6411,
+							6.3255,
+							7.6411,
+							6.3306,
+							7.8082,
+							5.8748,
+							7.8031
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 489,
+							"length": 6
+						}
+					},
+					{
+						"content": "Phone",
+						"polygon": [
+							4.7657,
+							7.9246,
+							5.2468,
+							7.9246,
+							5.2468,
+							8.1019,
+							4.7606,
+							8.1019
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 496,
+							"length": 5
+						}
+					},
+					{
+						"content": "(555)",
+						"polygon": [
+							5.6114,
+							7.9246,
+							6.0064,
+							7.9196,
+							6.0064,
+							8.117,
+							5.6114,
+							8.112
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 502,
+							"length": 5
+						}
+					},
+					{
+						"content": "987-6543",
+						"polygon": [
+							6.047,
+							7.9196,
+							6.756,
+							7.9145,
+							6.756,
+							8.117,
+							6.047,
+							8.117
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 508,
+							"length": 8
+						}
+					},
+					{
+						"content": "Allergies",
+						"polygon": [
+							0.4913,
+							8.5323,
+							1.1395,
+							8.5323,
+							1.1446,
+							8.7196,
+							0.4963,
+							8.7146
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 517,
+							"length": 9
+						}
+					},
+					{
+						"content": "and",
+						"polygon": [
+							1.175,
+							8.5323,
+							1.4484,
+							8.5323,
+							1.4484,
+							8.7196,
+							1.18,
+							8.7196
+						],
+						"confidence": 0.991,
+						"span": {
+							"offset": 527,
+							"length": 3
+						}
+					},
+					{
+						"content": "medicines",
+						"polygon": [
+							1.4839,
+							8.5323,
+							2.2537,
+							8.5424,
+							2.2537,
+							8.7095,
+							1.4839,
+							8.7196
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 531,
+							"length": 9
+						}
+					},
+					{
+						"content": "List",
+						"polygon": [
+							0.5622,
+							8.7348,
+							0.8356,
+							8.7348,
+							0.8407,
+							8.9272,
+							0.5672,
+							8.9272
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 541,
+							"length": 4
+						}
+					},
+					{
+						"content": "of",
+						"polygon": [
+							0.8711,
+							8.7348,
+							1.0281,
+							8.7348,
+							1.0281,
+							8.9272,
+							0.8762,
+							8.9272
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 546,
+							"length": 2
+						}
+					},
+					{
+						"content": "allergies",
+						"polygon": [
+							1.0635,
+							8.7348,
+							1.6814,
+							8.7399,
+							1.6865,
+							8.9222,
+							1.0635,
+							8.9222
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 549,
+							"length": 9
+						}
+					},
+					{
+						"content": "and",
+						"polygon": [
+							1.7219,
+							8.7399,
+							1.9954,
+							8.7399,
+							1.9954,
+							8.9222,
+							1.7219,
+							8.9222
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 559,
+							"length": 3
+						}
+					},
+					{
+						"content": "intolerances",
+						"polygon": [
+							2.0308,
+							8.7399,
+							2.9526,
+							8.7399,
+							2.9526,
+							8.9171,
+							2.0308,
+							8.9222
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 563,
+							"length": 12
+						}
+					},
+					{
+						"content": "to",
+						"polygon": [
+							2.988,
+							8.7399,
+							3.1298,
+							8.7399,
+							3.1298,
+							8.9171,
+							2.988,
+							8.9171
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 576,
+							"length": 2
+						}
+					},
+					{
+						"content": "medications.",
+						"polygon": [
+							3.1653,
+							8.7399,
+							4.1123,
+							8.7399,
+							4.1123,
+							8.912,
+							3.1704,
+							8.9171
+						],
+						"confidence": 0.982,
+						"span": {
+							"offset": 579,
+							"length": 12
+						}
+					},
+					{
+						"content": "Allergic",
+						"polygon": [
+							0.5672,
+							9.0184,
+							1.1142,
+							9.0234,
+							1.1142,
+							9.2057,
+							0.5672,
+							9.2108
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 592,
+							"length": 8
+						}
+					},
+					{
+						"content": "to",
+						"polygon": [
+							1.1496,
+							9.0234,
+							1.2965,
+							9.0234,
+							1.2965,
+							9.2057,
+							1.1496,
+							9.2057
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 601,
+							"length": 2
+						}
+					},
+					{
+						"content": "penicillin",
+						"polygon": [
+							1.332,
+							9.0234,
+							1.9802,
+							9.0184,
+							1.9853,
+							9.2057,
+							1.337,
+							9.2057
+						],
+						"confidence": 0.974,
+						"span": {
+							"offset": 604,
+							"length": 10
+						}
+					},
+					{
+						"content": "Describe",
+						"polygon": [
+							4.715,
+							8.7449,
+							5.3835,
+							8.7348,
+							5.3785,
+							8.9272,
+							4.7099,
+							8.9374
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 615,
+							"length": 8
+						}
+					},
+					{
+						"content": "your",
+						"polygon": [
+							5.419,
+							8.7348,
+							5.738,
+							8.7348,
+							5.738,
+							8.9272,
+							5.419,
+							8.9272
+						],
+						"confidence": 0.989,
+						"span": {
+							"offset": 624,
+							"length": 4
+						}
+					},
+					{
+						"content": "reaction.",
+						"polygon": [
+							5.7785,
+							8.7348,
+							6.4319,
+							8.7399,
+							6.4319,
+							8.9374,
+							5.7735,
+							8.9272
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 629,
+							"length": 9
+						}
+					},
+					{
+						"content": "Difficulty",
+						"polygon": [
+							4.7099,
+							9.0133,
+							5.343,
+							9.0234,
+							5.343,
+							9.2057,
+							4.715,
+							9.2057
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 639,
+							"length": 10
+						}
+					},
+					{
+						"content": "breathing",
+						"polygon": [
+							5.3785,
+							9.0234,
+							6.0875,
+							9.0285,
+							6.0875,
+							9.2108,
+							5.3785,
+							9.2057
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 650,
+							"length": 9
+						}
+					},
+					{
+						"content": "Intolerant",
+						"polygon": [
+							0.5723,
+							9.6615,
+							1.2712,
+							9.6665,
+							1.2762,
+							9.8387,
+							0.5723,
+							9.8387
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 660,
+							"length": 10
+						}
+					},
+					{
+						"content": "to",
+						"polygon": [
+							1.3066,
+							9.6665,
+							1.4383,
+							9.6716,
+							1.4383,
+							9.8387,
+							1.3066,
+							9.8387
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 671,
+							"length": 2
+						}
+					},
+					{
+						"content": "lactose",
+						"polygon": [
+							1.4839,
+							9.6716,
+							2.0207,
+							9.6716,
+							2.0207,
+							9.8336,
+							1.4839,
+							9.8336
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 674,
+							"length": 7
+						}
+					},
+					{
+						"content": "Bloating",
+						"polygon": [
+							4.7099,
+							9.6665,
+							5.3329,
+							9.6716,
+							5.3329,
+							9.8488,
+							4.715,
+							9.8488
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 682,
+							"length": 8
+						}
+					},
+					{
+						"content": "Signature",
+						"polygon": [
+							0.5014,
+							10.6691,
+							1.2003,
+							10.6691,
+							1.2053,
+							10.8565,
+							0.4963,
+							10.8615
+						],
+						"confidence": 0.994,
+						"span": {
+							"offset": 691,
+							"length": 9
+						}
+					},
+					{
+						"content": "Alex",
+						"polygon": [
+							1.4332,
+							10.6641,
+							1.7776,
+							10.6641,
+							1.7776,
+							10.8464,
+							1.4332,
+							10.8464
+						],
+						"confidence": 0.993,
+						"span": {
+							"offset": 701,
+							"length": 4
+						}
+					},
+					{
+						"content": "Smith",
+						"polygon": [
+							1.8131,
+							10.6641,
+							2.2284,
+							10.659,
+							2.2284,
+							10.8413,
+							1.8131,
+							10.8464
+						],
+						"confidence": 0.99,
+						"span": {
+							"offset": 706,
+							"length": 5
+						}
+					},
+					{
+						"content": "Date",
+						"polygon": [
+							4.8669,
+							10.6691,
+							5.2215,
+							10.6742,
+							5.2164,
+							10.8312,
+							4.8669,
+							10.8261
+						],
+						"confidence": 0.979,
+						"span": {
+							"offset": 712,
+							"length": 4
+						}
+					},
+					{
+						"content": "18/Nov/2025",
+						"polygon": [
+							5.6519,
+							10.6641,
+							6.5787,
+							10.6641,
+							6.5838,
+							10.8362,
+							5.6621,
+							10.8362
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 717,
+							"length": 11
+						}
+					}
+				],
+				"selectionMarks": [
+					{
+						"state": "selected",
+						"polygon": [
+							2.616,
+							4.758,
+							2.7532,
+							4.758,
+							2.7532,
+							4.8927,
+							2.616,
+							4.8927
+						],
+						"confidence": 0.992,
+						"span": {
+							"offset": 265,
+							"length": 10
+						}
+					},
+					{
+						"state": "unselected",
+						"polygon": [
+							3.6634,
+							4.758,
+							3.7966,
+							4.758,
+							3.7966,
+							4.8887,
+							3.6634,
+							4.8887
+						],
+						"confidence": 0.996,
+						"span": {
+							"offset": 400,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"polygon": [
+							4.7756,
+							4.758,
+							4.9074,
+							4.758,
+							4.9074,
+							4.8887,
+							4.7756,
+							4.8887
+						],
+						"confidence": 0.995,
+						"span": {
+							"offset": 451,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"polygon": [
+							1.5313,
+							1.9032,
+							1.9249,
+							1.9032,
+							1.9249,
+							2.0691,
+							1.5313,
+							2.0691
+						],
+						"confidence": 0.1,
+						"span": {
+							"offset": 729,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"polygon": [
+							1.0161,
+							7.671,
+							1.3165,
+							7.671,
+							1.3165,
+							7.8269,
+							1.0161,
+							7.8269
+						],
+						"confidence": 0.1,
+						"span": {
+							"offset": 742,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"polygon": [
+							5.5868,
+							7.6592,
+							5.8897,
+							7.6592,
+							5.8897,
+							7.8263,
+							5.5868,
+							7.8263
+						],
+						"confidence": 0.1,
+						"span": {
+							"offset": 755,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"polygon": [
+							0.9871,
+							7.9392,
+							1.2051,
+							7.9392,
+							1.2051,
+							8.1104,
+							0.9871,
+							8.1104
+						],
+						"confidence": 0.1,
+						"span": {
+							"offset": 768,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"polygon": [
+							1.244,
+							10.7003,
+							1.4473,
+							10.7003,
+							1.4473,
+							10.8506,
+							1.244,
+							10.8506
+						],
+						"confidence": 0.1,
+						"span": {
+							"offset": 781,
+							"length": 12
+						}
+					},
+					{
+						"state": "unselected",
+						"polygon": [
+							5.259,
+							10.6852,
+							5.658,
+							10.6852,
+							5.658,
+							10.8547,
+							5.259,
+							10.8547
+						],
+						"confidence": 0.1,
+						"span": {
+							"offset": 794,
+							"length": 12
+						}
+					}
+				],
+				"lines": [
+					{
+						"content": "en-AU",
+						"polygon": [
+							7.2726,
+							0.5216,
+							7.6777,
+							0.5216,
+							7.6777,
+							0.6431,
+							7.2726,
+							0.6431
+						],
+						"spans": [
+							{
+								"offset": 0,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Contoso Healthcare",
+						"polygon": [
+							1.7726,
+							0.6026,
+							6.4825,
+							0.5975,
+							6.4825,
+							0.9823,
+							1.7726,
+							0.9874
+						],
+						"spans": [
+							{
+								"offset": 6,
+								"length": 18
+							}
+						]
+					},
+					{
+						"content": "New Patient Information",
+						"polygon": [
+							3.2261,
+							1.0786,
+							5.029,
+							1.0786,
+							5.0341,
+							1.2558,
+							3.2261,
+							1.2558
+						],
+						"spans": [
+							{
+								"offset": 25,
+								"length": 23
+							}
+						]
+					},
+					{
+						"content": "Patient details:",
+						"polygon": [
+							0.4811,
+							1.4583,
+							1.6004,
+							1.4583,
+							1.6004,
+							1.6356,
+							0.4811,
+							1.6356
+						],
+						"spans": [
+							{
+								"offset": 49,
+								"length": 16
+							}
+						]
+					},
+					{
+						"content": "Family name",
+						"polygon": [
+							0.5318,
+							1.8786,
+							1.5193,
+							1.8786,
+							1.5193,
+							2.066,
+							0.5318,
+							2.066
+						],
+						"spans": [
+							{
+								"offset": 66,
+								"length": 11
+							}
+						]
+					},
+					{
+						"content": "Smith",
+						"polygon": [
+							1.8941,
+							1.8786,
+							2.3398,
+							1.8786,
+							2.3398,
+							2.0457,
+							1.8941,
+							2.0407
+						],
+						"spans": [
+							{
+								"offset": 78,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Given names",
+						"polygon": [
+							0.5419,
+							2.1622,
+							1.5345,
+							2.1672,
+							1.5345,
+							2.3394,
+							0.5419,
+							2.3343
+						],
+						"spans": [
+							{
+								"offset": 84,
+								"length": 11
+							}
+						]
+					},
+					{
+						"content": "Alex",
+						"polygon": [
+							1.9245,
+							2.1672,
+							2.2739,
+							2.1672,
+							2.2739,
+							2.3293,
+							1.9296,
+							2.3242
+						],
+						"spans": [
+							{
+								"offset": 96,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Date of birth (dd/mm/yy)",
+						"polygon": [
+							0.5318,
+							2.4457,
+							2.3499,
+							2.4508,
+							2.3499,
+							2.6432,
+							0.5318,
+							2.6382
+						],
+						"spans": [
+							{
+								"offset": 101,
+								"length": 24
+							}
+						]
+					},
+					{
+						"content": "_06",
+						"polygon": [
+							2.4309,
+							2.4356,
+							2.8006,
+							2.4559,
+							2.8006,
+							2.6179,
+							2.436,
+							2.6432
+						],
+						"spans": [
+							{
+								"offset": 126,
+								"length": 3
+							}
+						]
+					},
+					{
+						"content": "/",
+						"polygon": [
+							3.2463,
+							2.4559,
+							3.3122,
+							2.4559,
+							3.3122,
+							2.6128,
+							3.2463,
+							2.6128
+						],
+						"spans": [
+							{
+								"offset": 130,
+								"length": 1
+							}
+						]
+					},
+					{
+						"content": "10_/_90",
+						"polygon": [
+							3.6059,
+							2.4457,
+							4.4618,
+							2.4457,
+							4.4618,
+							2.623,
+							3.6059,
+							2.623
+						],
+						"spans": [
+							{
+								"offset": 132,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "Contact details:",
+						"polygon": [
+							0.4862,
+							3.1445,
+							1.6459,
+							3.1445,
+							1.6409,
+							3.3167,
+							0.4862,
+							3.3167
+						],
+						"spans": [
+							{
+								"offset": 140,
+								"length": 16
+							}
+						]
+					},
+					{
+						"content": "Street address",
+						"polygon": [
+							0.5318,
+							3.5648,
+							1.6409,
+							3.5648,
+							1.6409,
+							3.7269,
+							0.5318,
+							3.7218
+						],
+						"spans": [
+							{
+								"offset": 157,
+								"length": 14
+							}
+						]
+					},
+					{
+						"content": "123 Main St",
+						"polygon": [
+							2.0359,
+							3.5547,
+							2.9374,
+							3.5547,
+							2.9374,
+							3.7319,
+							2.0359,
+							3.7319
+						],
+						"spans": [
+							{
+								"offset": 172,
+								"length": 11
+							}
+						]
+					},
+					{
+						"content": "City",
+						"polygon": [
+							0.5267,
+							3.8433,
+							0.8306,
+							3.8484,
+							0.8306,
+							4.0256,
+							0.5267,
+							4.0205
+						],
+						"spans": [
+							{
+								"offset": 184,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Anytown",
+						"polygon": [
+							1.8283,
+							3.8484,
+							2.4765,
+							3.8534,
+							2.4765,
+							4.0256,
+							1.8283,
+							4.0205
+						],
+						"spans": [
+							{
+								"offset": 189,
+								"length": 7
+							}
+						]
+					},
+					{
+						"content": "State",
+						"polygon": [
+							0.5216,
+							4.1471,
+							0.9319,
+							4.1522,
+							0.9319,
+							4.3041,
+							0.5267,
+							4.3041
+						],
+						"spans": [
+							{
+								"offset": 197,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "California",
+						"polygon": [
+							1.5599,
+							4.1471,
+							2.2841,
+							4.1471,
+							2.2841,
+							4.3092,
+							1.5599,
+							4.3092
+						],
+						"spans": [
+							{
+								"offset": 203,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "Email",
+						"polygon": [
+							0.5267,
+							4.4358,
+							0.9876,
+							4.4358,
+							0.9825,
+							4.6181,
+							0.5216,
+							4.6079
+						],
+						"spans": [
+							{
+								"offset": 214,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "patient@example.com",
+						"polygon": [
+							1.3066,
+							4.4459,
+							2.983,
+							4.4408,
+							2.983,
+							4.6181,
+							1.3066,
+							4.6231
+						],
+						"spans": [
+							{
+								"offset": 220,
+								"length": 19
+							}
+						]
+					},
+					{
+						"content": "Preferred contact method",
+						"polygon": [
+							0.5267,
+							4.7396,
+							2.4259,
+							4.7396,
+							2.4259,
+							4.9117,
+							0.5267,
+							4.9117
+						],
+						"spans": [
+							{
+								"offset": 240,
+								"length": 24
+							}
+						]
+					},
+					{
+						"content": "Email",
+						"polygon": [
+							2.8412,
+							4.7497,
+							3.2919,
+							4.7497,
+							3.2868,
+							4.8966,
+							2.8412,
+							4.8915
+						],
+						"spans": [
+							{
+								"offset": 276,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "My gender identity is:",
+						"polygon": [
+							0.471,
+							5.2662,
+							2.0764,
+							5.2662,
+							2.0764,
+							5.4586,
+							0.471,
+							5.4586
+						],
+						"spans": [
+							{
+								"offset": 282,
+								"length": 22
+							}
+						]
+					},
+					{
+						"content": "Male",
+						"polygon": [
+							0.9217,
+							5.6612,
+							1.3421,
+							5.6561,
+							1.337,
+							5.8384,
+							0.9167,
+							5.8384
+						],
+						"spans": [
+							{
+								"offset": 305,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "My pronouns are:",
+						"polygon": [
+							0.4862,
+							6.2486,
+							1.7928,
+							6.2486,
+							1.7928,
+							6.4308,
+							0.4862,
+							6.4308
+						],
+						"spans": [
+							{
+								"offset": 310,
+								"length": 16
+							}
+						]
+					},
+					{
+						"content": "He/Him",
+						"polygon": [
+							0.8356,
+							6.6385,
+							1.413,
+							6.6385,
+							1.413,
+							6.8106,
+							0.8356,
+							6.8106
+						],
+						"spans": [
+							{
+								"offset": 327,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "Emergency contact:",
+						"polygon": [
+							0.4862,
+							7.2258,
+							1.9802,
+							7.2258,
+							1.9802,
+							7.4132,
+							0.4862,
+							7.4132
+						],
+						"spans": [
+							{
+								"offset": 334,
+								"length": 18
+							}
+						]
+					},
+					{
+						"content": "Name",
+						"polygon": [
+							0.5318,
+							7.6411,
+							0.9926,
+							7.6411,
+							0.9926,
+							7.8082,
+							0.5318,
+							7.798
+						],
+						"spans": [
+							{
+								"offset": 353,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "James Johnson",
+						"polygon": [
+							1.2813,
+							7.636,
+							2.4765,
+							7.636,
+							2.4765,
+							7.8132,
+							1.2813,
+							7.8132
+						],
+						"spans": [
+							{
+								"offset": 358,
+								"length": 13
+							}
+						]
+					},
+					{
+						"content": "Email",
+						"polygon": [
+							0.5267,
+							7.9246,
+							0.9825,
+							7.9246,
+							0.9825,
+							8.1069,
+							0.5166,
+							8.1019
+						],
+						"spans": [
+							{
+								"offset": 372,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "emergency@example.com",
+						"polygon": [
+							1.2205,
+							7.9246,
+							3.2007,
+							7.9196,
+							3.2007,
+							8.112,
+							1.2205,
+							8.117
+						],
+						"spans": [
+							{
+								"offset": 378,
+								"length": 21
+							}
+						]
+					},
+					{
+						"content": "Phone",
+						"polygon": [
+							3.9047,
+							4.7396,
+							4.3959,
+							4.7396,
+							4.3959,
+							4.9117,
+							3.9047,
+							4.9117
+						],
+						"spans": [
+							{
+								"offset": 413,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Code",
+						"polygon": [
+							4.8112,
+							4.1471,
+							5.2366,
+							4.1471,
+							5.2417,
+							4.3092,
+							4.8112,
+							4.3041
+						],
+						"spans": [
+							{
+								"offset": 419,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "90210",
+						"polygon": [
+							5.7684,
+							4.1471,
+							6.2495,
+							4.137,
+							6.2495,
+							4.3142,
+							5.7684,
+							4.3142
+						],
+						"spans": [
+							{
+								"offset": 424,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "Phone",
+						"polygon": [
+							4.7859,
+							4.4408,
+							5.2873,
+							4.4459,
+							5.2822,
+							4.6029,
+							4.7859,
+							4.5927
+						],
+						"spans": [
+							{
+								"offset": 430,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "(555) 123-4567",
+						"polygon": [
+							5.7279,
+							4.4358,
+							6.8674,
+							4.4256,
+							6.8674,
+							4.6181,
+							5.7279,
+							4.6282
+						],
+						"spans": [
+							{
+								"offset": 436,
+								"length": 14
+							}
+						]
+					},
+					{
+						"content": "Text",
+						"polygon": [
+							5.0037,
+							4.7446,
+							5.3481,
+							4.7446,
+							5.3481,
+							4.9016,
+							5.0037,
+							4.8966
+						],
+						"spans": [
+							{
+								"offset": 464,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "Relationship to you",
+						"polygon": [
+							4.1225,
+							7.6309,
+							5.5608,
+							7.6411,
+							5.5557,
+							7.8335,
+							4.1225,
+							7.8183
+						],
+						"spans": [
+							{
+								"offset": 469,
+								"length": 19
+							}
+						]
+					},
+					{
+						"content": "Friend",
+						"polygon": [
+							5.8697,
+							7.6411,
+							6.361,
+							7.6411,
+							6.361,
+							7.8031,
+							5.8697,
+							7.798
+						],
+						"spans": [
+							{
+								"offset": 489,
+								"length": 6
+							}
+						]
+					},
+					{
+						"content": "Phone",
+						"polygon": [
+							4.7555,
+							7.9246,
+							5.2873,
+							7.9246,
+							5.2873,
+							8.0968,
+							4.7555,
+							8.1019
+						],
+						"spans": [
+							{
+								"offset": 496,
+								"length": 5
+							}
+						]
+					},
+					{
+						"content": "(555) 987-6543",
+						"polygon": [
+							5.6064,
+							7.9145,
+							6.756,
+							7.9145,
+							6.756,
+							8.112,
+							5.6064,
+							8.112
+						],
+						"spans": [
+							{
+								"offset": 502,
+								"length": 14
+							}
+						]
+					},
+					{
+						"content": "Allergies and medicines",
+						"polygon": [
+							0.4913,
+							8.5323,
+							2.2638,
+							8.5323,
+							2.2638,
+							8.7146,
+							0.4913,
+							8.7146
+						],
+						"spans": [
+							{
+								"offset": 517,
+								"length": 23
+							}
+						]
+					},
+					{
+						"content": "List of allergies and intolerances to medications.",
+						"polygon": [
+							0.5622,
+							8.7297,
+							4.1174,
+							8.7297,
+							4.1225,
+							8.9171,
+							0.5622,
+							8.9222
+						],
+						"spans": [
+							{
+								"offset": 541,
+								"length": 50
+							}
+						]
+					},
+					{
+						"content": "Allergic to penicillin",
+						"polygon": [
+							0.5622,
+							9.0184,
+							2.0005,
+							9.0184,
+							2.0005,
+							9.2007,
+							0.5622,
+							9.2057
+						],
+						"spans": [
+							{
+								"offset": 592,
+								"length": 22
+							}
+						]
+					},
+					{
+						"content": "Describe your reaction.",
+						"polygon": [
+							4.6998,
+							8.7348,
+							6.4268,
+							8.7348,
+							6.4268,
+							8.9323,
+							4.6998,
+							8.9374
+						],
+						"spans": [
+							{
+								"offset": 615,
+								"length": 23
+							}
+						]
+					},
+					{
+						"content": "Difficulty breathing",
+						"polygon": [
+							4.7099,
+							9.0133,
+							6.0925,
+							9.0184,
+							6.0925,
+							9.2108,
+							4.7099,
+							9.2007
+						],
+						"spans": [
+							{
+								"offset": 639,
+								"length": 20
+							}
+						]
+					},
+					{
+						"content": "Intolerant to lactose",
+						"polygon": [
+							0.5672,
+							9.6615,
+							2.0359,
+							9.6615,
+							2.0359,
+							9.8336,
+							0.5672,
+							9.8336
+						],
+						"spans": [
+							{
+								"offset": 660,
+								"length": 21
+							}
+						]
+					},
+					{
+						"content": "Bloating",
+						"polygon": [
+							4.6998,
+							9.6615,
+							5.3329,
+							9.6665,
+							5.3329,
+							9.8488,
+							4.6998,
+							9.8438
+						],
+						"spans": [
+							{
+								"offset": 682,
+								"length": 8
+							}
+						]
+					},
+					{
+						"content": "Signature",
+						"polygon": [
+							0.471,
+							10.6691,
+							1.2155,
+							10.6691,
+							1.2155,
+							10.8565,
+							0.471,
+							10.8565
+						],
+						"spans": [
+							{
+								"offset": 691,
+								"length": 9
+							}
+						]
+					},
+					{
+						"content": "Alex Smith",
+						"polygon": [
+							1.418,
+							10.659,
+							2.2436,
+							10.659,
+							2.2436,
+							10.8362,
+							1.418,
+							10.8413
+						],
+						"spans": [
+							{
+								"offset": 701,
+								"length": 10
+							}
+						]
+					},
+					{
+						"content": "Date",
+						"polygon": [
+							4.8669,
+							10.6691,
+							5.2366,
+							10.6742,
+							5.2366,
+							10.8312,
+							4.8669,
+							10.8261
+						],
+						"spans": [
+							{
+								"offset": 712,
+								"length": 4
+							}
+						]
+					},
+					{
+						"content": "18/Nov/2025",
+						"polygon": [
+							5.6418,
+							10.659,
+							6.599,
+							10.659,
+							6.599,
+							10.8312,
+							5.6418,
+							10.8312
+						],
+						"spans": [
+							{
+								"offset": 717,
+								"length": 11
+							}
+						]
+					}
+				],
+				"spans": [
+					{
+						"offset": 0,
+						"length": 806
+					}
+				]
+			}
+		],
+		"tables": [
+			{
+				"rowCount": 5,
+				"columnCount": 2,
+				"cells": [
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 0,
+						"rowSpan": 2,
+						"content": "List of allergies and intolerances to medications. Allergic to penicillin",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									0.4994,
+									8.7124,
+									4.4127,
+									8.7199,
+									4.4127,
+									9.295,
+									0.4994,
+									9.295
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 541,
+								"length": 73
+							}
+						]
+					},
+					{
+						"kind": "columnHeader",
+						"rowIndex": 0,
+						"columnIndex": 1,
+						"content": "Describe your reaction.",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									4.4127,
+									8.7199,
+									7.7285,
+									8.7199,
+									7.7285,
+									8.9664,
+									4.4127,
+									8.9664
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 615,
+								"length": 23
+							}
+						]
+					},
+					{
+						"kind": "columnHeader",
+						"rowIndex": 1,
+						"columnIndex": 1,
+						"content": "Difficulty breathing",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									4.4127,
+									8.9664,
+									7.7285,
+									8.9664,
+									7.7285,
+									9.295,
+									4.4127,
+									9.295
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 639,
+								"length": 20
+							}
+						]
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 0,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									0.4994,
+									9.295,
+									4.4127,
+									9.295,
+									4.4127,
+									9.6237,
+									0.4994,
+									9.6237
+								]
+							}
+						],
+						"spans": []
+					},
+					{
+						"rowIndex": 2,
+						"columnIndex": 1,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									4.4127,
+									9.295,
+									7.7285,
+									9.295,
+									7.736,
+									9.6237,
+									4.4127,
+									9.6237
+								]
+							}
+						],
+						"spans": []
+					},
+					{
+						"rowIndex": 3,
+						"columnIndex": 0,
+						"content": "Intolerant to lactose",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									0.4994,
+									9.6237,
+									4.4127,
+									9.6237,
+									4.4127,
+									9.9598,
+									0.4994,
+									9.9598
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 660,
+								"length": 21
+							}
+						]
+					},
+					{
+						"rowIndex": 3,
+						"columnIndex": 1,
+						"content": "Bloating",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									4.4127,
+									9.6237,
+									7.736,
+									9.6237,
+									7.736,
+									9.9673,
+									4.4127,
+									9.9598
+								]
+							}
+						],
+						"spans": [
+							{
+								"offset": 682,
+								"length": 8
+							}
+						]
+					},
+					{
+						"rowIndex": 4,
+						"columnIndex": 0,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									0.4994,
+									9.9598,
+									4.4127,
+									9.9598,
+									4.4127,
+									10.2661,
+									0.4994,
+									10.2586
+								]
+							}
+						],
+						"spans": []
+					},
+					{
+						"rowIndex": 4,
+						"columnIndex": 1,
+						"content": "",
+						"boundingRegions": [
+							{
+								"pageNumber": 1,
+								"polygon": [
+									4.4127,
+									9.9598,
+									7.736,
+									9.9673,
+									7.736,
+									10.2661,
+									4.4127,
+									10.2661
+								]
+							}
+						],
+						"spans": []
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.4857,
+							8.6557,
+							7.7595,
+							8.6654,
+							7.7523,
+							10.2829,
+							0.4783,
+							10.2723
+						]
+					}
+				],
+				"spans": [
+					{
+						"offset": 541,
+						"length": 149
+					}
+				]
+			}
+		],
+		"paragraphs": [
+			{
+				"spans": [
+					{
+						"offset": 0,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							7.2726,
+							0.5216,
+							7.6777,
+							0.5216,
+							7.6777,
+							0.6431,
+							7.2726,
+							0.6431
+						]
+					}
+				],
+				"content": "en-AU"
+			},
+			{
+				"spans": [
+					{
+						"offset": 6,
+						"length": 42
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1.7721,
+							0.6026,
+							6.4825,
+							0.5975,
+							6.4832,
+							1.2542,
+							1.7729,
+							1.2593
+						]
+					}
+				],
+				"role": "title",
+				"content": "Contoso Healthcare New Patient Information"
+			},
+			{
+				"spans": [
+					{
+						"offset": 49,
+						"length": 16
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.4811,
+							1.4583,
+							1.6004,
+							1.4583,
+							1.6004,
+							1.6356,
+							0.4811,
+							1.6356
+						]
+					}
+				],
+				"content": "Patient details:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 66,
+						"length": 11
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.5318,
+							1.8786,
+							1.5193,
+							1.8786,
+							1.5193,
+							2.066,
+							0.5318,
+							2.066
+						]
+					}
+				],
+				"content": "Family name"
+			},
+			{
+				"spans": [
+					{
+						"offset": 78,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1.8941,
+							1.8786,
+							2.3398,
+							1.8786,
+							2.3398,
+							2.0457,
+							1.8941,
+							2.0407
+						]
+					}
+				],
+				"content": "Smith"
+			},
+			{
+				"spans": [
+					{
+						"offset": 84,
+						"length": 16
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.5419,
+							2.1622,
+							2.2744,
+							2.1672,
+							2.2739,
+							2.3416,
+							0.5414,
+							2.3365
+						]
+					}
+				],
+				"content": "Given names Alex"
+			},
+			{
+				"spans": [
+					{
+						"offset": 101,
+						"length": 24
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.5318,
+							2.4457,
+							2.3499,
+							2.4508,
+							2.3499,
+							2.6432,
+							0.5318,
+							2.6382
+						]
+					}
+				],
+				"content": "Date of birth (dd/mm/yy)"
+			},
+			{
+				"spans": [
+					{
+						"offset": 126,
+						"length": 3
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							2.4309,
+							2.4356,
+							2.8006,
+							2.4559,
+							2.8006,
+							2.6179,
+							2.436,
+							2.6432
+						]
+					}
+				],
+				"content": "_06"
+			},
+			{
+				"spans": [
+					{
+						"offset": 130,
+						"length": 1
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							3.2463,
+							2.4559,
+							3.3122,
+							2.4559,
+							3.3122,
+							2.6128,
+							3.2463,
+							2.6128
+						]
+					}
+				],
+				"content": "/"
+			},
+			{
+				"spans": [
+					{
+						"offset": 132,
+						"length": 7
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							3.6059,
+							2.4457,
+							4.4618,
+							2.4457,
+							4.4618,
+							2.623,
+							3.6059,
+							2.623
+						]
+					}
+				],
+				"content": "10_/_90"
+			},
+			{
+				"spans": [
+					{
+						"offset": 140,
+						"length": 16
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.4862,
+							3.1445,
+							1.6459,
+							3.1445,
+							1.6459,
+							3.3167,
+							0.4862,
+							3.3167
+						]
+					}
+				],
+				"content": "Contact details:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 157,
+						"length": 14
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.5318,
+							3.5648,
+							1.6409,
+							3.5648,
+							1.6409,
+							3.7269,
+							0.5318,
+							3.7218
+						]
+					}
+				],
+				"content": "Street address"
+			},
+			{
+				"spans": [
+					{
+						"offset": 172,
+						"length": 11
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							2.0359,
+							3.5547,
+							2.9374,
+							3.5547,
+							2.9374,
+							3.7319,
+							2.0359,
+							3.7319
+						]
+					}
+				],
+				"content": "123 Main St"
+			},
+			{
+				"spans": [
+					{
+						"offset": 184,
+						"length": 12
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.5267,
+							3.8433,
+							2.4772,
+							3.8509,
+							2.4765,
+							4.032,
+							0.526,
+							4.0244
+						]
+					}
+				],
+				"content": "City Anytown"
+			},
+			{
+				"spans": [
+					{
+						"offset": 197,
+						"length": 16
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.5216,
+							4.1471,
+							2.2841,
+							4.1471,
+							2.2841,
+							4.3092,
+							0.5216,
+							4.3092
+						]
+					}
+				],
+				"content": "State California"
+			},
+			{
+				"spans": [
+					{
+						"offset": 214,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.5267,
+							4.4358,
+							0.9876,
+							4.4358,
+							0.9825,
+							4.6181,
+							0.5216,
+							4.6079
+						]
+					}
+				],
+				"content": "Email"
+			},
+			{
+				"spans": [
+					{
+						"offset": 220,
+						"length": 19
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1.3066,
+							4.4459,
+							2.983,
+							4.4408,
+							2.983,
+							4.6181,
+							1.3066,
+							4.6231
+						]
+					}
+				],
+				"content": "patient@example.com"
+			},
+			{
+				"spans": [
+					{
+						"offset": 240,
+						"length": 24
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.5267,
+							4.7396,
+							2.4259,
+							4.7396,
+							2.4259,
+							4.9117,
+							0.5267,
+							4.9117
+						]
+					}
+				],
+				"content": "Preferred contact method"
+			},
+			{
+				"spans": [
+					{
+						"offset": 265,
+						"length": 16
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							2.616,
+							4.7497,
+							3.2919,
+							4.7497,
+							3.2919,
+							4.8966,
+							2.616,
+							4.8966
+						]
+					}
+				],
+				"content": ":selected: Email"
+			},
+			{
+				"spans": [
+					{
+						"offset": 282,
+						"length": 22
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.471,
+							5.2662,
+							2.0764,
+							5.2662,
+							2.0764,
+							5.4586,
+							0.471,
+							5.4586
+						]
+					}
+				],
+				"content": "My gender identity is:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 305,
+						"length": 4
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.9167,
+							5.6561,
+							1.3421,
+							5.6561,
+							1.3421,
+							5.8384,
+							0.9167,
+							5.8384
+						]
+					}
+				],
+				"content": "Male"
+			},
+			{
+				"spans": [
+					{
+						"offset": 310,
+						"length": 16
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.4862,
+							6.2486,
+							1.7928,
+							6.2486,
+							1.7928,
+							6.4308,
+							0.4862,
+							6.4308
+						]
+					}
+				],
+				"content": "My pronouns are:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 327,
+						"length": 6
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.8356,
+							6.6385,
+							1.413,
+							6.6385,
+							1.413,
+							6.8106,
+							0.8356,
+							6.8106
+						]
+					}
+				],
+				"content": "He/Him"
+			},
+			{
+				"spans": [
+					{
+						"offset": 334,
+						"length": 18
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.4862,
+							7.2258,
+							1.9802,
+							7.2258,
+							1.9802,
+							7.4132,
+							0.4862,
+							7.4132
+						]
+					}
+				],
+				"content": "Emergency contact:"
+			},
+			{
+				"spans": [
+					{
+						"offset": 353,
+						"length": 4
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.5318,
+							7.6411,
+							0.9926,
+							7.6411,
+							0.9926,
+							7.8082,
+							0.5318,
+							7.798
+						]
+					}
+				],
+				"content": "Name"
+			},
+			{
+				"spans": [
+					{
+						"offset": 358,
+						"length": 13
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1.2813,
+							7.636,
+							2.4765,
+							7.636,
+							2.4765,
+							7.8132,
+							1.2813,
+							7.8132
+						]
+					}
+				],
+				"content": "James Johnson"
+			},
+			{
+				"spans": [
+					{
+						"offset": 372,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.5267,
+							7.9246,
+							0.9825,
+							7.9246,
+							0.9825,
+							8.1069,
+							0.5166,
+							8.1019
+						]
+					}
+				],
+				"content": "Email"
+			},
+			{
+				"spans": [
+					{
+						"offset": 378,
+						"length": 21
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1.2205,
+							7.9246,
+							3.2007,
+							7.9196,
+							3.2007,
+							8.112,
+							1.2205,
+							8.117
+						]
+					}
+				],
+				"content": "emergency@example.com"
+			},
+			{
+				"spans": [
+					{
+						"offset": 400,
+						"length": 18
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							3.6634,
+							4.7396,
+							4.3959,
+							4.7396,
+							4.3959,
+							4.9117,
+							3.6634,
+							4.9117
+						]
+					}
+				],
+				"content": ":unselected: Phone"
+			},
+			{
+				"spans": [
+					{
+						"offset": 419,
+						"length": 4
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							4.8112,
+							4.1471,
+							5.2366,
+							4.1471,
+							5.2417,
+							4.3092,
+							4.8112,
+							4.3041
+						]
+					}
+				],
+				"content": "Code"
+			},
+			{
+				"spans": [
+					{
+						"offset": 424,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							5.7684,
+							4.1471,
+							6.2495,
+							4.137,
+							6.2495,
+							4.3142,
+							5.7684,
+							4.3142
+						]
+					}
+				],
+				"content": "90210"
+			},
+			{
+				"spans": [
+					{
+						"offset": 430,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							4.7859,
+							4.4408,
+							5.2873,
+							4.4459,
+							5.2822,
+							4.6029,
+							4.7859,
+							4.5927
+						]
+					}
+				],
+				"content": "Phone"
+			},
+			{
+				"spans": [
+					{
+						"offset": 436,
+						"length": 14
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							5.7279,
+							4.4358,
+							6.8674,
+							4.4256,
+							6.8674,
+							4.6181,
+							5.7279,
+							4.6282
+						]
+					}
+				],
+				"content": "(555) 123-4567"
+			},
+			{
+				"spans": [
+					{
+						"offset": 451,
+						"length": 17
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							4.7756,
+							4.7446,
+							5.3481,
+							4.7446,
+							5.3481,
+							4.9016,
+							4.7756,
+							4.9016
+						]
+					}
+				],
+				"content": ":unselected: Text"
+			},
+			{
+				"spans": [
+					{
+						"offset": 469,
+						"length": 19
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							4.1225,
+							7.6309,
+							5.5608,
+							7.6411,
+							5.5557,
+							7.8335,
+							4.1225,
+							7.8183
+						]
+					}
+				],
+				"content": "Relationship to you"
+			},
+			{
+				"spans": [
+					{
+						"offset": 489,
+						"length": 6
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							5.8697,
+							7.6411,
+							6.361,
+							7.6411,
+							6.361,
+							7.8031,
+							5.8697,
+							7.8031
+						]
+					}
+				],
+				"content": "Friend"
+			},
+			{
+				"spans": [
+					{
+						"offset": 496,
+						"length": 5
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							4.7555,
+							7.9246,
+							5.2873,
+							7.9246,
+							5.2873,
+							8.0968,
+							4.7555,
+							8.1019
+						]
+					}
+				],
+				"content": "Phone"
+			},
+			{
+				"spans": [
+					{
+						"offset": 502,
+						"length": 14
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							5.6064,
+							7.9145,
+							6.756,
+							7.9145,
+							6.756,
+							8.112,
+							5.6064,
+							8.112
+						]
+					}
+				],
+				"content": "(555) 987-6543"
+			},
+			{
+				"spans": [
+					{
+						"offset": 517,
+						"length": 23
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.4913,
+							8.5323,
+							2.2638,
+							8.5323,
+							2.2638,
+							8.7146,
+							0.4913,
+							8.7146
+						]
+					}
+				],
+				"content": "Allergies and medicines"
+			},
+			{
+				"spans": [
+					{
+						"offset": 541,
+						"length": 73
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.4994,
+							8.7124,
+							4.4127,
+							8.7199,
+							4.4127,
+							9.295,
+							0.4994,
+							9.295
+						]
+					}
+				],
+				"content": "List of allergies and intolerances to medications. Allergic to penicillin"
+			},
+			{
+				"spans": [
+					{
+						"offset": 615,
+						"length": 23
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							4.4127,
+							8.7199,
+							7.7285,
+							8.7199,
+							7.7285,
+							8.9664,
+							4.4127,
+							8.9664
+						]
+					}
+				],
+				"content": "Describe your reaction."
+			},
+			{
+				"spans": [
+					{
+						"offset": 639,
+						"length": 20
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							4.4127,
+							8.9664,
+							7.7285,
+							8.9664,
+							7.7285,
+							9.295,
+							4.4127,
+							9.295
+						]
+					}
+				],
+				"content": "Difficulty breathing"
+			},
+			{
+				"spans": [
+					{
+						"offset": 660,
+						"length": 21
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.4994,
+							9.6237,
+							4.4127,
+							9.6237,
+							4.4127,
+							9.9598,
+							0.4994,
+							9.9598
+						]
+					}
+				],
+				"content": "Intolerant to lactose"
+			},
+			{
+				"spans": [
+					{
+						"offset": 682,
+						"length": 8
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							4.4127,
+							9.6237,
+							7.736,
+							9.6237,
+							7.736,
+							9.9673,
+							4.4127,
+							9.9598
+						]
+					}
+				],
+				"content": "Bloating"
+			},
+			{
+				"spans": [
+					{
+						"offset": 691,
+						"length": 9
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							0.471,
+							10.6691,
+							1.2155,
+							10.6691,
+							1.2155,
+							10.8565,
+							0.471,
+							10.8565
+						]
+					}
+				],
+				"content": "Signature"
+			},
+			{
+				"spans": [
+					{
+						"offset": 701,
+						"length": 10
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							1.418,
+							10.659,
+							2.2436,
+							10.659,
+							2.2436,
+							10.8362,
+							1.418,
+							10.8413
+						]
+					}
+				],
+				"content": "Alex Smith"
+			},
+			{
+				"spans": [
+					{
+						"offset": 712,
+						"length": 4
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							4.8669,
+							10.6691,
+							5.2366,
+							10.6742,
+							5.2366,
+							10.8312,
+							4.8669,
+							10.8261
+						]
+					}
+				],
+				"content": "Date"
+			},
+			{
+				"spans": [
+					{
+						"offset": 717,
+						"length": 11
+					}
+				],
+				"boundingRegions": [
+					{
+						"pageNumber": 1,
+						"polygon": [
+							5.6418,
+							10.659,
+							6.599,
+							10.659,
+							6.599,
+							10.8312,
+							5.6418,
+							10.8312
+						]
+					}
+				],
+				"content": "18/Nov/2025"
+			}
+		],
+		"styles": [
+			{
+				"confidence": 0.1,
+				"spans": [
+					{
+						"offset": 130,
+						"length": 1
+					}
+				],
+				"isHandwritten": true
+			}
+		]
+	}
+}
